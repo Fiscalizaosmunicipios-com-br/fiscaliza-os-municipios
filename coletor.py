@@ -28,7 +28,19 @@ import requests
 
 # ═════════════════ CONFIGURAÇÃO DE CIDADES ═════════════════
 CIDADES = [
-    {"nome": "Charqueada", "uf": "SP", "ibge": "3511706", "vereadores": 9, "sapl": None},
+    {"nome": "Charqueada", "uf": "SP", "ibge": "3511706", "vereadores": 11, "sapl": None,
+     "transparencia": "https://webapp1-charqueada.cidade360.cloud/pronimtb/",
+     "transparencia_sistema": "Pronim TB (Cidade360)",
+     "fontes_extra": [
+        ("Proposituras — SisCam (Câmara de Charqueada)",
+         "http://consulta.siscam.com.br/camaracharqueada/index/80/8"),
+        ("Leis municipais — Legislação Digital",
+         "https://legislacaodigital.com.br/Charqueada-sp"),
+        ("Transparência da Câmara (portal próprio)",
+         "http://186.250.144.166:5656/transparencia/"),
+        ("Diário Oficial de Charqueada",
+         "https://www.charqueada.sp.gov.br/portal/diario-oficial"),
+     ]},
     {"nome": "São Pedro", "uf": "SP", "ibge": "3550407", "vereadores": 11, "sapl": None},
     {"nome": "Rio das Pedras", "uf": "SP", "ibge": "3544004", "vereadores": 10, "sapl": None},
     {"nome": "Piracicaba", "uf": "SP", "ibge": "3538709", "vereadores": 23, "sapl": None},
@@ -872,6 +884,15 @@ def pagina_cidade(c, pos, total, gerado_em):
                      'sem API pública de autoria — o conector está em desenvolvimento. '
                      'Nomes de vereadores só são publicados com fonte oficial verificável.</div>')
 
+    extra_li = "".join(
+        f'<li><a href="{u}" target="_blank" rel="noreferrer">{r}</a></li>'
+        for r, u in (c.get("fontes_extra") or []))
+    transp_li = ""
+    if c.get("transparencia"):
+        sist = c.get("transparencia_sistema", "portal municipal")
+        transp_li = (f'<li><a href="{c["transparencia"]}" target="_blank" rel="noreferrer">'
+                     f'Portal da Transparência do Executivo ({sist})</a> — folha por servidor, '
+                     f'empenhos, diárias e licitações (conector Fase B)</li>')
     dia = c.get("diario_oficial") or {}
     diario_txt = (f" — {_num(dia['valor'])} edições indexadas"
                   if dia.get("status") == "verificada" and dia.get("valor") else "")
@@ -933,7 +954,7 @@ def pagina_cidade(c, pos, total, gerado_em):
     <li><a href="{c['populacao']['url']}" target="_blank" rel="noreferrer">IBGE — população</a></li>
     <li><a href="{c['proposicoes']['url']}" target="_blank" rel="noreferrer">Portal da Câmara — proposições</a></li>
     <li><a href="{dia.get('url','#')}" target="_blank" rel="noreferrer">Querido Diário — Diário Oficial do município</a>{diario_txt}</li>
-    <li><a href="https://divulgacandcontas.tse.jus.br" target="_blank" rel="noreferrer">TSE / DivulgaCandContas — bens e campanhas dos eleitos</a></li>
+    {extra_li}{transp_li}<li><a href="https://divulgacandcontas.tse.jus.br" target="_blank" rel="noreferrer">TSE / DivulgaCandContas — bens e campanhas dos eleitos</a></li>
     <li><a href="https://radardatransparencia.atricon.org.br" target="_blank" rel="noreferrer">Radar da Transparência Pública (Atricon)</a></li>
   </ul>
   <div class="nota">Números com "✓ fonte oficial" foram coletados automaticamente na data indicada; os links abrem exatamente a consulta usada. A régua completa está em <a href="../metodologia.html">como calculamos</a>.</div>
@@ -975,7 +996,7 @@ def pagina_index(dados):
 <div class="metodo"><b>Como a nota é calculada:</b> 40% gestão fiscal (equilíbrio, folha de pessoal da LRF e investimento),
 30% custo do legislativo (teto do art. 29-A, folha parlamentar e comparação com o grupo populacional) e
 30% qualidade legislativa (peso real das matérias, por classificação automática das ementas, e diversidade de temas).
-Fórmulas completas em <a href="metodologia.html">como calculamos</a>. Notas com fontes pendentes são preliminares.</div>
+Fórmulas em <a href="metodologia.html">como calculamos</a> · lacunas declaradas em <a href="cobertura.html">cobertura de dados</a>. Notas com fontes pendentes são preliminares.</div>
 {''.join(itens)}"""
     return _shell(titulo, descricao, DOMINIO + "/", corpo)
 
@@ -1024,10 +1045,81 @@ def pagina_metodologia(dados):
     return _shell(titulo, descricao, DOMINIO + "/metodologia.html", corpo)
 
 
+ROTULOS_BLOCOS = [
+    ("populacao", "População (IBGE)"),
+    ("receita", "Receita (SICONFI)"),
+    ("investimentos", "Investimentos"),
+    ("base29a", "Base art. 29-A"),
+    ("rgf_executivo", "Pessoal Executivo (RGF)"),
+    ("rgf_legislativo", "Pessoal Legislativo (RGF)"),
+    ("custo_camara", "Custo da Câmara (DCA)"),
+    ("proposicoes", "Proposições"),
+    ("producao_vereadores", "Autoria por vereador"),
+    ("diario_oficial", "Diário Oficial (QD)"),
+]
+
+MOTIVOS_PENDENCIA = {
+    "proposicoes": "a Câmara não usa o SAPL/Interlegis; conector para o sistema próprio em desenvolvimento",
+    "producao_vereadores": "sem API pública de autoria no sistema da Câmara",
+    "diario_oficial": "município ainda não coberto pelo Querido Diário",
+    "investimentos": "linha não localizada no RREO/DCA do período",
+    "rgf_executivo": "RGF do período ainda não homologado no SICONFI",
+    "rgf_legislativo": "RGF do Legislativo ainda não homologado no SICONFI",
+}
+
+
+def _bloco_de(c, chave):
+    if chave in ("receita", "investimentos", "base29a"):
+        return c["financas"][chave]
+    return c.get(chave) or {"status": "demo"}
+
+
+def pagina_cobertura(dados):
+    titulo = f"Cobertura de dados por cidade | {MARCA}"
+    descricao = ("Transparência sobre a própria base: o que está verificado em fonte "
+                 "oficial e o que está pendente em cada cidade do ranking.")
+    total_v = total_b = 0
+    linhas = []
+    for c in dados["cidades"]:
+        celulas = ""
+        pend = []
+        for chave, rotulo in ROTULOS_BLOCOS:
+            ok = _bloco_de(c, chave)["status"] == "verificada"
+            total_b += 1
+            total_v += ok
+            celulas += ("<span class='selo selo-ok'>✓</span>" if ok
+                        else "<span class='selo selo-demo'>—</span>")
+            if not ok:
+                pend.append(MOTIVOS_PENDENCIA.get(chave, rotulo))
+        s = slug(c["nome"]) + "-" + c["uf"].lower()
+        motivo = ("Completa nos blocos acompanhados." if not pend
+                  else "Pendências: " + "; ".join(sorted(set(pend))) + ".")
+        linhas.append(
+            f"<div class='ver'><div class='ver-topo'>"
+            f"<span class='ver-nome'><a href='cidades/{s}.html'>{c['nome']} — {c['uf']}</a></span>"
+            f"<span class='ver-efic'>{c['nota']['confianca']:.0%}</span></div>"
+            f"<div style='margin-top:4px'>{celulas}</div>"
+            f"<div class='ver-detalhe'>{motivo}</div></div>")
+    cab = " · ".join(r for _, r in ROTULOS_BLOCOS)
+    corpo = f"""<a class="voltar" href="index.html">← voltar ao ranking</a>
+<header class="cabecalho">
+  <div class="protocolo">TRANSPARÊNCIA DA PRÓPRIA BASE</div>
+  <h1>Cobertura de dados<small>{total_v} de {total_b} blocos verificados em fonte oficial
+  ({total_v/total_b:.0%}) · atualizado em {dados['gerado_em'][:10]}. Lacunas não são escondidas:
+  são listadas com o motivo e entram na nota como confiança reduzida.</small></h1>
+</header>
+<p class="sub">Ordem dos blocos: {cab}.</p>
+{''.join(linhas)}
+<div class="nota">Sabe onde encontrar um dado pendente da sua cidade (portal da Câmara,
+sistema de proposituras)? Envie o link pelo repositório do projeto — foi assim que
+Charqueada ganhou suas fontes.</div>"""
+    return _shell(titulo, descricao, DOMINIO + "/cobertura.html", corpo)
+
+
 def gerar_site(dados):
     import os
     os.makedirs("docs/cidades", exist_ok=True)
-    urls = [DOMINIO + "/", DOMINIO + "/metodologia.html"]
+    urls = [DOMINIO + "/", DOMINIO + "/metodologia.html", DOMINIO + "/cobertura.html"]
     for i, c in enumerate(dados["cidades"], 1):
         s, url, html = pagina_cidade(c, i, len(dados["cidades"]), dados["gerado_em"])
         with open(f"docs/cidades/{s}.html", "w", encoding="utf-8") as fh:
@@ -1037,6 +1129,8 @@ def gerar_site(dados):
         fh.write(pagina_index(dados))
     with open("docs/metodologia.html", "w", encoding="utf-8") as fh:
         fh.write(pagina_metodologia(dados))
+    with open("docs/cobertura.html", "w", encoding="utf-8") as fh:
+        fh.write(pagina_cobertura(dados))
     with open("docs/CNAME", "w") as fh:
         fh.write("fiscalizaosmunicipios.com.br\n")
     with open("docs/robots.txt", "w") as fh:
