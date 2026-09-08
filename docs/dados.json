@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-09-08T18:22:36+00:00",
+  "gerado_em": "2026-09-08T18:28:21+00:00",
   "metodologia": {
     "pesos": {
       "gestao_fiscal": 0.4,
@@ -10,240 +10,42 @@
   },
   "cidades": [
     {
-      "nome": "São Pedro",
-      "uf": "SP",
-      "ibge": "3550407",
-      "vereadores": 11,
-      "populacao": {
-        "valor": 37000,
-        "fonte": "IBGE",
-        "url": "https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/3550407",
-        "status": "demo",
-        "coletado_em": "2026-09-08T18:20:55+00:00",
-        "detalhe": "404 Client Error: Not Found for url: https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/3550407"
-      },
-      "financas": {
-        "receita": {
-          "valor": 142850819.74,
-          "fonte": "SICONFI/RREO",
-          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3550407",
-          "status": "verificada",
-          "coletado_em": "2026-09-08T18:20:57+00:00",
-          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
-        },
-        "despesa": {
-          "valor": 128616463.46,
-          "fonte": "SICONFI/RREO",
-          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3550407",
-          "status": "verificada",
-          "coletado_em": "2026-09-08T18:20:57+00:00",
-          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
-        },
-        "base29a": {
-          "valor": 126253050.17,
-          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
-          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3550407",
-          "status": "verificada",
-          "coletado_em": "2026-09-08T18:20:57+00:00",
-          "detalhe": "Aproximação: tributária + transferências correntes"
-        }
-      },
-      "custo_camara": {
-        "valor": 3521002.43,
-        "fonte": "SICONFI/DCA — função 01 Legislativa",
-        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3550407",
-        "status": "verificada",
-        "coletado_em": "2026-09-08T18:20:58+00:00",
-        "detalhe": "Exercício 2025"
-      },
-      "proposicoes": {
-        "valor": [
-          {
-            "tipo": "Projetos de Lei",
-            "qtd": 40,
-            "peso": "alta"
-          },
-          {
-            "tipo": "Emendas e substitutivos",
-            "qtd": 15,
-            "peso": "alta"
-          },
-          {
-            "tipo": "Requerimentos",
-            "qtd": 60,
-            "peso": "media"
-          },
-          {
-            "tipo": "Indicações",
-            "qtd": 250,
-            "peso": "baixa"
-          },
-          {
-            "tipo": "Moções e homenagens",
-            "qtd": 85,
-            "peso": "baixa"
-          }
-        ],
-        "fonte": "SAPL (portal ainda não integrado)",
-        "url": "https://sapl.saopedro.sp.leg.br",
-        "status": "demo",
-        "coletado_em": "2026-09-08T18:20:58+00:00",
-        "detalhe": ""
-      },
-      "indicadores": {
-        "resultado_fiscal": 14234356.280000016,
-        "margem_fiscal": 0.09964490442482367,
-        "limite_art29a": 0.07,
-        "uso_limite": 0.02788845437998498,
-        "custo_por_habitante": 95.16222783783785,
-        "custo_por_vereador": 320091.13,
-        "indice_propositivo": 0.12222222222222222
-      },
-      "nota": {
-        "final": 66.2,
-        "fiscal": 89.9,
-        "custo_legislativo": 60.2,
-        "producao_legislativa": 40.7,
-        "selo": "ATENÇÃO",
-        "confianca": 0.67
-      }
-    },
-    {
-      "nome": "Piracicaba",
-      "uf": "SP",
-      "ibge": "3538709",
-      "vereadores": 23,
-      "populacao": {
-        "valor": 425000,
-        "fonte": "IBGE",
-        "url": "https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/3538709",
-        "status": "demo",
-        "coletado_em": "2026-09-08T18:22:01+00:00",
-        "detalhe": "HTTPSConnectionPool(host='servicodados.ibge.gov.br', port=443): Max retries exceeded with url: /api/v1/projecoes/populacao/3538709 (Caused by ConnectTimeoutError(<HTTPSConnection(host='servicodados.ibge.gov.br', port=443) at 0x7f168eba2c30>, 'Connection to servicodados.ibge.gov.br timed out. (connect timeout=30)'))"
-      },
-      "financas": {
-        "receita": {
-          "valor": 1796458195.34,
-          "fonte": "SICONFI/RREO",
-          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3538709",
-          "status": "verificada",
-          "coletado_em": "2026-09-08T18:22:02+00:00",
-          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
-        },
-        "despesa": {
-          "valor": 1454537679.08,
-          "fonte": "SICONFI/RREO",
-          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3538709",
-          "status": "verificada",
-          "coletado_em": "2026-09-08T18:22:02+00:00",
-          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
-        },
-        "base29a": {
-          "valor": 1413850541.94,
-          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
-          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3538709",
-          "status": "verificada",
-          "coletado_em": "2026-09-08T18:22:02+00:00",
-          "detalhe": "Aproximação: tributária + transferências correntes"
-        }
-      },
-      "custo_camara": {
-        "valor": 53445010.4,
-        "fonte": "SICONFI/DCA — função 01 Legislativa",
-        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3538709",
-        "status": "verificada",
-        "coletado_em": "2026-09-08T18:22:03+00:00",
-        "detalhe": "Exercício 2025"
-      },
-      "proposicoes": {
-        "valor": [
-          {
-            "tipo": "Projetos de Lei",
-            "qtd": 40,
-            "peso": "alta"
-          },
-          {
-            "tipo": "Emendas e substitutivos",
-            "qtd": 15,
-            "peso": "alta"
-          },
-          {
-            "tipo": "Requerimentos",
-            "qtd": 60,
-            "peso": "media"
-          },
-          {
-            "tipo": "Indicações",
-            "qtd": 250,
-            "peso": "baixa"
-          },
-          {
-            "tipo": "Moções e homenagens",
-            "qtd": 85,
-            "peso": "baixa"
-          }
-        ],
-        "fonte": "SAPL (portal ainda não integrado)",
-        "url": "https://sapl.piracicaba.sp.leg.br",
-        "status": "demo",
-        "coletado_em": "2026-09-08T18:22:04+00:00",
-        "detalhe": ""
-      },
-      "indicadores": {
-        "resultado_fiscal": 341920516.26,
-        "margem_fiscal": 0.19033034954386327,
-        "limite_art29a": 0.05,
-        "uso_limite": 0.03780103258061916,
-        "custo_por_habitante": 125.75296564705882,
-        "custo_por_vereador": 2323696.104347826,
-        "indice_propositivo": 0.12222222222222222
-      },
-      "nota": {
-        "final": 59.5,
-        "fiscal": 100.0,
-        "custo_legislativo": 24.4,
-        "producao_legislativa": 40.7,
-        "selo": "ATENÇÃO",
-        "confianca": 0.67
-      }
-    },
-    {
       "nome": "Charqueada",
       "uf": "SP",
       "ibge": "3511706",
       "vereadores": 9,
       "populacao": {
-        "valor": 15814,
-        "fonte": "IBGE",
-        "url": "https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/3511706",
-        "status": "demo",
-        "coletado_em": "2026-09-08T18:20:49+00:00",
-        "detalhe": "404 Client Error: Not Found for url: https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/3511706"
+        "valor": 15827,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3511706]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T18:26:33+00:00",
+        "detalhe": ""
       },
       "financas": {
         "receita": {
-          "valor": 118000000.0,
-          "fonte": "SICONFI",
-          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
-          "status": "demo",
-          "coletado_em": "2026-09-08T18:20:53+00:00",
-          "detalhe": ""
+          "valor": 118189446.11,
+          "fonte": "SICONFI/DCA",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-C&id_ente=3511706",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T18:26:37+00:00",
+          "detalhe": "DCA — contas anuais, exercício 2025"
         },
         "despesa": {
-          "valor": 112500000.0,
-          "fonte": "SICONFI",
-          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
-          "status": "demo",
-          "coletado_em": "2026-09-08T18:20:53+00:00",
-          "detalhe": ""
+          "valor": 99795450.46,
+          "fonte": "SICONFI/DCA",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-D&id_ente=3511706",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T18:26:37+00:00",
+          "detalhe": "DCA — contas anuais, exercício 2025"
         },
         "base29a": {
-          "valor": 52000000.0,
-          "fonte": "SICONFI",
-          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
-          "status": "demo",
-          "coletado_em": "2026-09-08T18:20:53+00:00",
-          "detalhe": ""
+          "valor": 110488366.63,
+          "fonte": "SICONFI/DCA (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-C&id_ente=3511706",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T18:26:37+00:00",
+          "detalhe": "Aproximação: impostos + transferências correntes"
         }
       },
       "custo_camara": {
@@ -251,7 +53,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3511706",
         "status": "verificada",
-        "coletado_em": "2026-09-08T18:20:54+00:00",
+        "coletado_em": "2026-09-08T18:26:37+00:00",
         "detalhe": "Exercício 2025"
       },
       "proposicoes": {
@@ -285,25 +87,223 @@
         "fonte": "SAPL (portal ainda não integrado)",
         "url": "https://sapl.charqueada.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-09-08T18:20:54+00:00",
+        "coletado_em": "2026-09-08T18:26:37+00:00",
         "detalhe": ""
       },
       "indicadores": {
-        "resultado_fiscal": 5500000.0,
-        "margem_fiscal": 0.046610169491525424,
+        "resultado_fiscal": 18393995.650000006,
+        "margem_fiscal": 0.15563145657591582,
         "limite_art29a": 0.07,
-        "uso_limite": 0.042344954615384615,
-        "custo_por_habitante": 139.23976476539775,
+        "uso_limite": 0.019929135592833772,
+        "custo_por_habitante": 139.12539584254756,
         "custo_por_vereador": 244659.7377777778,
         "indice_propositivo": 0.12222222222222222
       },
       "nota": {
-        "final": 51.5,
-        "fiscal": 68.6,
-        "custo_legislativo": 39.5,
+        "final": 73.7,
+        "fiscal": 100.0,
+        "custo_legislativo": 71.5,
+        "producao_legislativa": 40.7,
+        "selo": "VIÁVEL",
+        "confianca": 0.83
+      }
+    },
+    {
+      "nome": "São Pedro",
+      "uf": "SP",
+      "ibge": "3550407",
+      "vereadores": 11,
+      "populacao": {
+        "valor": 40054,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3550407]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T18:26:38+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 142850819.74,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3550407",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T18:26:42+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 128616463.46,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3550407",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T18:26:42+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 126253050.17,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3550407",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T18:26:42+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 3521002.43,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3550407",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T18:26:44+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "SAPL (portal ainda não integrado)",
+        "url": "https://sapl.saopedro.sp.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T18:26:44+00:00",
+        "detalhe": ""
+      },
+      "indicadores": {
+        "resultado_fiscal": 14234356.280000016,
+        "margem_fiscal": 0.09964490442482367,
+        "limite_art29a": 0.07,
+        "uso_limite": 0.02788845437998498,
+        "custo_por_habitante": 87.90638712737804,
+        "custo_por_vereador": 320091.13,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 66.2,
+        "fiscal": 89.9,
+        "custo_legislativo": 60.2,
         "producao_legislativa": 40.7,
         "selo": "ATENÇÃO",
-        "confianca": 0.17
+        "confianca": 0.83
+      }
+    },
+    {
+      "nome": "Piracicaba",
+      "uf": "SP",
+      "ibge": "3538709",
+      "vereadores": 23,
+      "populacao": {
+        "valor": 425000,
+        "fonte": "IBGE",
+        "url": "https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/3538709",
+        "status": "demo",
+        "coletado_em": "2026-09-08T18:27:47+00:00",
+        "detalhe": "404 Client Error: Not Found for url: https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/3538709"
+      },
+      "financas": {
+        "receita": {
+          "valor": 1796458195.34,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3538709",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T18:27:48+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 1454537679.08,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3538709",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T18:27:48+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 1413850541.94,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3538709",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T18:27:48+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 53445010.4,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3538709",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T18:27:48+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "SAPL (portal ainda não integrado)",
+        "url": "https://sapl.piracicaba.sp.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T18:27:49+00:00",
+        "detalhe": ""
+      },
+      "indicadores": {
+        "resultado_fiscal": 341920516.26,
+        "margem_fiscal": 0.19033034954386327,
+        "limite_art29a": 0.05,
+        "uso_limite": 0.03780103258061916,
+        "custo_por_habitante": 125.75296564705882,
+        "custo_por_vereador": 2323696.104347826,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 59.5,
+        "fiscal": 100.0,
+        "custo_legislativo": 24.4,
+        "producao_legislativa": 40.7,
+        "selo": "ATENÇÃO",
+        "confianca": 0.67
       }
     },
     {
@@ -316,8 +316,8 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/3524402",
         "status": "demo",
-        "coletado_em": "2026-09-08T18:22:34+00:00",
-        "detalhe": "HTTPSConnectionPool(host='servicodados.ibge.gov.br', port=443): Max retries exceeded with url: /api/v1/projecoes/populacao/3524402 (Caused by ConnectTimeoutError(<HTTPSConnection(host='servicodados.ibge.gov.br', port=443) at 0x7f168eba3980>, 'Connection to servicodados.ibge.gov.br timed out. (connect timeout=30)'))"
+        "coletado_em": "2026-09-08T18:28:19+00:00",
+        "detalhe": "404 Client Error: Not Found for url: https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/3524402"
       },
       "financas": {
         "receita": {
@@ -325,7 +325,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3524402",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:22:35+00:00",
+          "coletado_em": "2026-09-08T18:28:20+00:00",
           "detalhe": "RREO Anexo 01, 3º bimestre 2026"
         },
         "despesa": {
@@ -333,7 +333,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3524402",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:22:35+00:00",
+          "coletado_em": "2026-09-08T18:28:20+00:00",
           "detalhe": "RREO Anexo 01, 3º bimestre 2026"
         },
         "base29a": {
@@ -341,7 +341,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3524402",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:22:35+00:00",
+          "coletado_em": "2026-09-08T18:28:20+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -350,7 +350,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3524402",
         "status": "verificada",
-        "coletado_em": "2026-09-08T18:22:36+00:00",
+        "coletado_em": "2026-09-08T18:28:20+00:00",
         "detalhe": "Exercício 2025"
       },
       "proposicoes": {
@@ -384,7 +384,7 @@
         "fonte": "SAPL (portal ainda não integrado)",
         "url": "https://sapl.jacarei.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-09-08T18:22:36+00:00",
+        "coletado_em": "2026-09-08T18:28:21+00:00",
         "detalhe": ""
       },
       "indicadores": {
@@ -415,8 +415,8 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/3544004",
         "status": "demo",
-        "coletado_em": "2026-09-08T18:21:28+00:00",
-        "detalhe": "HTTPSConnectionPool(host='servicodados.ibge.gov.br', port=443): Max retries exceeded with url: /api/v1/projecoes/populacao/3544004 (Caused by ConnectTimeoutError(<HTTPSConnection(host='servicodados.ibge.gov.br', port=443) at 0x7f168eba0230>, 'Connection to servicodados.ibge.gov.br timed out. (connect timeout=30)'))"
+        "coletado_em": "2026-09-08T18:27:15+00:00",
+        "detalhe": "404 Client Error: Not Found for url: https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/3544004"
       },
       "financas": {
         "receita": {
@@ -424,7 +424,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3544004",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:21:30+00:00",
+          "coletado_em": "2026-09-08T18:27:15+00:00",
           "detalhe": "RREO Anexo 01, 3º bimestre 2026"
         },
         "despesa": {
@@ -432,7 +432,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3544004",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:21:30+00:00",
+          "coletado_em": "2026-09-08T18:27:15+00:00",
           "detalhe": "RREO Anexo 01, 3º bimestre 2026"
         },
         "base29a": {
@@ -440,7 +440,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3544004",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:21:30+00:00",
+          "coletado_em": "2026-09-08T18:27:15+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -449,7 +449,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3544004",
         "status": "verificada",
-        "coletado_em": "2026-09-08T18:21:31+00:00",
+        "coletado_em": "2026-09-08T18:27:15+00:00",
         "detalhe": "Exercício 2025"
       },
       "proposicoes": {
@@ -483,7 +483,7 @@
         "fonte": "SAPL (portal ainda não integrado)",
         "url": "https://sapl.riodaspedras.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-09-08T18:21:31+00:00",
+        "coletado_em": "2026-09-08T18:27:16+00:00",
         "detalhe": ""
       },
       "indicadores": {
