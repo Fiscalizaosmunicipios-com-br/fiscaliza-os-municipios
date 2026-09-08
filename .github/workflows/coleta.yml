@@ -1,0 +1,33 @@
+name: Coleta diária de dados públicos
+
+on:
+  schedule:
+    - cron: "0 9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: pip install requests
+
+      - name: Rodar coletor
+        run: python coletor.py
+
+      - name: Publicar dados atualizados
+        run: |
+          git config user.name "coletor-bot"
+          git config user.email "actions@github.com"
+          git add -A docs
+          git diff --cached --quiet || git commit -m "Coleta automática $(date -u +%Y-%m-%d)"
+          git push
