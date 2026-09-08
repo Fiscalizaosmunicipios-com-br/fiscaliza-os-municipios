@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-09-08T18:52:52+00:00",
+  "gerado_em": "2026-09-08T19:17:49+00:00",
   "metodologia": {
     "pesos": {
       "gestao_fiscal": 0.4,
@@ -15,12 +15,21 @@
       "ibge": "3544905",
       "vereadores": 9,
       "sapl": "https://sapl.salesoliveira.sp.leg.br",
+      "vereadores_estimado": false,
+      "diario_oficial": {
+        "valor": 0,
+        "fonte": "Querido Diário",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=3544905",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:10:28+00:00",
+        "detalhe": "Cidade ainda não coberta pelo Querido Diário"
+      },
       "populacao": {
         "valor": 11708,
         "fonte": "IBGE — Estimativas de População (2026)",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3544905]",
         "status": "verificada",
-        "coletado_em": "2026-09-08T18:52:17+00:00",
+        "coletado_em": "2026-09-08T19:09:15+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -29,7 +38,7 @@
           "fonte": "SICONFI/DCA",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-C&id_ente=3544905",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:52:25+00:00",
+          "coletado_em": "2026-09-08T19:09:25+00:00",
           "detalhe": "DCA — contas anuais, exercício 2025"
         },
         "despesa": {
@@ -37,7 +46,7 @@
           "fonte": "SICONFI/DCA",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-D&id_ente=3544905",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:52:25+00:00",
+          "coletado_em": "2026-09-08T19:09:25+00:00",
           "detalhe": "DCA — contas anuais, exercício 2025"
         },
         "base29a": {
@@ -45,7 +54,7 @@
           "fonte": "SICONFI/DCA (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-C&id_ente=3544905",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:52:25+00:00",
+          "coletado_em": "2026-09-08T19:09:25+00:00",
           "detalhe": "Aproximação: impostos + transferências correntes"
         }
       },
@@ -54,30 +63,40 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3544905",
         "status": "verificada",
-        "coletado_em": "2026-09-08T18:52:26+00:00",
+        "coletado_em": "2026-09-08T19:09:26+00:00",
         "detalhe": "Exercício 2025"
       },
       "proposicoes": {
         "valor": [
           {
             "tipo": "Indicação",
-            "qtd": 106,
+            "qtd": 198,
             "peso": "baixa"
           },
           {
             "tipo": "Projeto de Lei",
-            "qtd": 47,
+            "qtd": 93,
             "peso": "alta"
           },
           {
             "tipo": "Pedido de Informação",
-            "qtd": 10,
+            "qtd": 24,
             "peso": "media"
           },
           {
-            "tipo": "Veto a Projeto de Lei",
-            "qtd": 7,
+            "tipo": "Emenda Impositiva",
+            "qtd": 14,
             "peso": "alta"
+          },
+          {
+            "tipo": "Projeto de Emenda",
+            "qtd": 10,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Moção",
+            "qtd": 7,
+            "peso": "baixa"
           },
           {
             "tipo": "Projeto de Decreto Legislativo",
@@ -85,23 +104,13 @@
             "peso": "media"
           },
           {
-            "tipo": "Moção",
-            "qtd": 5,
-            "peso": "baixa"
-          },
-          {
             "tipo": "Projeto de Lei Complementar",
             "qtd": 3,
             "peso": "alta"
           },
           {
-            "tipo": "Requerimento",
-            "qtd": 2,
-            "peso": "media"
-          },
-          {
             "tipo": "Projeto de Resolução",
-            "qtd": 1,
+            "qtd": 2,
             "peso": "media"
           },
           {
@@ -111,17 +120,17 @@
           }
         ],
         "fonte": "SAPL — Câmara Municipal",
-        "url": "https://sapl.salesoliveira.sp.leg.br/materia/pesquisar-materia?ano=2026",
+        "url": "https://sapl.salesoliveira.sp.leg.br/materia/pesquisar-materia?ano=2025",
         "status": "verificada",
-        "coletado_em": "2026-09-08T18:52:45+00:00",
-        "detalhe": "Ano 2026"
+        "coletado_em": "2026-09-08T19:10:21+00:00",
+        "detalhe": "Ano 2025"
       },
       "producao_vereadores": {
         "valor": [],
         "fonte": "SAPL (autoria indisponível no momento)",
         "url": "https://sapl.salesoliveira.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-09-08T18:52:50+00:00",
+        "coletado_em": "2026-09-08T19:10:27+00:00",
         "detalhe": ""
       },
       "indicadores": {
@@ -131,7 +140,7 @@
         "uso_limite": 0.015243964305146128,
         "custo_por_habitante": 109.68376153057739,
         "custo_por_vereador": 142686.38666666666,
-        "indice_propositivo": 0.30851063829787234
+        "indice_propositivo": 0.33798882681564246
       },
       "nota": {
         "final": 93.5,
@@ -148,12 +157,21 @@
       "ibge": "3511706",
       "vereadores": 9,
       "sapl": null,
+      "vereadores_estimado": false,
+      "diario_oficial": {
+        "valor": 0,
+        "fonte": "Querido Diário",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=3511706",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:06:29+00:00",
+        "detalhe": "Cidade ainda não coberta pelo Querido Diário"
+      },
       "populacao": {
         "valor": 15827,
         "fonte": "IBGE — Estimativas de População (2026)",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3511706]",
         "status": "verificada",
-        "coletado_em": "2026-09-08T18:49:59+00:00",
+        "coletado_em": "2026-09-08T19:05:57+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -162,7 +180,7 @@
           "fonte": "SICONFI/DCA",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-C&id_ente=3511706",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:50:07+00:00",
+          "coletado_em": "2026-09-08T19:05:58+00:00",
           "detalhe": "DCA — contas anuais, exercício 2025"
         },
         "despesa": {
@@ -170,7 +188,7 @@
           "fonte": "SICONFI/DCA",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-D&id_ente=3511706",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:50:07+00:00",
+          "coletado_em": "2026-09-08T19:05:58+00:00",
           "detalhe": "DCA — contas anuais, exercício 2025"
         },
         "base29a": {
@@ -178,7 +196,7 @@
           "fonte": "SICONFI/DCA (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-C&id_ente=3511706",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:50:07+00:00",
+          "coletado_em": "2026-09-08T19:05:58+00:00",
           "detalhe": "Aproximação: impostos + transferências correntes"
         }
       },
@@ -187,7 +205,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3511706",
         "status": "verificada",
-        "coletado_em": "2026-09-08T18:50:08+00:00",
+        "coletado_em": "2026-09-08T19:05:58+00:00",
         "detalhe": "Exercício 2025"
       },
       "proposicoes": {
@@ -221,7 +239,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.charqueada.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-09-08T18:50:08+00:00",
+        "coletado_em": "2026-09-08T19:05:58+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -229,7 +247,7 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.charqueada.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-09-08T18:50:08+00:00",
+        "coletado_em": "2026-09-08T19:05:58+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "indicadores": {
@@ -251,17 +269,144 @@
       }
     },
     {
+      "nome": "Curitiba",
+      "uf": "PR",
+      "ibge": "4106902",
+      "vereadores": 41,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 9138,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=4106902",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:14:03+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
+      },
+      "populacao": {
+        "valor": 1832183,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[4106902]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:13:58+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 7593514910.89,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=4106902",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:14:01+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 6110743056.2,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=4106902",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:14:01+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 6365374303.08,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=4106902",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:14:01+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 147920975.87,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=4106902",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:14:02+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.curitiba.pr.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:14:02+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.curitiba.pr.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:14:02+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": 1482771854.6900005,
+        "margem_fiscal": 0.19526818240173993,
+        "limite_art29a": 0.045,
+        "uso_limite": 0.023238378267626116,
+        "custo_por_habitante": 80.73482608997027,
+        "custo_por_vereador": 3607828.6797560975,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 66.7,
+        "fiscal": 100.0,
+        "custo_legislativo": 48.4,
+        "producao_legislativa": 40.7,
+        "selo": "ATENÇÃO",
+        "confianca": 0.71
+      }
+    },
+    {
       "nome": "São Pedro",
       "uf": "SP",
       "ibge": "3550407",
       "vereadores": 11,
       "sapl": null,
+      "vereadores_estimado": false,
+      "diario_oficial": {
+        "valor": 0,
+        "fonte": "Querido Diário",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=3550407",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:06:33+00:00",
+        "detalhe": "Cidade ainda não coberta pelo Querido Diário"
+      },
       "populacao": {
         "valor": 40054,
         "fonte": "IBGE — Estimativas de População (2026)",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3550407]",
         "status": "verificada",
-        "coletado_em": "2026-09-08T18:50:10+00:00",
+        "coletado_em": "2026-09-08T19:06:32+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -270,7 +415,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3550407",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:50:13+00:00",
+          "coletado_em": "2026-09-08T19:06:32+00:00",
           "detalhe": "RREO Anexo 01, 3º bimestre 2026"
         },
         "despesa": {
@@ -278,7 +423,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3550407",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:50:13+00:00",
+          "coletado_em": "2026-09-08T19:06:32+00:00",
           "detalhe": "RREO Anexo 01, 3º bimestre 2026"
         },
         "base29a": {
@@ -286,7 +431,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3550407",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:50:13+00:00",
+          "coletado_em": "2026-09-08T19:06:32+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -295,7 +440,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3550407",
         "status": "verificada",
-        "coletado_em": "2026-09-08T18:50:14+00:00",
+        "coletado_em": "2026-09-08T19:06:32+00:00",
         "detalhe": "Exercício 2025"
       },
       "proposicoes": {
@@ -329,7 +474,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.saopedro.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-09-08T18:50:14+00:00",
+        "coletado_em": "2026-09-08T19:06:32+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -337,7 +482,7 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.saopedro.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-09-08T18:50:14+00:00",
+        "coletado_em": "2026-09-08T19:06:32+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "indicadores": {
@@ -359,17 +504,379 @@
       }
     },
     {
+      "nome": "Ilha Comprida",
+      "uf": "SP",
+      "ibge": "3520426",
+      "vereadores": 9,
+      "sapl": "https://sapl.ilhacomprida.sp.leg.br",
+      "vereadores_estimado": false,
+      "diario_oficial": {
+        "valor": 0,
+        "fonte": "Querido Diário",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=3520426",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:09:12+00:00",
+        "detalhe": "Cidade ainda não coberta pelo Querido Diário"
+      },
+      "populacao": {
+        "valor": 14237,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3520426]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:07:19+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 85309454.7,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3520426",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:07:22+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 74676109.65,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3520426",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:07:22+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 82585745.88,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3520426",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:07:22+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 3533451.9,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3520426",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:07:23+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "SAPL (indisponível no momento)",
+        "url": "https://sapl.ilhacomprida.sp.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:09:08+00:00",
+        "detalhe": ""
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "SAPL (autoria indisponível no momento)",
+        "url": "https://sapl.ilhacomprida.sp.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:09:11+00:00",
+        "detalhe": ""
+      },
+      "indicadores": {
+        "resultado_fiscal": 10633345.049999997,
+        "margem_fiscal": 0.12464439126229694,
+        "limite_art29a": 0.07,
+        "uso_limite": 0.042785251405663034,
+        "custo_por_habitante": 248.187953922877,
+        "custo_por_vereador": 392605.76666666666,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 63.8,
+        "fiscal": 99.9,
+        "custo_legislativo": 38.9,
+        "producao_legislativa": 40.7,
+        "selo": "ATENÇÃO",
+        "confianca": 0.71
+      }
+    },
+    {
+      "nome": "Vitória",
+      "uf": "ES",
+      "ibge": "3205309",
+      "vereadores": 23,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 3743,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=3205309",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:11:47+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
+      },
+      "populacao": {
+        "valor": 343935,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3205309]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:11:42+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 1933928703.58,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3205309",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:11:45+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 1545138662.84,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3205309",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:11:45+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 1580498359.51,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3205309",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:11:45+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 53655698.89,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3205309",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:11:46+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.vitoria.es.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:11:46+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.vitoria.es.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:11:46+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": 388790040.74,
+        "margem_fiscal": 0.2010363877532247,
+        "limite_art29a": 0.05,
+        "uso_limite": 0.033948595116944515,
+        "custo_por_habitante": 156.00534662072775,
+        "custo_por_vereador": 2332856.473478261,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 61.9,
+        "fiscal": 100.0,
+        "custo_legislativo": 32.1,
+        "producao_legislativa": 40.7,
+        "selo": "ATENÇÃO",
+        "confianca": 0.71
+      }
+    },
+    {
+      "nome": "Belo Horizonte",
+      "uf": "MG",
+      "ibge": "3106200",
+      "vereadores": 43,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 4052,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=3106200",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:13:39+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
+      },
+      "populacao": {
+        "valor": 2415451,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3106200]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:13:33+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 11230141210.09,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3106200",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:13:36+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 9898123610.85,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3106200",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:13:36+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 9852955833.43,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3106200",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:13:36+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 287025675.82,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3106200",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:13:37+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.belohorizonte.mg.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:13:37+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.belohorizonte.mg.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:13:37+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": 1332017599.2399998,
+        "margem_fiscal": 0.11861093946380794,
+        "limite_art29a": 0.045,
+        "uso_limite": 0.02913092077873254,
+        "custo_por_habitante": 118.82902026164058,
+        "custo_por_vereador": 6675015.716744185,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 61.8,
+        "fiscal": 97.4,
+        "custo_legislativo": 35.3,
+        "producao_legislativa": 40.7,
+        "selo": "ATENÇÃO",
+        "confianca": 0.71
+      }
+    },
+    {
       "nome": "Piracicaba",
       "uf": "SP",
       "ibge": "3538709",
       "vereadores": 23,
       "sapl": null,
+      "vereadores_estimado": false,
+      "diario_oficial": {
+        "valor": 0,
+        "fonte": "Querido Diário",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=3538709",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:07:10+00:00",
+        "detalhe": "Cidade ainda não coberta pelo Querido Diário"
+      },
       "populacao": {
         "valor": 442635,
         "fonte": "IBGE — Estimativas de População (2026)",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3538709]",
         "status": "verificada",
-        "coletado_em": "2026-09-08T18:50:24+00:00",
+        "coletado_em": "2026-09-08T19:06:40+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -378,7 +885,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3538709",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:50:26+00:00",
+          "coletado_em": "2026-09-08T19:06:40+00:00",
           "detalhe": "RREO Anexo 01, 3º bimestre 2026"
         },
         "despesa": {
@@ -386,7 +893,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3538709",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:50:26+00:00",
+          "coletado_em": "2026-09-08T19:06:40+00:00",
           "detalhe": "RREO Anexo 01, 3º bimestre 2026"
         },
         "base29a": {
@@ -394,7 +901,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3538709",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:50:26+00:00",
+          "coletado_em": "2026-09-08T19:06:40+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -403,7 +910,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3538709",
         "status": "verificada",
-        "coletado_em": "2026-09-08T18:50:28+00:00",
+        "coletado_em": "2026-09-08T19:06:40+00:00",
         "detalhe": "Exercício 2025"
       },
       "proposicoes": {
@@ -437,7 +944,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.piracicaba.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-09-08T18:50:28+00:00",
+        "coletado_em": "2026-09-08T19:06:40+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -445,7 +952,7 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.piracicaba.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-09-08T18:50:28+00:00",
+        "coletado_em": "2026-09-08T19:06:40+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "indicadores": {
@@ -467,17 +974,1206 @@
       }
     },
     {
+      "nome": "São Luís",
+      "uf": "MA",
+      "ibge": "2111300",
+      "vereadores": 33,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 9716,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=2111300",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:12:03+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
+      },
+      "populacao": {
+        "valor": 1090229,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[2111300]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:11:57+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 3142757195.78,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2111300",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:12:00+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 2663172622.98,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2111300",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:12:00+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 2638985197.33,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2111300",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:12:00+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 172032582.1,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=2111300",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:12:01+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.saoluis.ma.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:12:01+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.saoluis.ma.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:12:01+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": 479584572.8000002,
+        "margem_fiscal": 0.15259994422858117,
+        "limite_art29a": 0.045,
+        "uso_limite": 0.06518891514588805,
+        "custo_por_habitante": 157.79490556571142,
+        "custo_por_vereador": 5213108.548484848,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 52.2,
+        "fiscal": 100.0,
+        "custo_legislativo": 0.0,
+        "producao_legislativa": 40.7,
+        "selo": "ATENÇÃO",
+        "confianca": 0.71
+      }
+    },
+    {
+      "nome": "Natal",
+      "uf": "RN",
+      "ibge": "2408102",
+      "vereadores": 29,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 5574,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=2408102",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:15:44+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
+      },
+      "populacao": {
+        "valor": 783196,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[2408102]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:15:39+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 2338172418.06,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2408102",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:15:42+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 1937009080.92,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2408102",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:15:42+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 2050645932.69,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2408102",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:15:42+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 114955570.04,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=2408102",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:15:43+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.natal.rn.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:15:43+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.natal.rn.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:15:43+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": 401163337.13999987,
+        "margem_fiscal": 0.17157132384311002,
+        "limite_art29a": 0.045,
+        "uso_limite": 0.05605822448793165,
+        "custo_por_habitante": 146.77752445109527,
+        "custo_por_vereador": 3963985.1737931035,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 52.2,
+        "fiscal": 100.0,
+        "custo_legislativo": 0.0,
+        "producao_legislativa": 40.7,
+        "selo": "ATENÇÃO",
+        "confianca": 0.71
+      }
+    },
+    {
+      "nome": "Boa Vista",
+      "uf": "RR",
+      "ibge": "1400100",
+      "vereadores": 25,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 3932,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=1400100",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:17:16+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
+      },
+      "populacao": {
+        "valor": 500965,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[1400100]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:17:12+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 1586482961.25,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1400100",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:17:15+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 1336808681.48,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1400100",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:17:15+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 1339500768.36,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1400100",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:17:15+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 78531090.52,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=1400100",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:17:16+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.boavista.rr.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:17:16+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.boavista.rr.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:17:16+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": 249674279.76999998,
+        "margem_fiscal": 0.15737596045360616,
+        "limite_art29a": 0.045,
+        "uso_limite": 0.05862713361198628,
+        "custo_por_habitante": 156.759634944557,
+        "custo_por_vereador": 3141243.6207999997,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 52.2,
+        "fiscal": 100.0,
+        "custo_legislativo": 0.0,
+        "producao_legislativa": 40.7,
+        "selo": "ATENÇÃO",
+        "confianca": 0.71
+      }
+    },
+    {
+      "nome": "Florianópolis",
+      "uf": "SC",
+      "ibge": "4205407",
+      "vereadores": 25,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 4250,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=4205407",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:17:24+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
+      },
+      "populacao": {
+        "valor": 598370,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[4205407]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:17:20+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 2231765472.12,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=4205407",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:17:23+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 1969685200.43,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=4205407",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:17:23+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 1987851311.0100002,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=4205407",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:17:23+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 93652631.26,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=4205407",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:17:24+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.florianopolis.sc.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:17:24+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.florianopolis.sc.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:17:24+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": 262080271.68999982,
+        "margem_fiscal": 0.1174318157369127,
+        "limite_art29a": 0.045,
+        "uso_limite": 0.04711249314337116,
+        "custo_por_habitante": 156.5129121780838,
+        "custo_por_vereador": 3746105.2504000003,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 51.0,
+        "fiscal": 97.0,
+        "custo_legislativo": 0.0,
+        "producao_legislativa": 40.7,
+        "selo": "ATENÇÃO",
+        "confianca": 0.71
+      }
+    },
+    {
+      "nome": "João Pessoa",
+      "uf": "PB",
+      "ibge": "2507507",
+      "vereadores": 31,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 4219,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=2507507",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:13:56+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
+      },
+      "populacao": {
+        "valor": 906093,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[2507507]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:13:51+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 2574499083.29,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2507507",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:13:54+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 2287124817.67,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2507507",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:13:54+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 2249001013.56,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2507507",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:13:54+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 135249387.37,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=2507507",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:13:55+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.joaopessoa.pb.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:13:55+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.joaopessoa.pb.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:13:55+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": 287374265.6199999,
+        "margem_fiscal": 0.11162337073072832,
+        "limite_art29a": 0.045,
+        "uso_limite": 0.0601375395362363,
+        "custo_por_habitante": 149.26656244999134,
+        "custo_por_vereador": 4362883.463548387,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 50.1,
+        "fiscal": 94.6,
+        "custo_legislativo": 0.0,
+        "producao_legislativa": 40.7,
+        "selo": "ATENÇÃO",
+        "confianca": 0.71
+      }
+    },
+    {
+      "nome": "Rio Branco",
+      "uf": "AC",
+      "ibge": "1200401",
+      "vereadores": 23,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 0,
+        "fonte": "Querido Diário",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=1200401",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:10:36+00:00",
+        "detalhe": "Cidade ainda não coberta pelo Querido Diário"
+      },
+      "populacao": {
+        "valor": 390058,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[1200401]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:10:31+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 1069658943.67,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1200401",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:10:34+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 951190086.65,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1200401",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:10:34+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 860031749.97,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1200401",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:10:34+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 60813116.31,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=1200401",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:10:35+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.riobranco.ac.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:10:35+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.riobranco.ac.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:10:35+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": 118468857.01999998,
+        "margem_fiscal": 0.11075386011688297,
+        "limite_art29a": 0.05,
+        "uso_limite": 0.07071031541814743,
+        "custo_por_habitante": 155.9078811612632,
+        "custo_por_vereador": 2644048.5352173913,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 49.9,
+        "fiscal": 94.3,
+        "custo_legislativo": 0.0,
+        "producao_legislativa": 40.7,
+        "selo": "ATENÇÃO",
+        "confianca": 0.71
+      }
+    },
+    {
+      "nome": "Porto Alegre",
+      "uf": "RS",
+      "ibge": "4314902",
+      "vereadores": 37,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 10000,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=4314902",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:17:01+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
+      },
+      "populacao": {
+        "valor": 1388791,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[4314902]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:16:56+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 5860573703.58,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=4314902",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:16:59+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 5512711921.64,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=4314902",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:16:59+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 4589736556.940001,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=4314902",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:16:59+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 155675343.95,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=4314902",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:17:00+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.portoalegre.rs.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:17:00+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.portoalegre.rs.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:17:00+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": 347861781.9399996,
+        "margem_fiscal": 0.05935626775370202,
+        "limite_art29a": 0.045,
+        "uso_limite": 0.0339181436709277,
+        "custo_por_habitante": 112.09414803955382,
+        "custo_por_vereador": 4207441.728378378,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 49.1,
+        "fiscal": 73.7,
+        "custo_legislativo": 24.6,
+        "producao_legislativa": 40.7,
+        "selo": "ATENÇÃO",
+        "confianca": 0.71
+      }
+    },
+    {
+      "nome": "Belém",
+      "uf": "PA",
+      "ibge": "1501402",
+      "vereadores": 37,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 4744,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=1501402",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:13:48+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
+      },
+      "populacao": {
+        "valor": 1396157,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[1501402]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:13:42+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 2931490948.96,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1501402",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:13:45+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 2655727563.65,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1501402",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:13:45+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 2523468725.37,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1501402",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:13:45+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 177131125.87,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=1501402",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:13:47+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.belem.pa.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:13:47+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.belem.pa.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:13:47+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": 275763385.30999994,
+        "margem_fiscal": 0.09406932858101849,
+        "limite_art29a": 0.045,
+        "uso_limite": 0.07019350946940245,
+        "custo_por_habitante": 126.87049226555466,
+        "custo_por_vereador": 4787327.726216217,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 47.3,
+        "fiscal": 87.6,
+        "custo_legislativo": 0.0,
+        "producao_legislativa": 40.7,
+        "selo": "ATENÇÃO",
+        "confianca": 0.71
+      }
+    },
+    {
+      "nome": "São Paulo",
+      "uf": "SP",
+      "ibge": "3550308",
+      "vereadores": 55,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 20,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=3550308",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:17:32+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
+      },
+      "populacao": {
+        "valor": 11911337,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3550308]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:17:27+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 58026294846.86,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3550308",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:17:30+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 57424799333.21,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3550308",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:17:30+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 52756978483.19,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3550308",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:17:30+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 1321502981.57,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3550308",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:17:31+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.saopaulo.sp.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:17:31+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.saopaulo.sp.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:17:31+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": 601495513.6500015,
+        "margem_fiscal": 0.010365912819997165,
+        "limite_art29a": 0.045,
+        "uso_limite": 0.025048875420169703,
+        "custo_por_habitante": 110.94497465481834,
+        "custo_por_vereador": 24027326.937636364,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 47.2,
+        "fiscal": 54.1,
+        "custo_legislativo": 44.3,
+        "producao_legislativa": 40.7,
+        "selo": "ATENÇÃO",
+        "confianca": 0.71
+      }
+    },
+    {
+      "nome": "Porto Velho",
+      "uf": "RO",
+      "ibge": "1100205",
+      "vereadores": 25,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 0,
+        "fonte": "Querido Diário",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=1100205",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:17:09+00:00",
+        "detalhe": "Cidade ainda não coberta pelo Querido Diário"
+      },
+      "populacao": {
+        "valor": 520379,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[1100205]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:17:04+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 1475210839.25,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1100205",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:17:07+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 1340275800.39,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1100205",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:17:07+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 1258751670.26,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1100205",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:17:07+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 62658520.42,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=1100205",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:17:08+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.portovelho.ro.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:17:08+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.portovelho.ro.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:17:08+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": 134935038.8599999,
+        "margem_fiscal": 0.09146830762753962,
+        "limite_art29a": 0.045,
+        "uso_limite": 0.04977830170986597,
+        "custo_por_habitante": 120.40939472961054,
+        "custo_por_vereador": 2506340.8168,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 46.9,
+        "fiscal": 86.6,
+        "custo_legislativo": 0.0,
+        "producao_legislativa": 40.7,
+        "selo": "ATENÇÃO",
+        "confianca": 0.71
+      }
+    },
+    {
       "nome": "Jacareí",
       "uf": "SP",
       "ibge": "3524402",
       "vereadores": 13,
       "sapl": null,
+      "vereadores_estimado": false,
+      "diario_oficial": {
+        "valor": 0,
+        "fonte": "Querido Diário",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=3524402",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:07:16+00:00",
+        "detalhe": "Cidade ainda não coberta pelo Querido Diário"
+      },
       "populacao": {
         "valor": 251848,
         "fonte": "IBGE — Estimativas de População (2026)",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3524402]",
         "status": "verificada",
-        "coletado_em": "2026-09-08T18:50:30+00:00",
+        "coletado_em": "2026-09-08T19:07:13+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -486,7 +2182,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3524402",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:50:33+00:00",
+          "coletado_em": "2026-09-08T19:07:15+00:00",
           "detalhe": "RREO Anexo 01, 3º bimestre 2026"
         },
         "despesa": {
@@ -494,7 +2190,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3524402",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:50:33+00:00",
+          "coletado_em": "2026-09-08T19:07:15+00:00",
           "detalhe": "RREO Anexo 01, 3º bimestre 2026"
         },
         "base29a": {
@@ -502,7 +2198,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3524402",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:50:33+00:00",
+          "coletado_em": "2026-09-08T19:07:15+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -511,7 +2207,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3524402",
         "status": "verificada",
-        "coletado_em": "2026-09-08T18:50:34+00:00",
+        "coletado_em": "2026-09-08T19:07:15+00:00",
         "detalhe": "Exercício 2025"
       },
       "proposicoes": {
@@ -545,7 +2241,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.jacarei.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-09-08T18:50:34+00:00",
+        "coletado_em": "2026-09-08T19:07:15+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -553,7 +2249,7 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.jacarei.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-09-08T18:50:34+00:00",
+        "coletado_em": "2026-09-08T19:07:15+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "indicadores": {
@@ -575,17 +2271,1324 @@
       }
     },
     {
+      "nome": "Teresina",
+      "uf": "PI",
+      "ibge": "2211001",
+      "vereadores": 31,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 3363,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=2211001",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:15:28+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
+      },
+      "populacao": {
+        "valor": 908012,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[2211001]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:15:23+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 2662761199.92,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2211001",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:15:26+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 2492919037.55,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2211001",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:15:26+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 2268101782.22,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2211001",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:15:26+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 133947885.77,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=2211001",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:15:27+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.teresina.pi.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:15:27+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.teresina.pi.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:15:27+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": 169842162.3699999,
+        "margem_fiscal": 0.06378422607896743,
+        "limite_art29a": 0.045,
+        "uso_limite": 0.05905726401700231,
+        "custo_por_habitante": 147.51774841081394,
+        "custo_por_vereador": 4320899.540967742,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 42.4,
+        "fiscal": 75.5,
+        "custo_legislativo": 0.0,
+        "producao_legislativa": 40.7,
+        "selo": "CRÍTICO",
+        "confianca": 0.71
+      }
+    },
+    {
+      "nome": "Macapá",
+      "uf": "AP",
+      "ibge": "1600303",
+      "vereadores": 25,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 1019,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=1600303",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:10:55+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
+      },
+      "populacao": {
+        "valor": 491987,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[1600303]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:10:48+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 631735885.68,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=2&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1600303",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:10:52+00:00",
+          "detalhe": "RREO Anexo 01, 2º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 599897989.65,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=2&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1600303",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:10:52+00:00",
+          "detalhe": "RREO Anexo 01, 2º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 519785903.44,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=2&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1600303",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:10:52+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 60397131.69,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=1600303",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:10:53+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.macapa.ap.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:10:53+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.macapa.ap.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:10:53+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": 31837896.02999997,
+        "margem_fiscal": 0.05039747899666914,
+        "limite_art29a": 0.05,
+        "uso_limite": 0.11619617094323868,
+        "custo_por_habitante": 122.76164144581055,
+        "custo_por_vereador": 2415885.2676,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 40.3,
+        "fiscal": 70.2,
+        "custo_legislativo": 0.0,
+        "producao_legislativa": 40.7,
+        "selo": "CRÍTICO",
+        "confianca": 0.71
+      }
+    },
+    {
+      "nome": "Campo Grande",
+      "uf": "MS",
+      "ibge": "5002704",
+      "vereadores": 31,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 9906,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=5002704",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:13:30+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
+      },
+      "populacao": {
+        "valor": 970843,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[5002704]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:13:25+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 3097911259.48,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=5002704",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:13:28+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 3040232078.5,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=5002704",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:13:28+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 2761693704.51,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=5002704",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:13:28+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 122775172.74,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=5002704",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:13:29+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.campogrande.ms.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:13:29+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.campogrande.ms.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:13:29+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": 57679180.98000002,
+        "margem_fiscal": 0.018618732477728158,
+        "limite_art29a": 0.045,
+        "uso_limite": 0.04445647703056326,
+        "custo_por_habitante": 126.46243804611044,
+        "custo_por_vereador": 3960489.443225806,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 35.6,
+        "fiscal": 57.4,
+        "custo_legislativo": 1.2,
+        "producao_legislativa": 40.7,
+        "selo": "CRÍTICO",
+        "confianca": 0.71
+      }
+    },
+    {
+      "nome": "Goiânia",
+      "uf": "GO",
+      "ibge": "5208707",
+      "vereadores": 39,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 9037,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=5208707",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:11:55+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
+      },
+      "populacao": {
+        "valor": 1511709,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[5208707]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:11:50+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 5111061780.99,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=5208707",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:11:53+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 5150304013.41,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=5208707",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:11:53+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 4338907605.84,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=5208707",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:11:53+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 242556342.81,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=5208707",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:11:54+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.goiania.go.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:11:54+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.goiania.go.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:11:54+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": -39242232.42000008,
+        "margem_fiscal": -0.0076779021857957186,
+        "limite_art29a": 0.045,
+        "uso_limite": 0.05590262915106296,
+        "custo_por_habitante": 160.451742240074,
+        "custo_por_vereador": 6219393.405384615,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 31.0,
+        "fiscal": 46.9,
+        "custo_legislativo": 0.0,
+        "producao_legislativa": 40.7,
+        "selo": "CRÍTICO",
+        "confianca": 0.71
+      }
+    },
+    {
+      "nome": "Salvador",
+      "uf": "BA",
+      "ibge": "2927408",
+      "vereadores": 43,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 6326,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=2927408",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:11:13+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
+      },
+      "populacao": {
+        "valor": 2559945,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[2927408]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:11:08+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 6071844363.1,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2927408",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:11:10+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 6154610608.18,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2927408",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:11:10+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 5400212692.559999,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2927408",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:11:10+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 283855234.93,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=2927408",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:11:12+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.salvador.ba.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:11:12+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.salvador.ba.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:11:12+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": -82766245.07999992,
+        "margem_fiscal": -0.013631153918072982,
+        "limite_art29a": 0.045,
+        "uso_limite": 0.05256371389243132,
+        "custo_por_habitante": 110.88333340364734,
+        "custo_por_vereador": 6601284.533255815,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 30.0,
+        "fiscal": 44.5,
+        "custo_legislativo": 0.0,
+        "producao_legislativa": 40.7,
+        "selo": "CRÍTICO",
+        "confianca": 0.71
+      }
+    },
+    {
+      "nome": "Palmas",
+      "uf": "TO",
+      "ibge": "1721000",
+      "vereadores": 23,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 4276,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=1721000",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:17:47+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
+      },
+      "populacao": {
+        "valor": 333154,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[1721000]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:17:43+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 1343224215.96,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1721000",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:17:45+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 1362129344.97,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1721000",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:17:45+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 1188902310.94,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1721000",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:17:45+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 68139007.67,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=1721000",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:17:47+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.palmas.to.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:17:47+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.palmas.to.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:17:47+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": -18905129.00999999,
+        "margem_fiscal": -0.014074440279866847,
+        "limite_art29a": 0.05,
+        "uso_limite": 0.057312536987270395,
+        "custo_por_habitante": 204.52705856750933,
+        "custo_por_vereador": 2962565.5508695655,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 30.0,
+        "fiscal": 44.4,
+        "custo_legislativo": 0.0,
+        "producao_legislativa": 40.7,
+        "selo": "CRÍTICO",
+        "confianca": 0.71
+      }
+    },
+    {
+      "nome": "Aracaju",
+      "uf": "SE",
+      "ibge": "2800308",
+      "vereadores": 27,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 4582,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=2800308",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:17:40+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
+      },
+      "populacao": {
+        "valor": 623328,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[2800308]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:17:35+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 1900027350.83,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2800308",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:17:38+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 1958195055.14,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2800308",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:17:38+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 1654497270.31,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2800308",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:17:38+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 96231646.14,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=2800308",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:17:39+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.aracaju.se.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:17:39+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.aracaju.se.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:17:39+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": -58167704.31000018,
+        "margem_fiscal": -0.03061414051991959,
+        "limite_art29a": 0.045,
+        "uso_limite": 0.058163677793175966,
+        "custo_por_habitante": 154.38364094024334,
+        "custo_por_vereador": 3564135.0422222223,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 27.3,
+        "fiscal": 37.8,
+        "custo_legislativo": 0.0,
+        "producao_legislativa": 40.7,
+        "selo": "CRÍTICO",
+        "confianca": 0.71
+      }
+    },
+    {
+      "nome": "Fortaleza",
+      "uf": "CE",
+      "ibge": "2304400",
+      "vereadores": 43,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 0,
+        "fonte": "Querido Diário",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=2304400",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:11:39+00:00",
+        "detalhe": "Cidade ainda não coberta pelo Querido Diário"
+      },
+      "populacao": {
+        "valor": 2582360,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[2304400]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:11:15+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 7145064797.98,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2304400",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:11:18+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 7388312296.8,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2304400",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:11:18+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 6299886878.45,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2304400",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:11:18+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 300955200.79,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=2304400",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:11:19+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.fortaleza.ce.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:11:19+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.fortaleza.ce.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:11:19+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": -243247498.82000065,
+        "margem_fiscal": -0.03404412775777342,
+        "limite_art29a": 0.045,
+        "uso_limite": 0.04777152456808016,
+        "custo_por_habitante": 116.54269768351432,
+        "custo_por_vereador": 6998958.157906977,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 26.8,
+        "fiscal": 36.4,
+        "custo_legislativo": 0.0,
+        "producao_legislativa": 40.7,
+        "selo": "CRÍTICO",
+        "confianca": 0.71
+      }
+    },
+    {
+      "nome": "Recife",
+      "uf": "PE",
+      "ibge": "2611606",
+      "vereadores": 39,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 1845,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=2611606",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:15:20+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
+      },
+      "populacao": {
+        "valor": 1588983,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[2611606]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:15:15+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 4644544150.45,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2611606",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:15:18+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 4836810692.73,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2611606",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:15:18+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 4069692458.1800003,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2611606",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:15:18+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 237276639.07,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=2611606",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:15:19+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.recife.pe.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:15:19+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.recife.pe.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:15:19+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": -192266542.27999973,
+        "margem_fiscal": -0.04139621371913785,
+        "limite_art29a": 0.045,
+        "uso_limite": 0.05830333409913535,
+        "custo_por_habitante": 149.32610296648863,
+        "custo_por_vereador": 6084016.386410256,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 25.6,
+        "fiscal": 33.4,
+        "custo_legislativo": 0.0,
+        "producao_legislativa": 40.7,
+        "selo": "CRÍTICO",
+        "confianca": 0.71
+      }
+    },
+    {
+      "nome": "Maceió",
+      "uf": "AL",
+      "ibge": "2704302",
+      "vereadores": 31,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 3780,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=2704302",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:10:46+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
+      },
+      "populacao": {
+        "valor": 995134,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[2704302]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:10:39+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 2574947097.45,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2704302",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:10:42+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 2682537517.99,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2704302",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:10:42+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 2150397630.92,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2704302",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:10:42+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 116790678.04,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=2704302",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:10:43+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.maceio.al.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:10:43+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.maceio.al.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:10:43+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": -107590420.53999996,
+        "margem_fiscal": -0.04178354601791548,
+        "limite_art29a": 0.045,
+        "uso_limite": 0.05431120103589107,
+        "custo_por_habitante": 117.36176036594067,
+        "custo_por_vereador": 3767441.2270967746,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 25.5,
+        "fiscal": 33.3,
+        "custo_legislativo": 0.0,
+        "producao_legislativa": 40.7,
+        "selo": "CRÍTICO",
+        "confianca": 0.71
+      }
+    },
+    {
+      "nome": "Cuiabá",
+      "uf": "MT",
+      "ibge": "5103403",
+      "vereadores": 27,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 10000,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=5103403",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:13:21+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
+      },
+      "populacao": {
+        "valor": 698917,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[5103403]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:13:15+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 2292342762.69,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=5103403",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:13:18+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 2395738095.47,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=5103403",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:13:18+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 2013502931.5499997,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=5103403",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:13:18+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 90620705.37,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=5103403",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:13:19+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.cuiaba.mt.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:13:19+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.cuiaba.mt.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:13:19+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": -103395332.77999973,
+        "margem_fiscal": -0.04510465645140616,
+        "limite_art29a": 0.045,
+        "uso_limite": 0.04500649288860978,
+        "custo_por_habitante": 129.65875113926262,
+        "custo_por_vereador": 3356322.421111111,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 25.0,
+        "fiscal": 32.0,
+        "custo_legislativo": 0.0,
+        "producao_legislativa": 40.7,
+        "selo": "CRÍTICO",
+        "confianca": 0.71
+      }
+    },
+    {
       "nome": "Rio das Pedras",
       "uf": "SP",
       "ibge": "3544004",
       "vereadores": 10,
       "sapl": null,
+      "vereadores_estimado": false,
+      "diario_oficial": {
+        "valor": 0,
+        "fonte": "Querido Diário",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=3544004",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:06:37+00:00",
+        "detalhe": "Cidade ainda não coberta pelo Querido Diário"
+      },
       "populacao": {
         "valor": 32386,
         "fonte": "IBGE — Estimativas de População (2026)",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3544004]",
         "status": "verificada",
-        "coletado_em": "2026-09-08T18:50:17+00:00",
+        "coletado_em": "2026-09-08T19:06:36+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -594,7 +3597,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3544004",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:50:20+00:00",
+          "coletado_em": "2026-09-08T19:06:36+00:00",
           "detalhe": "RREO Anexo 01, 3º bimestre 2026"
         },
         "despesa": {
@@ -602,7 +3605,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3544004",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:50:20+00:00",
+          "coletado_em": "2026-09-08T19:06:36+00:00",
           "detalhe": "RREO Anexo 01, 3º bimestre 2026"
         },
         "base29a": {
@@ -610,7 +3613,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3544004",
           "status": "verificada",
-          "coletado_em": "2026-09-08T18:50:20+00:00",
+          "coletado_em": "2026-09-08T19:06:36+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -619,7 +3622,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3544004",
         "status": "verificada",
-        "coletado_em": "2026-09-08T18:50:21+00:00",
+        "coletado_em": "2026-09-08T19:06:36+00:00",
         "detalhe": "Exercício 2025"
       },
       "proposicoes": {
@@ -653,7 +3656,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.riodaspedras.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-09-08T18:50:21+00:00",
+        "coletado_em": "2026-09-08T19:06:36+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -661,7 +3664,7 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.riodaspedras.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-09-08T18:50:21+00:00",
+        "coletado_em": "2026-09-08T19:06:36+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "indicadores": {
@@ -677,6 +3680,242 @@
         "final": 21.3,
         "fiscal": 22.6,
         "custo_legislativo": 0.1,
+        "producao_legislativa": 40.7,
+        "selo": "CRÍTICO",
+        "confianca": 0.71
+      }
+    },
+    {
+      "nome": "Rio de Janeiro",
+      "uf": "RJ",
+      "ibge": "3304557",
+      "vereadores": 51,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 6376,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=3304557",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:15:36+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
+      },
+      "populacao": {
+        "valor": 6731133,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3304557]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:15:31+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 20808754471.07,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3304557",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:15:34+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 22979454425.31,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3304557",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:15:34+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 18585170023.98,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3304557",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:15:34+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 1125034339.72,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3304557",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:15:36+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.riodejaneiro.rj.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:15:36+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.riodejaneiro.rj.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:15:36+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": -2170699954.2400017,
+        "margem_fiscal": -0.10431666908549875,
+        "limite_art29a": 0.045,
+        "uso_limite": 0.06053398157070369,
+        "custo_por_habitante": 167.13892590147898,
+        "custo_por_vereador": 22059496.857254904,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 15.5,
+        "fiscal": 8.3,
+        "custo_legislativo": 0.0,
+        "producao_legislativa": 40.7,
+        "selo": "CRÍTICO",
+        "confianca": 0.71
+      }
+    },
+    {
+      "nome": "Manaus",
+      "uf": "AM",
+      "ibge": "1302603",
+      "vereadores": 41,
+      "sapl": null,
+      "capital": true,
+      "vereadores_estimado": true,
+      "diario_oficial": {
+        "valor": 7517,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=1302603",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:11:05+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
+      },
+      "populacao": {
+        "valor": 2327101,
+        "fonte": "IBGE — Estimativas de População (2026)",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[1302603]",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:10:58+00:00",
+        "detalhe": ""
+      },
+      "financas": {
+        "receita": {
+          "valor": 5132724968.59,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1302603",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:11:01+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "despesa": {
+          "valor": 5678635513.98,
+          "fonte": "SICONFI/RREO",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1302603",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:11:01+00:00",
+          "detalhe": "RREO Anexo 01, 3º bimestre 2026"
+        },
+        "base29a": {
+          "valor": 4559210161.92,
+          "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=3&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1302603",
+          "status": "verificada",
+          "coletado_em": "2026-09-08T19:11:01+00:00",
+          "detalhe": "Aproximação: tributária + transferências correntes"
+        }
+      },
+      "custo_camara": {
+        "valor": 303343369.03,
+        "fonte": "SICONFI/DCA — função 01 Legislativa",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=1302603",
+        "status": "verificada",
+        "coletado_em": "2026-09-08T19:11:03+00:00",
+        "detalhe": "Exercício 2025"
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+        "url": "https://www.manaus.am.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:11:03+00:00",
+        "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
+      },
+      "producao_vereadores": {
+        "valor": [],
+        "fonte": "Portal da Câmara — sem API de autoria",
+        "url": "https://www.manaus.am.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T19:11:03+00:00",
+        "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
+      },
+      "indicadores": {
+        "resultado_fiscal": -545910545.3899994,
+        "margem_fiscal": -0.10635881500191999,
+        "limite_art29a": 0.045,
+        "uso_limite": 0.06653419304151013,
+        "custo_por_habitante": 130.35247246681598,
+        "custo_por_vereador": 7398618.756829267,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 15.2,
+        "fiscal": 7.5,
+        "custo_legislativo": 0.0,
         "producao_legislativa": 40.7,
         "selo": "CRÍTICO",
         "confianca": 0.71
