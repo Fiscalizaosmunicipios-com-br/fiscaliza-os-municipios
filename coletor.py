@@ -21,6 +21,7 @@ metadados de verificação (fonte, URL, status verificada/demo).
 
 import json
 import sys
+import time
 import unicodedata
 from datetime import datetime, timezone
 
@@ -87,16 +88,19 @@ def coletar_populacao(c):
     # agregado 6579 / variável 9324) — endpoint atual do IBGE
     url_v3 = ("https://servicodados.ibge.gov.br/api/v3/agregados/6579/"
               f"periodos/-1/variaveis/9324?localidades=N6[{c['ibge']}]")
-    try:
-        r = requests.get(url_v3, timeout=TIMEOUT, headers=UA)
-        r.raise_for_status()
-        serie = r.json()[0]["resultados"][0]["series"][0]["serie"]
-        ano, valor = sorted(serie.items())[-1]
-        pop = int(valor)
-        return bloco(pop, f"IBGE — Estimativas de População ({ano})",
-                     url_v3, "verificada")
-    except Exception as e:
-        print(f"[{c['nome']}] IBGE agregados falhou: {e}", file=sys.stderr)
+    for tentativa in range(3):
+        try:
+            r = requests.get(url_v3, timeout=TIMEOUT, headers=UA)
+            r.raise_for_status()
+            serie = r.json()[0]["resultados"][0]["series"][0]["serie"]
+            ano, valor = sorted(serie.items())[-1]
+            pop = int(valor)
+            return bloco(pop, f"IBGE — Estimativas de População ({ano})",
+                         url_v3, "verificada")
+        except Exception as e:
+            print(f"[{c['nome']}] IBGE agregados tentativa {tentativa+1}: {e}",
+                  file=sys.stderr)
+            time.sleep(3 * (tentativa + 1))
     # 2ª opção: API de projeções (antiga)
     url = IBGE_POP.format(ibge=c["ibge"])
     try:
@@ -557,6 +561,7 @@ if __name__ == "__main__":
     for c in CIDADES:
         print(f"→ Coletando {c['nome']}-{c['uf']}…")
         cidades.append(avaliar(c))
+        time.sleep(2)
 
     ranking = sorted(cidades, key=lambda x: -x["nota"]["final"])
     saida = {
