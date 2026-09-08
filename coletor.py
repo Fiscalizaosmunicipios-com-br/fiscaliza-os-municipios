@@ -33,11 +33,16 @@ import requests
 # vereadores: conferir na Lei Orgânica de cada município.
 # ─────────────────────────────────────────────
 CIDADES = [
-    {"nome": "Charqueada", "uf": "SP", "ibge": "3511706", "vereadores": 9},
-    {"nome": "São Pedro", "uf": "SP", "ibge": "3550407", "vereadores": 11},
-    {"nome": "Rio das Pedras", "uf": "SP", "ibge": "3544004", "vereadores": 10},
-    {"nome": "Piracicaba", "uf": "SP", "ibge": "3538709", "vereadores": 23},
-    {"nome": "Jacareí", "uf": "SP", "ibge": "3524402", "vereadores": 13},
+    {"nome": "Charqueada", "uf": "SP", "ibge": "3511706", "vereadores": 9, "sapl": None},
+    {"nome": "São Pedro", "uf": "SP", "ibge": "3550407", "vereadores": 11, "sapl": None},
+    {"nome": "Rio das Pedras", "uf": "SP", "ibge": "3544004", "vereadores": 10, "sapl": None},
+    {"nome": "Piracicaba", "uf": "SP", "ibge": "3538709", "vereadores": 23, "sapl": None},
+    {"nome": "Jacareí", "uf": "SP", "ibge": "3524402", "vereadores": 13, "sapl": None},
+    # Câmaras com SAPL (Interlegis): produção por vereador com nome real e link
+    {"nome": "Ilha Comprida", "uf": "SP", "ibge": None, "vereadores": 9,
+     "sapl": "https://sapl.ilhacomprida.sp.leg.br"},
+    {"nome": "Sales Oliveira", "uf": "SP", "ibge": "3544905", "vereadores": 9,
+     "sapl": "https://sapl.salesoliveira.sp.leg.br"},
 ]
 
 IBGE_POP = "https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/{ibge}"
@@ -54,6 +59,11 @@ DEMO_FIN = {
     "3538709": (425000, 2600e6, 2510e6, 1300e6, 68e6),
     "3524402": (242093, 1512e6, 1448e6, 690e6, 32.8e6),
 }
+
+def demo_fin(c):
+    return DEMO_FIN.get(c["ibge"], (12000, 90_000_000, 87_000_000,
+                                    40_000_000, 2_500_000))
+
 
 DEMO_PROPS = [
     {"tipo": "Projetos de Lei", "qtd": 40, "peso": "alta"},
@@ -80,6 +90,50 @@ def slug(nome):
 
 def clamp(v, lo=0.0, hi=100.0):
     return max(lo, min(hi, v))
+
+
+UF_COD = {"SP": 35, "RJ": 33, "MG": 31, "PR": 41, "RS": 43, "SC": 42,
+          "BA": 29, "GO": 52, "ES": 32, "MT": 51, "MS": 50, "DF": 53}
+_cache_municipios = {}
+
+
+def resolver_ibge(c):
+    """Preenche c['ibge'] pelo nome, via API de localidades do IBGE."""
+    if c.get("ibge"):
+        return True
+    uf = c["uf"]
+    if uf not in _cache_municipios:
+        url = (f"https://servicodados.ibge.gov.br/api/v1/localidades/"
+               f"estados/{UF_COD.get(uf, uf)}/municipios")
+        try:
+            r = requests.get(url, timeout=TIMEOUT, headers=UA)
+            r.raise_for_status()
+            _cache_municipios[uf] = {slug(m["nome"]): str(m["id"])
+                                     for m in r.json()}
+        except Exception as e:
+            print(f"[{c['nome']}] localidades IBGE falhou: {e}", file=sys.stderr)
+            return False
+    cod = _cache_municipios[uf].get(slug(c["nome"]))
+    if cod:
+        c["ibge"] = cod
+        print(f"[{c['nome']}] código IBGE resolvido: {cod}")
+        return True
+    print(f"[{c['nome']}] não encontrado na base do IBGE", file=sys.stderr)
+    return False
+
+
+def _sapl_paginar(url_base, max_paginas=20):
+    """Percorre a paginação da API do SAPL (Django REST: next/results)."""
+    itens, url = [], url_base
+    for _ in range(max_paginas):
+        r = requests.get(url, timeout=TIMEOUT, headers=UA)
+        r.raise_for_status()
+        j = r.json()
+        itens.extend(j.get("results", []))
+        url = j.get("next") or (j.get("pagination") or {}).get("links", {}).get("next")
+        if not url:
+            break
+    return itens
 
 
 # ───────────── Coletas ─────────────
@@ -110,7 +164,7 @@ def coletar_populacao(c):
         return bloco(pop, "IBGE — Projeções de População", url, "verificada")
     except Exception as e:
         print(f"[{c['nome']}] IBGE projeções falhou: {e}", file=sys.stderr)
-        return bloco(DEMO_FIN[c["ibge"]][0], "IBGE", url, "demo", str(e))
+        return bloco(demo_fin(c)[0], "IBGE", url, "demo", str(e))
 
 
 def coletar_rreo(c):
@@ -142,7 +196,7 @@ def coletar_rreo(c):
             base = (trib + transf) or None
             if rc:
                 det = f"RREO Anexo 01, {periodo}º bimestre {ano}"
-                d = DEMO_FIN[c["ibge"]]
+                d = demo_fin(c)
                 return {
                     "receita": bloco(rc, "SICONFI/RREO", url, "verificada", det),
                     "despesa": bloco(dt or d[2], "SICONFI/RREO", url,
@@ -158,7 +212,7 @@ def coletar_rreo(c):
     dca = coletar_dca_anual(c)
     if dca:
         return dca
-    d = DEMO_FIN[c["ibge"]]
+    d = demo_fin(c)
     print(f"[{c['nome']}] SICONFI/RREO e DCA indisponíveis — demo", file=sys.stderr)
     return {"receita": bloco(d[1], "SICONFI", SICONFI, "demo"),
             "despesa": bloco(d[2], "SICONFI", SICONFI, "demo"),
@@ -204,7 +258,7 @@ def coletar_dca_anual(c):
             if rec:
                 det = f"DCA — contas anuais, exercício {ano}"
                 print(f"[{c['nome']}] plano B DCA {ano}: receita={rec:,.0f}")
-                d = DEMO_FIN[c["ibge"]]
+                d = demo_fin(c)
                 base = ((trib or 0) + (transf or 0)) or None
                 return {
                     "receita": bloco(rec, "SICONFI/DCA", url_c, "verificada", det),
@@ -238,7 +292,7 @@ def coletar_custo_camara(c):
         except Exception:
             pass
     print(f"[{c['nome']}] SICONFI/DCA indisponível — demo", file=sys.stderr)
-    return bloco(DEMO_FIN[c["ibge"]][4], "SICONFI/DCA", SICONFI, "demo")
+    return bloco(demo_fin(c)[4], "SICONFI/DCA", SICONFI, "demo")
 
 
 PESOS_TIPO = {
@@ -259,29 +313,79 @@ def classificar_peso(nome_tipo):
 
 
 def coletar_proposicoes(c):
+    sapl = c.get("sapl")
+    if not sapl:
+        return bloco(DEMO_PROPS, "Portal da Câmara — sistema próprio, conector em desenvolvimento",
+                     f"https://www.{slug(c['nome'])}.{c['uf'].lower()}.leg.br", "demo",
+                     "Esta Câmara não usa o SAPL; a integração é a próxima etapa.")
     ano = datetime.now().year
-    candidatos = [f"https://sapl.{slug(c['nome'])}.{c['uf'].lower()}.leg.br"]
-    for base in candidatos:
-        url = f"{base}/api/materia/materialegislativa/?ano={ano}&page_size=1000"
+    for a in (ano, ano - 1):
         try:
-            r = requests.get(url, timeout=TIMEOUT, headers=UA)
-            r.raise_for_status()
-            res = r.json().get("results", [])
-            if not res:
+            tipos = {t["id"]: t.get("descricao") or t.get("sigla", "")
+                     for t in _sapl_paginar(f"{sapl}/api/materia/tipomaterialegislativa/?page_size=100", 5)}
+            mats = _sapl_paginar(f"{sapl}/api/materia/materialegislativa/?ano={a}&page_size=100")
+            if not mats:
                 continue
             cont = {}
-            for m in res:
-                tipo = m.get("tipo", {}).get("descricao") if isinstance(m.get("tipo"), dict) \
-                    else str(m.get("tipo"))
-                cont[tipo] = cont.get(tipo, 0) + 1
+            for m in mats:
+                t = m.get("tipo")
+                nome_tipo = tipos.get(t, str(t)) if not isinstance(t, dict) else t.get("descricao", "")
+                cont[nome_tipo] = cont.get(nome_tipo, 0) + 1
             props = [{"tipo": t, "qtd": q, "peso": classificar_peso(t)}
                      for t, q in sorted(cont.items(), key=lambda x: -x[1])]
-            return bloco(props, "SAPL — Câmara Municipal", url, "verificada", f"Ano {ano}")
-        except Exception:
-            pass
-    print(f"[{c['nome']}] SAPL indisponível — demo", file=sys.stderr)
-    return bloco(DEMO_PROPS, "SAPL (portal ainda não integrado)",
-                 candidatos[0], "demo")
+            print(f"[{c['nome']}] SAPL: {len(mats)} matérias de {a}")
+            return bloco(props, "SAPL — Câmara Municipal",
+                         f"{sapl}/materia/pesquisar-materia?ano={a}", "verificada",
+                         f"Ano {a}")
+        except Exception as e:
+            print(f"[{c['nome']}] SAPL matérias {a} falhou: {e}", file=sys.stderr)
+    return bloco(DEMO_PROPS, "SAPL (indisponível no momento)", sapl, "demo")
+
+
+def coletar_producao_vereadores(c):
+    """Produção por vereador — só com SAPL: nome real + link verificável."""
+    sapl = c.get("sapl")
+    if not sapl:
+        return bloco([], "Portal da Câmara — sem API de autoria",
+                     f"https://www.{slug(c['nome'])}.{c['uf'].lower()}.leg.br", "demo",
+                     "Nomes de vereadores só são publicados com fonte oficial verificável.")
+    ano = datetime.now().year
+    for a in (ano, ano - 1):
+        try:
+            parls = _sapl_paginar(f"{sapl}/api/parlamentar/parlamentar/?page_size=100", 5)
+            nomes_parl = {p.get("nome_parlamentar") or p.get("nome_completo", "")
+                          for p in parls}
+            autores = {x["id"]: x.get("nome", "")
+                       for x in _sapl_paginar(f"{sapl}/api/base/autor/?page_size=100", 10)}
+            tipos = {t["id"]: t.get("descricao") or t.get("sigla", "")
+                     for t in _sapl_paginar(f"{sapl}/api/materia/tipomaterialegislativa/?page_size=100", 5)}
+            mats = _sapl_paginar(f"{sapl}/api/materia/materialegislativa/?ano={a}&page_size=100")
+            if not mats:
+                continue
+            agg = {}
+            for m in mats:
+                t = m.get("tipo")
+                nome_tipo = tipos.get(t, str(t)) if not isinstance(t, dict) else t.get("descricao", "")
+                peso = classificar_peso(nome_tipo)
+                for aid in (m.get("autores") or []):
+                    nome = autores.get(aid, "")
+                    if nome not in nomes_parl:
+                        continue  # Prefeito, comissões etc. ficam fora do ranking de vereadores
+                    v = agg.setdefault(aid, {"nome": nome, "alta": 0, "media": 0,
+                                             "baixa": 0, "total": 0})
+                    v[peso] += 1
+                    v["total"] += 1
+            if not agg:
+                continue
+            lista = sorted(agg.values(), key=lambda v: (-v["alta"], -v["total"]))
+            for aid, v in agg.items():
+                v["link"] = f"{sapl}/materia/pesquisar-materia?autoria__autor={aid}&ano={a}"
+            print(f"[{c['nome']}] SAPL autoria: {len(lista)} vereadores com produção em {a}")
+            return bloco(lista, "SAPL — autoria por parlamentar",
+                         f"{sapl}/parlamentar/", "verificada", f"Ano {a}")
+        except Exception as e:
+            print(f"[{c['nome']}] SAPL autoria {a} falhou: {e}", file=sys.stderr)
+    return bloco([], "SAPL (autoria indisponível no momento)", sapl, "demo")
 
 
 # ───────────── Nota da cidade ─────────────
@@ -300,6 +404,7 @@ def avaliar(c):
     fin = coletar_rreo(c)
     custo_b = coletar_custo_camara(c)
     props_b = coletar_proposicoes(c)
+    prod_b = coletar_producao_vereadores(c)
 
     pop = pop_b["valor"]
     rc, dt = fin["receita"]["valor"], fin["despesa"]["valor"]
@@ -325,7 +430,7 @@ def avaliar(c):
 
     nota = 0.4 * nota_fiscal + 0.3 * nota_custo + 0.3 * nota_prod
 
-    blocos = [pop_b, fin["receita"], fin["despesa"], fin["base29a"], custo_b, props_b]
+    blocos = [pop_b, fin["receita"], fin["despesa"], fin["base29a"], custo_b, props_b, prod_b]
     verificados = sum(1 for b in blocos if b["status"] == "verificada")
     confianca = verificados / len(blocos)
 
@@ -337,6 +442,7 @@ def avaliar(c):
         "financas": fin,
         "custo_camara": custo_b,
         "proposicoes": props_b,
+        "producao_vereadores": prod_b,
         "indicadores": {
             "resultado_fiscal": resultado,
             "margem_fiscal": margem,
@@ -438,6 +544,33 @@ def pagina_cidade(c, pos, total, gerado_em):
     prelim = ("" if n["confianca"] >= 1 else
               f'<div class="conf">nota preliminar — {n["confianca"]:.0%} das fontes verificadas</div>')
 
+    prod = c.get("producao_vereadores") or {}
+    if prod.get("status") == "verificada" and prod.get("valor"):
+        max_alta = max(v["alta"] for v in prod["valor"]) or 1
+        linhas_v = ""
+        for pos_v, v in enumerate(prod["valor"], 1):
+            largura = (v["alta"] / max_alta * 100) if max_alta else 0
+            linhas_v += (
+                f'<div class="ver"><div class="ver-topo">'
+                f'<span class="ver-nome">{pos_v}º · {v["nome"]}</span>'
+                f'<span class="ver-efic">{v["alta"]} de peso alto</span></div>'
+                f'<div class="ver-detalhe">{v["total"]} proposições no ano — '
+                f'{v["alta"]} peso alto · {v["media"]} médio · {v["baixa"]} baixo · '
+                f'<a href="{v["link"]}" target="_blank" rel="noreferrer">conferir no portal oficial</a></div>'
+                f'<div class="ver-barra"><div style="width:{largura:.0f}%"></div></div></div>'
+            )
+        vers_html = (
+            f'<h2 style="margin-top:26px">Produção por vereador {_selo_html("verificada")}</h2>'
+            f'<p class="sub">{prod.get("detalhe","")} · ordenado por proposições de peso alto '
+            f'(PLs, PLCs, emendas) · fonte: <a href="{prod["url"]}" target="_blank" rel="noreferrer">SAPL da Câmara</a></p>'
+            + linhas_v +
+            '<p class="legenda" style="margin-top:10px">Cada link abre a lista oficial de proposições do vereador no portal da Câmara — confira qualquer número na fonte. Homenagens, moções e indicações contam como peso baixo.</p>'
+        )
+    else:
+        vers_html = ('<div class="nota">Produção individual por vereador: esta Câmara usa sistema próprio, '
+                     'sem API pública de autoria — o conector está em desenvolvimento. '
+                     'Nomes de vereadores só são publicados com fonte oficial verificável.</div>')
+
     corpo = f"""<a class="voltar" href="../index.html">← voltar ao ranking</a>
 <header class="cabecalho">
   <div class="protocolo">RETRATO DO MUNICÍPIO · {pos}º DE {total} NO RANKING · ATUALIZADO EM {gerado_em[:10]}</div>
@@ -474,7 +607,7 @@ def pagina_cidade(c, pos, total, gerado_em):
   {props_html}
   <div class="barra"><div style="width:{min(ind['indice_propositivo']/0.30*100,100):.0f}%;background:{'#1E6B4F' if ok_prod else '#C22F2A'}"></div></div>
   <p class="legenda">Índice propositivo: {_pct(ind['indice_propositivo'])} das peças têm peso alto (PLs, emendas). Homenagens, moções e indicações não contam ponto.</p>
-  <div class="nota">Fase 2 — eficiência por vereador: quando o portal da Câmara expõe a autoria (SAPL), o sistema publica o ranking individual, cada número com link para a proposição oficial. Sem fonte verificável, nomes não são publicados.</div>
+  {vers_html}
 </section>
 
 <section class="fontes">
@@ -560,6 +693,9 @@ if __name__ == "__main__":
     cidades = []
     for c in CIDADES:
         print(f"→ Coletando {c['nome']}-{c['uf']}…")
+        if not resolver_ibge(c):
+            print(f"  (pulada: sem código IBGE)")
+            continue
         cidades.append(avaliar(c))
         time.sleep(2)
 
