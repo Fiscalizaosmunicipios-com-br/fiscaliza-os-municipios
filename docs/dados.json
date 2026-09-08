@@ -1,0 +1,508 @@
+{
+  "gerado_em": "2026-09-08T17:35:40+00:00",
+  "metodologia": {
+    "pesos": {
+      "gestao_fiscal": 0.4,
+      "custo_legislativo": 0.3,
+      "producao_legislativa": 0.3
+    },
+    "descricao": "Gestão fiscal: equilíbrio receita×despesa (Executivo). Custo do legislativo: fração consumida do teto do art. 29-A da CF. Produção legislativa: proporção de proposições de peso alto (PLs, emendas) sobre o total — homenagens e indicações não contam. Confiança: fração dos dados com fonte oficial verificada; notas com confiança < 1 são preliminares."
+  },
+  "cidades": [
+    {
+      "nome": "Jacareí",
+      "uf": "SP",
+      "ibge": "3524402",
+      "vereadores": 13,
+      "populacao": {
+        "valor": 242093,
+        "fonte": "IBGE",
+        "url": "https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/3524402",
+        "status": "demo",
+        "coletado_em": "2026-09-08T17:35:39+00:00",
+        "detalhe": "403 Client Error: Forbidden for url: https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/3524402"
+      },
+      "financas": {
+        "receita": {
+          "valor": 1512000000.0,
+          "fonte": "SICONFI",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
+          "status": "demo",
+          "coletado_em": "2026-09-08T17:35:39+00:00",
+          "detalhe": ""
+        },
+        "despesa": {
+          "valor": 1448000000.0,
+          "fonte": "SICONFI",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
+          "status": "demo",
+          "coletado_em": "2026-09-08T17:35:39+00:00",
+          "detalhe": ""
+        },
+        "base29a": {
+          "valor": 690000000.0,
+          "fonte": "SICONFI",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
+          "status": "demo",
+          "coletado_em": "2026-09-08T17:35:39+00:00",
+          "detalhe": ""
+        }
+      },
+      "custo_camara": {
+        "valor": 32800000.0,
+        "fonte": "SICONFI/DCA",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
+        "status": "demo",
+        "coletado_em": "2026-09-08T17:35:39+00:00",
+        "detalhe": ""
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "SAPL (portal ainda não integrado)",
+        "url": "https://sapl.jacarei.sp.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T17:35:40+00:00",
+        "detalhe": ""
+      },
+      "indicadores": {
+        "resultado_fiscal": 64000000.0,
+        "margem_fiscal": 0.042328042328042326,
+        "limite_art29a": 0.06,
+        "uso_limite": 0.04753623188405797,
+        "custo_por_habitante": 135.48512348560263,
+        "custo_por_vereador": 2523076.923076923,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 45.2,
+        "fiscal": 66.9,
+        "custo_legislativo": 20.8,
+        "producao_legislativa": 40.7,
+        "selo": "ATENÇÃO",
+        "confianca": 0.0
+      }
+    },
+    {
+      "nome": "Charqueada",
+      "uf": "SP",
+      "ibge": "3511706",
+      "vereadores": 9,
+      "populacao": {
+        "valor": 15814,
+        "fonte": "IBGE",
+        "url": "https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/3511706",
+        "status": "demo",
+        "coletado_em": "2026-09-08T17:35:36+00:00",
+        "detalhe": "403 Client Error: Forbidden for url: https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/3511706"
+      },
+      "financas": {
+        "receita": {
+          "valor": 118000000.0,
+          "fonte": "SICONFI",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
+          "status": "demo",
+          "coletado_em": "2026-09-08T17:35:37+00:00",
+          "detalhe": ""
+        },
+        "despesa": {
+          "valor": 112500000.0,
+          "fonte": "SICONFI",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
+          "status": "demo",
+          "coletado_em": "2026-09-08T17:35:37+00:00",
+          "detalhe": ""
+        },
+        "base29a": {
+          "valor": 52000000.0,
+          "fonte": "SICONFI",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
+          "status": "demo",
+          "coletado_em": "2026-09-08T17:35:37+00:00",
+          "detalhe": ""
+        }
+      },
+      "custo_camara": {
+        "valor": 3350000.0,
+        "fonte": "SICONFI/DCA",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
+        "status": "demo",
+        "coletado_em": "2026-09-08T17:35:37+00:00",
+        "detalhe": ""
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "SAPL (portal ainda não integrado)",
+        "url": "https://sapl.charqueada.sp.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T17:35:37+00:00",
+        "detalhe": ""
+      },
+      "indicadores": {
+        "resultado_fiscal": 5500000.0,
+        "margem_fiscal": 0.046610169491525424,
+        "limite_art29a": 0.07,
+        "uso_limite": 0.06442307692307692,
+        "custo_por_habitante": 211.83761224231694,
+        "custo_por_vereador": 372222.22222222225,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 42.1,
+        "fiscal": 68.6,
+        "custo_legislativo": 8.0,
+        "producao_legislativa": 40.7,
+        "selo": "CRÍTICO",
+        "confianca": 0.0
+      }
+    },
+    {
+      "nome": "São Pedro",
+      "uf": "SP",
+      "ibge": "3550407",
+      "vereadores": 11,
+      "populacao": {
+        "valor": 37000,
+        "fonte": "IBGE",
+        "url": "https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/3550407",
+        "status": "demo",
+        "coletado_em": "2026-09-08T17:35:37+00:00",
+        "detalhe": "403 Client Error: Forbidden for url: https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/3550407"
+      },
+      "financas": {
+        "receita": {
+          "valor": 260000000.0,
+          "fonte": "SICONFI",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
+          "status": "demo",
+          "coletado_em": "2026-09-08T17:35:38+00:00",
+          "detalhe": ""
+        },
+        "despesa": {
+          "valor": 252000000.0,
+          "fonte": "SICONFI",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
+          "status": "demo",
+          "coletado_em": "2026-09-08T17:35:38+00:00",
+          "detalhe": ""
+        },
+        "base29a": {
+          "valor": 120000000.0,
+          "fonte": "SICONFI",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
+          "status": "demo",
+          "coletado_em": "2026-09-08T17:35:38+00:00",
+          "detalhe": ""
+        }
+      },
+      "custo_camara": {
+        "valor": 8200000.0,
+        "fonte": "SICONFI/DCA",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
+        "status": "demo",
+        "coletado_em": "2026-09-08T17:35:38+00:00",
+        "detalhe": ""
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "SAPL (portal ainda não integrado)",
+        "url": "https://sapl.saopedro.sp.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T17:35:38+00:00",
+        "detalhe": ""
+      },
+      "indicadores": {
+        "resultado_fiscal": 8000000.0,
+        "margem_fiscal": 0.03076923076923077,
+        "limite_art29a": 0.07,
+        "uso_limite": 0.06833333333333333,
+        "custo_por_habitante": 221.6216216216216,
+        "custo_por_vereador": 745454.5454545454,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 37.9,
+        "fiscal": 62.3,
+        "custo_legislativo": 2.4,
+        "producao_legislativa": 40.7,
+        "selo": "CRÍTICO",
+        "confianca": 0.0
+      }
+    },
+    {
+      "nome": "Piracicaba",
+      "uf": "SP",
+      "ibge": "3538709",
+      "vereadores": 23,
+      "populacao": {
+        "valor": 425000,
+        "fonte": "IBGE",
+        "url": "https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/3538709",
+        "status": "demo",
+        "coletado_em": "2026-09-08T17:35:38+00:00",
+        "detalhe": "403 Client Error: Forbidden for url: https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/3538709"
+      },
+      "financas": {
+        "receita": {
+          "valor": 2600000000.0,
+          "fonte": "SICONFI",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
+          "status": "demo",
+          "coletado_em": "2026-09-08T17:35:39+00:00",
+          "detalhe": ""
+        },
+        "despesa": {
+          "valor": 2510000000.0,
+          "fonte": "SICONFI",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
+          "status": "demo",
+          "coletado_em": "2026-09-08T17:35:39+00:00",
+          "detalhe": ""
+        },
+        "base29a": {
+          "valor": 1300000000.0,
+          "fonte": "SICONFI",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
+          "status": "demo",
+          "coletado_em": "2026-09-08T17:35:39+00:00",
+          "detalhe": ""
+        }
+      },
+      "custo_camara": {
+        "valor": 68000000.0,
+        "fonte": "SICONFI/DCA",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
+        "status": "demo",
+        "coletado_em": "2026-09-08T17:35:39+00:00",
+        "detalhe": ""
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "SAPL (portal ainda não integrado)",
+        "url": "https://sapl.piracicaba.sp.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T17:35:39+00:00",
+        "detalhe": ""
+      },
+      "indicadores": {
+        "resultado_fiscal": 90000000.0,
+        "margem_fiscal": 0.03461538461538462,
+        "limite_art29a": 0.05,
+        "uso_limite": 0.052307692307692305,
+        "custo_por_habitante": 160.0,
+        "custo_por_vereador": 2956521.7391304346,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 37.8,
+        "fiscal": 63.8,
+        "custo_legislativo": 0.0,
+        "producao_legislativa": 40.7,
+        "selo": "CRÍTICO",
+        "confianca": 0.0
+      }
+    },
+    {
+      "nome": "Rio das Pedras",
+      "uf": "SP",
+      "ibge": "3544004",
+      "vereadores": 10,
+      "populacao": {
+        "valor": 36000,
+        "fonte": "IBGE",
+        "url": "https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/3544004",
+        "status": "demo",
+        "coletado_em": "2026-09-08T17:35:38+00:00",
+        "detalhe": "403 Client Error: Forbidden for url: https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/3544004"
+      },
+      "financas": {
+        "receita": {
+          "valor": 240000000.0,
+          "fonte": "SICONFI",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
+          "status": "demo",
+          "coletado_em": "2026-09-08T17:35:38+00:00",
+          "detalhe": ""
+        },
+        "despesa": {
+          "valor": 236000000.0,
+          "fonte": "SICONFI",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
+          "status": "demo",
+          "coletado_em": "2026-09-08T17:35:38+00:00",
+          "detalhe": ""
+        },
+        "base29a": {
+          "valor": 112000000.0,
+          "fonte": "SICONFI",
+          "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
+          "status": "demo",
+          "coletado_em": "2026-09-08T17:35:38+00:00",
+          "detalhe": ""
+        }
+      },
+      "custo_camara": {
+        "valor": 7900000.0,
+        "fonte": "SICONFI/DCA",
+        "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
+        "status": "demo",
+        "coletado_em": "2026-09-08T17:35:38+00:00",
+        "detalhe": ""
+      },
+      "proposicoes": {
+        "valor": [
+          {
+            "tipo": "Projetos de Lei",
+            "qtd": 40,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Emendas e substitutivos",
+            "qtd": 15,
+            "peso": "alta"
+          },
+          {
+            "tipo": "Requerimentos",
+            "qtd": 60,
+            "peso": "media"
+          },
+          {
+            "tipo": "Indicações",
+            "qtd": 250,
+            "peso": "baixa"
+          },
+          {
+            "tipo": "Moções e homenagens",
+            "qtd": 85,
+            "peso": "baixa"
+          }
+        ],
+        "fonte": "SAPL (portal ainda não integrado)",
+        "url": "https://sapl.riodaspedras.sp.leg.br",
+        "status": "demo",
+        "coletado_em": "2026-09-08T17:35:38+00:00",
+        "detalhe": ""
+      },
+      "indicadores": {
+        "resultado_fiscal": 4000000.0,
+        "margem_fiscal": 0.016666666666666666,
+        "limite_art29a": 0.07,
+        "uso_limite": 0.07053571428571428,
+        "custo_por_habitante": 219.44444444444446,
+        "custo_por_vereador": 790000.0,
+        "indice_propositivo": 0.12222222222222222
+      },
+      "nota": {
+        "final": 34.9,
+        "fiscal": 56.7,
+        "custo_legislativo": 0.0,
+        "producao_legislativa": 40.7,
+        "selo": "CRÍTICO",
+        "confianca": 0.0
+      }
+    }
+  ]
+}
