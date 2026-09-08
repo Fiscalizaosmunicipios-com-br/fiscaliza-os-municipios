@@ -83,6 +83,21 @@ def clamp(v, lo=0.0, hi=100.0):
 
 # ───────────── Coletas ─────────────
 def coletar_populacao(c):
+    # 1ª opção: API de agregados (estimativas oficiais de população,
+    # agregado 6579 / variável 9324) — endpoint atual do IBGE
+    url_v3 = ("https://servicodados.ibge.gov.br/api/v3/agregados/6579/"
+              f"periodos/-1/variaveis/9324?localidades=N6[{c['ibge']}]")
+    try:
+        r = requests.get(url_v3, timeout=TIMEOUT, headers=UA)
+        r.raise_for_status()
+        serie = r.json()[0]["resultados"][0]["series"][0]["serie"]
+        ano, valor = sorted(serie.items())[-1]
+        pop = int(valor)
+        return bloco(pop, f"IBGE — Estimativas de População ({ano})",
+                     url_v3, "verificada")
+    except Exception as e:
+        print(f"[{c['nome']}] IBGE agregados falhou: {e}", file=sys.stderr)
+    # 2ª opção: API de projeções (antiga)
     url = IBGE_POP.format(ibge=c["ibge"])
     try:
         r = requests.get(url, timeout=TIMEOUT, headers=UA)
@@ -90,7 +105,7 @@ def coletar_populacao(c):
         pop = r.json()["projecao"]["populacao"]
         return bloco(pop, "IBGE — Projeções de População", url, "verificada")
     except Exception as e:
-        print(f"[{c['nome']}] IBGE falhou: {e}", file=sys.stderr)
+        print(f"[{c['nome']}] IBGE projeções falhou: {e}", file=sys.stderr)
         return bloco(DEMO_FIN[c["ibge"]][0], "IBGE", url, "demo", str(e))
 
 
@@ -135,11 +150,70 @@ def coletar_rreo(c):
                 }
         except Exception as e:
             pass
+    # Plano B: DCA anual (cidades pequenas atrasam a entrega do RREO)
+    dca = coletar_dca_anual(c)
+    if dca:
+        return dca
     d = DEMO_FIN[c["ibge"]]
-    print(f"[{c['nome']}] SICONFI/RREO indisponível — demo", file=sys.stderr)
+    print(f"[{c['nome']}] SICONFI/RREO e DCA indisponíveis — demo", file=sys.stderr)
     return {"receita": bloco(d[1], "SICONFI", SICONFI, "demo"),
             "despesa": bloco(d[2], "SICONFI", SICONFI, "demo"),
             "base29a": bloco(d[3], "SICONFI", SICONFI, "demo")}
+
+
+def coletar_dca_anual(c):
+    """Receita/despesa do último exercício encerrado via DCA (anexos I-C e I-D)."""
+    ano_atual = datetime.now().year
+    for ano in (ano_atual - 1, ano_atual - 2):
+        try:
+            rec = desp = trib = transf = None
+            url_c = (f"{SICONFI}/dca?an_exercicio={ano}"
+                     f"&no_anexo=DCA-Anexo%20I-C&id_ente={c['ibge']}")
+            r = requests.get(url_c, timeout=TIMEOUT, headers=UA)
+            r.raise_for_status()
+            for i in r.json().get("items", []):
+                conta = (i.get("conta") or "").lower()
+                col = (i.get("coluna") or "").lower()
+                if "realizad" not in col and "receitas brutas" not in col:
+                    continue
+                v = i.get("valor")
+                if v is None:
+                    continue
+                if "receitas correntes" in conta and "intra" not in conta:
+                    rec = max(rec or 0, v)
+                if conta.startswith("1.1") and "impostos" in conta:
+                    trib = max(trib or 0, v)
+                if "transferências correntes" in conta:
+                    transf = max(transf or 0, v)
+            url_d = (f"{SICONFI}/dca?an_exercicio={ano}"
+                     f"&no_anexo=DCA-Anexo%20I-D&id_ente={c['ibge']}")
+            r = requests.get(url_d, timeout=TIMEOUT, headers=UA)
+            r.raise_for_status()
+            for i in r.json().get("items", []):
+                conta = (i.get("conta") or "").lower()
+                col = (i.get("coluna") or "").lower()
+                if "liquidad" in col and ("despesas correntes" in conta or
+                                          "total" in conta):
+                    v = i.get("valor")
+                    if v is not None:
+                        desp = max(desp or 0, v)
+            if rec:
+                det = f"DCA — contas anuais, exercício {ano}"
+                print(f"[{c['nome']}] plano B DCA {ano}: receita={rec:,.0f}")
+                d = DEMO_FIN[c["ibge"]]
+                base = ((trib or 0) + (transf or 0)) or None
+                return {
+                    "receita": bloco(rec, "SICONFI/DCA", url_c, "verificada", det),
+                    "despesa": bloco(desp or d[2], "SICONFI/DCA", url_d,
+                                     "verificada" if desp else "demo", det),
+                    "base29a": bloco(base or d[3],
+                                     "SICONFI/DCA (base aprox. art. 29-A)", url_c,
+                                     "verificada" if base else "demo",
+                                     "Aproximação: impostos + transferências correntes"),
+                }
+        except Exception as e:
+            print(f"[{c['nome']}] DCA anual {ano} falhou: {e}", file=sys.stderr)
+    return None
 
 
 def coletar_custo_camara(c):
