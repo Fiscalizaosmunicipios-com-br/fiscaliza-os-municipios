@@ -45,6 +45,28 @@ CIDADES = [
      "sapl": "https://sapl.salesoliveira.sp.leg.br"},
 ]
 
+# Capitais (Brasília fica fora: o DF não tem Câmara de Vereadores e o
+# art. 29-A não se aplica à CLDF). vereadores=None → estimado pelo teto
+# constitucional (EC 58/2009) a partir da população.
+CAPITAIS = [
+    ("Rio Branco", "AC", "1200401"), ("Maceió", "AL", "2704302"),
+    ("Macapá", "AP", "1600303"), ("Manaus", "AM", "1302603"),
+    ("Salvador", "BA", "2927408"), ("Fortaleza", "CE", "2304400"),
+    ("Vitória", "ES", "3205309"), ("Goiânia", "GO", "5208707"),
+    ("São Luís", "MA", "2111300"), ("Cuiabá", "MT", "5103403"),
+    ("Campo Grande", "MS", "5002704"), ("Belo Horizonte", "MG", "3106200"),
+    ("Belém", "PA", "1501402"), ("João Pessoa", "PB", "2507507"),
+    ("Curitiba", "PR", "4106902"), ("Recife", "PE", "2611606"),
+    ("Teresina", "PI", "2211001"), ("Rio de Janeiro", "RJ", "3304557"),
+    ("Natal", "RN", "2408102"), ("Porto Alegre", "RS", "4314902"),
+    ("Porto Velho", "RO", "1100205"), ("Boa Vista", "RR", "1400100"),
+    ("Florianópolis", "SC", "4205407"), ("São Paulo", "SP", "3550308"),
+    ("Aracaju", "SE", "2800308"), ("Palmas", "TO", "1721000"),
+]
+for _n, _uf, _cod in CAPITAIS:
+    CIDADES.append({"nome": _n, "uf": _uf, "ibge": _cod,
+                    "vereadores": None, "sapl": None, "capital": True})
+
 IBGE_POP = "https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/{ibge}"
 SICONFI = "https://apidatalake.tesouro.gov.br/ords/siconfi/tt"
 TIMEOUT = 30
@@ -61,8 +83,8 @@ DEMO_FIN = {
 }
 
 def demo_fin(c):
-    return DEMO_FIN.get(c["ibge"], (12000, 90_000_000, 87_000_000,
-                                    40_000_000, 2_500_000))
+    return DEMO_FIN.get(c["ibge"], (500_000, 3_000_000_000, 2_950_000_000,
+                                    1_400_000_000, 60_000_000))
 
 
 DEMO_PROPS = [
@@ -105,13 +127,18 @@ def resolver_ibge(c):
     if uf not in _cache_municipios:
         url = (f"https://servicodados.ibge.gov.br/api/v1/localidades/"
                f"estados/{UF_COD.get(uf, uf)}/municipios")
-        try:
-            r = requests.get(url, timeout=TIMEOUT, headers=UA)
-            r.raise_for_status()
-            _cache_municipios[uf] = {slug(m["nome"]): str(m["id"])
-                                     for m in r.json()}
-        except Exception as e:
-            print(f"[{c['nome']}] localidades IBGE falhou: {e}", file=sys.stderr)
+        for tentativa in range(3):
+            try:
+                r = requests.get(url, timeout=TIMEOUT, headers=UA)
+                r.raise_for_status()
+                _cache_municipios[uf] = {slug(m["nome"]): str(m["id"])
+                                         for m in r.json()}
+                break
+            except Exception as e:
+                print(f"[{c['nome']}] localidades IBGE tentativa {tentativa+1}: {e}",
+                      file=sys.stderr)
+                time.sleep(4 * (tentativa + 1))
+        if uf not in _cache_municipios:
             return False
     cod = _cache_municipios[uf].get(slug(c["nome"]))
     if cod:
@@ -362,19 +389,46 @@ def coletar_producao_vereadores(c):
             mats = _sapl_paginar(f"{sapl}/api/materia/materialegislativa/?ano={a}&page_size=100")
             if not mats:
                 continue
-            agg = {}
-            for m in mats:
-                t = m.get("tipo")
-                nome_tipo = tipos.get(t, str(t)) if not isinstance(t, dict) else t.get("descricao", "")
-                peso = classificar_peso(nome_tipo)
-                for aid in (m.get("autores") or []):
-                    nome = autores.get(aid, "")
-                    if nome not in nomes_parl:
-                        continue  # Prefeito, comissões etc. ficam fora do ranking de vereadores
-                    v = agg.setdefault(aid, {"nome": nome, "alta": 0, "media": 0,
-                                             "baixa": 0, "total": 0})
-                    v[peso] += 1
-                    v["total"] += 1
+            def _norm(s):
+                s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode()
+                return " ".join(s.lower().split())
+
+            parl_norm = {_norm(x) for x in nomes_parl if x}
+
+            def eh_parlamentar(nome):
+                n = _norm(nome)
+                if not n:
+                    return False
+                if n in parl_norm:
+                    return True
+                # nome do cadastro de autores pode ser mais longo/curto
+                return any(p and (p in n or n in p) for p in parl_norm)
+
+            NAO_PARLAMENTAR = ("prefeit", "executivo", "comiss", "mesa",
+                               "camara municipal", "câmara municipal",
+                               "secretar", "poder", "procurador")
+
+            def monta_agg(filtro):
+                agg = {}
+                for m in mats:
+                    t = m.get("tipo")
+                    nome_tipo = tipos.get(t, str(t)) if not isinstance(t, dict) else t.get("descricao", "")
+                    peso = classificar_peso(nome_tipo)
+                    for aid in (m.get("autores") or []):
+                        nome = autores.get(aid, "")
+                        if not filtro(nome):
+                            continue
+                        v = agg.setdefault(aid, {"nome": nome, "alta": 0, "media": 0,
+                                                 "baixa": 0, "total": 0})
+                        v[peso] += 1
+                        v["total"] += 1
+                return agg
+
+            agg = monta_agg(eh_parlamentar)
+            if not agg:
+                # plano B: todos os autores, exceto órgãos (Prefeito, comissões…)
+                agg = monta_agg(lambda nome: nome and not any(
+                    x in _norm(nome) for x in NAO_PARLAMENTAR))
             if not agg:
                 continue
             lista = sorted(agg.values(), key=lambda v: (-v["alta"], -v["total"]))
@@ -388,7 +442,43 @@ def coletar_producao_vereadores(c):
     return bloco([], "SAPL (autoria indisponível no momento)", sapl, "demo")
 
 
+def coletar_diario_oficial(c):
+    """Querido Diário (Open Knowledge Brasil) — Diários Oficiais indexados."""
+    url = (f"https://queridodiario.ok.org.br/api/gazettes?"
+           f"territory_ids={c['ibge']}&size=1")
+    link = f"https://queridodiario.ok.org.br/pesquisa/?territory_ids={c['ibge']}"
+    try:
+        r = requests.get(url, timeout=TIMEOUT, headers=UA)
+        r.raise_for_status()
+        total = r.json().get("total_gazettes", 0)
+        if total:
+            return bloco(total, "Querido Diário — Open Knowledge Brasil",
+                         link, "verificada", "Edições do Diário Oficial indexadas")
+    except Exception as e:
+        print(f"[{c['nome']}] Querido Diário falhou: {e}", file=sys.stderr)
+    return bloco(0, "Querido Diário", link, "demo",
+                 "Cidade ainda não coberta pelo Querido Diário")
+
+
 # ───────────── Nota da cidade ─────────────
+# Tabela do art. 29, IV da CF (redação da EC 58/2009): teto de vereadores
+_TETO_VEREADORES = [
+    (15_000, 9), (30_000, 11), (50_000, 13), (80_000, 15), (120_000, 17),
+    (160_000, 19), (300_000, 21), (450_000, 23), (600_000, 25), (750_000, 27),
+    (900_000, 29), (1_050_000, 31), (1_200_000, 33), (1_350_000, 35),
+    (1_500_000, 37), (1_800_000, 39), (2_400_000, 41), (3_000_000, 43),
+    (4_000_000, 45), (5_000_000, 47), (6_000_000, 49), (7_000_000, 51),
+    (8_000_000, 53),
+]
+
+
+def vereadores_teto(pop):
+    for lim, n in _TETO_VEREADORES:
+        if pop <= lim:
+            return n
+    return 55
+
+
 def limite_art_29a(pop):
     if pop <= 100_000:
         return 0.07
@@ -407,6 +497,9 @@ def avaliar(c):
     prod_b = coletar_producao_vereadores(c)
 
     pop = pop_b["valor"]
+    n_ver = c.get("vereadores") or vereadores_teto(pop)
+    ver_estimado = c.get("vereadores") is None
+    dia_b = coletar_diario_oficial(c)
     rc, dt = fin["receita"]["valor"], fin["despesa"]["valor"]
     base, cc = fin["base29a"]["valor"], custo_b["valor"]
 
@@ -438,6 +531,9 @@ def avaliar(c):
 
     return {
         **c,
+        "vereadores": n_ver,
+        "vereadores_estimado": ver_estimado,
+        "diario_oficial": dia_b,
         "populacao": pop_b,
         "financas": fin,
         "custo_camara": custo_b,
@@ -449,7 +545,7 @@ def avaliar(c):
             "limite_art29a": limite,
             "uso_limite": uso,
             "custo_por_habitante": cc / pop,
-            "custo_por_vereador": cc / c["vereadores"],
+            "custo_por_vereador": cc / n_ver,
             "indice_propositivo": indice_prop,
         },
         "nota": {
@@ -571,11 +667,15 @@ def pagina_cidade(c, pos, total, gerado_em):
                      'sem API pública de autoria — o conector está em desenvolvimento. '
                      'Nomes de vereadores só são publicados com fonte oficial verificável.</div>')
 
+    dia = c.get("diario_oficial") or {}
+    diario_txt = (f" — {_num(dia['valor'])} edições indexadas"
+                  if dia.get("status") == "verificada" and dia.get("valor") else "")
+
     corpo = f"""<a class="voltar" href="../index.html">← voltar ao ranking</a>
 <header class="cabecalho">
   <div class="protocolo">RETRATO DO MUNICÍPIO · {pos}º DE {total} NO RANKING · ATUALIZADO EM {gerado_em[:10]}</div>
   <h1>{c['nome']} — {c['uf']}
-    <small>{_num(c['populacao']['valor'])} habitantes {_selo_html(c['populacao']['status'])} · {c['vereadores']} vereadores</small>
+    <small>{_num(c['populacao']['valor'])} habitantes {_selo_html(c['populacao']['status'])} · {'≈ ' if c.get('vereadores_estimado') else ''}{c['vereadores']} vereadores{' (teto do art. 29 da CF — confirmar na Lei Orgânica)' if c.get('vereadores_estimado') else ''}</small>
   </h1>
   <div class="carimbo" style="color:{cor}">{n['selo']}</div>
   <span class="nota-grande" style="color:{cor}">nota {n['final']}/100</span>
@@ -617,6 +717,9 @@ def pagina_cidade(c, pos, total, gerado_em):
     <li><a href="{cc['url']}" target="_blank" rel="noreferrer">SICONFI/DCA — custo da função Legislativa</a></li>
     <li><a href="{c['populacao']['url']}" target="_blank" rel="noreferrer">API IBGE — população</a></li>
     <li><a href="{c['proposicoes']['url']}" target="_blank" rel="noreferrer">Portal da Câmara — proposições</a></li>
+    <li><a href="{(c.get('diario_oficial') or {}).get('url','#')}" target="_blank" rel="noreferrer">Querido Diário — Diário Oficial do município</a>{diario_txt}</li>
+    <li><a href="https://divulgacandcontas.tse.jus.br" target="_blank" rel="noreferrer">TSE / DivulgaCandContas — bens e campanhas dos eleitos</a></li>
+    <li><a href="https://radardatransparencia.atricon.org.br" target="_blank" rel="noreferrer">Radar da Transparência Pública (Atricon) — portal auditado da cidade</a></li>
   </ul>
   <div class="nota">Números com "✓ fonte oficial" foram coletados automaticamente na data indicada; os links abrem exatamente a consulta usada — qualquer pessoa pode conferir.</div>
 </section>"""
@@ -644,7 +747,7 @@ def pagina_index(dados):
                          ("Produção legislativa", n["producao_legislativa"])]
         )
         itens.append(f"""<a class="cidade" href="cidades/{s}.html">
-  <div class="topo"><span class="pos">{i}º</span><span class="nome">{c['nome']} — {c['uf']}</span>
+  <div class="topo"><span class="pos">{i}º</span><span class="nome">{c['nome']} — {c['uf']}{' · capital' if c.get('capital') else ''}</span>
   <span class="selo-cidade" style="color:{cor}">{n['selo']}</span>
   <span class="nota-rank" style="color:{cor}">{str(n['final']).replace('.', ',')}</span></div>
   <div class="pilares">{pil}</div>{prelim}</a>""")
