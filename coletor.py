@@ -389,7 +389,7 @@ def _linha(rot, val, alerta=False):
             f'<span class="linha-pontos"></span><span{cls}>{val}</span></div>')
 
 
-def _shell(titulo, descricao, canonical, corpo):
+def _shell(titulo, descricao, canonical, corpo, raiz=""):
     return f"""<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -401,7 +401,7 @@ def _shell(titulo, descricao, canonical, corpo):
 <meta property="og:title" content="{titulo}" />
 <meta property="og:description" content="{descricao}" />
 <meta property="og:type" content="website" />
-<link rel="stylesheet" href="/estilo.css" />
+<link rel="stylesheet" href="{raiz}estilo.css" />
 </head>
 <body>
 {corpo}
@@ -434,7 +434,7 @@ def pagina_cidade(c, pos, total, gerado_em):
     prelim = ("" if n["confianca"] >= 1 else
               f'<div class="conf">nota preliminar — {n["confianca"]:.0%} das fontes verificadas</div>')
 
-    corpo = f"""<a class="voltar" href="/index.html">← voltar ao ranking</a>
+    corpo = f"""<a class="voltar" href="../index.html">← voltar ao ranking</a>
 <header class="cabecalho">
   <div class="protocolo">RETRATO DO MUNICÍPIO · {pos}º DE {total} NO RANKING · ATUALIZADO EM {gerado_em[:10]}</div>
   <h1>{c['nome']} — {c['uf']}
@@ -483,7 +483,7 @@ def pagina_cidade(c, pos, total, gerado_em):
   </ul>
   <div class="nota">Números com "✓ fonte oficial" foram coletados automaticamente na data indicada; os links abrem exatamente a consulta usada — qualquer pessoa pode conferir.</div>
 </section>"""
-    return s, url, _shell(titulo, descricao, url, corpo)
+    return s, url, _shell(titulo, descricao, url, corpo, raiz="../")
 
 
 def pagina_index(dados):
