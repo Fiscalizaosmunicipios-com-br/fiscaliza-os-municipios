@@ -226,6 +226,23 @@ def entropia_norm(contagens):
 
 
 # ═════════════════ COLETAS ═════════════════
+def descobrir_sapl(c):
+    """Sonda o padrão Interlegis sapl.<cidade>.<uf>.leg.br para cidades
+    sem SAPL configurado. Ativa somente se a API responder com matérias."""
+    if c.get("sapl") or c.get("sapl_sondado"):
+        return
+    c["sapl_sondado"] = True
+    base = f"https://sapl.{slug(c['nome'])}.{c['uf'].lower()}.leg.br"
+    try:
+        r = requests.get(f"{base}/api/materia/materialegislativa/?page_size=1",
+                         timeout=12, headers=UA)
+        if r.status_code == 200 and isinstance(r.json().get("results"), list):
+            c["sapl"] = base
+            print(f"[{c['nome']}] SAPL descoberto automaticamente: {base}")
+    except Exception:
+        pass
+
+
 def coletar_populacao(c):
     url = ("https://servicodados.ibge.gov.br/api/v3/agregados/6579/"
            f"periodos/-1/variaveis/9324?localidades=N6[{c['ibge']}]")
@@ -274,12 +291,14 @@ def coletar_rreo(c):
             if rc:
                 det = f"RREO Anexo 01, {periodo}º bimestre {ano}"
                 d = demo_fin(c)
+                inv_b = (bloco(inv, "SICONFI/RREO", url, "verificada", det)
+                         if inv is not None else
+                         (_dca_investimentos(c) or bloco(None, "SICONFI", url, "demo")))
                 return {
                     "receita": bloco(rc, "SICONFI/RREO", url, "verificada", det),
                     "despesa": bloco(dt or d[2], "SICONFI/RREO", url,
                                      "verificada" if dt else "demo", det),
-                    "investimentos": bloco(inv, "SICONFI/RREO", url,
-                                           "verificada" if inv is not None else "demo", det),
+                    "investimentos": inv_b,
                     "base29a": bloco(base or d[3],
                                      "SICONFI/RREO (base aprox. art. 29-A)", url,
                                      "verificada" if base else "demo",
@@ -296,6 +315,30 @@ def coletar_rreo(c):
             "despesa": bloco(d[2], "SICONFI", SICONFI, "demo"),
             "investimentos": bloco(None, "SICONFI", SICONFI, "demo"),
             "base29a": bloco(d[3], "SICONFI", SICONFI, "demo")}
+
+
+def _dca_investimentos(c):
+    """Investimentos do último exercício encerrado (DCA Anexo I-D)."""
+    ano_atual = datetime.now().year
+    for ano in (ano_atual - 1, ano_atual - 2):
+        url = f"{SICONFI}/dca?an_exercicio={ano}&no_anexo=DCA-Anexo%20I-D&id_ente={c['ibge']}"
+        try:
+            r = requests.get(url, timeout=TIMEOUT, headers=UA)
+            r.raise_for_status()
+            inv = None
+            for i in r.json().get("items", []):
+                conta = (i.get("conta") or "").lower()
+                col = (i.get("coluna") or "").lower()
+                if "investimento" in conta and "liquidad" in col:
+                    v = i.get("valor")
+                    if v is not None:
+                        inv = max(inv or 0, v)
+            if inv:
+                return bloco(inv, "SICONFI/DCA — Investimentos", url,
+                             "verificada", f"Exercício {ano}")
+        except Exception:
+            pass
+    return None
 
 
 def coletar_dca_anual(c):
@@ -337,7 +380,8 @@ def coletar_dca_anual(c):
                 return {"receita": bloco(rec, "SICONFI/DCA", url_c, "verificada", det),
                         "despesa": bloco(desp or d[2], "SICONFI/DCA", url_d,
                                          "verificada" if desp else "demo", det),
-                        "investimentos": bloco(None, "SICONFI/DCA", url_d, "demo"),
+                        "investimentos": (_dca_investimentos(c)
+                                          or bloco(None, "SICONFI/DCA", url_d, "demo")),
                         "base29a": bloco(base or d[3],
                                          "SICONFI/DCA (base aprox. art. 29-A)", url_c,
                                          "verificada" if base else "demo",
@@ -350,10 +394,12 @@ def coletar_dca_anual(c):
 def coletar_rgf_pessoal(c, poder):
     """RGF Anexo 01 — Despesa Total com Pessoal em % da RCL. poder: 'E' ou 'L'."""
     ano_atual = datetime.now().year
-    tentativas = [(ano_atual, p) for p in (3, 2, 1)] + [(ano_atual - 1, 3)]
+    tentativas = ([(ano_atual, "Q", p) for p in (3, 2, 1)] +
+                  [(ano_atual, "S", p) for p in (2, 1)] +
+                  [(ano_atual - 1, "Q", 3), (ano_atual - 1, "S", 2)])
     rotulo = "Executivo" if poder == "E" else "Legislativo"
-    for ano, periodo in tentativas:
-        url = (f"{SICONFI}/rgf?an_exercicio={ano}&in_periodicidade=Q"
+    for ano, perc, periodo in tentativas:
+        url = (f"{SICONFI}/rgf?an_exercicio={ano}&in_periodicidade={perc}"
                f"&nr_periodo={periodo}&co_tipo_demonstrativo=RGF"
                f"&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder={poder}"
                f"&id_ente={c['ibge']}")
@@ -366,9 +412,10 @@ def coletar_rgf_pessoal(c, poder):
                 if "DESPESA TOTAL COM PESSOAL" in conta and "%" in col:
                     v = i.get("valor")
                     if v is not None:
+                        per_txt = ("quadrimestre" if perc == "Q" else "semestre")
                         return bloco(float(v) / 100.0,
                                      f"SICONFI/RGF — {rotulo}", url, "verificada",
-                                     f"{periodo}º quadrimestre {ano} (% da RCL)")
+                                     f"{periodo}º {per_txt} {ano} (% da RCL)")
         except Exception:
             pass
     return bloco(None, f"SICONFI/RGF — {rotulo}", SICONFI, "demo",
@@ -485,6 +532,29 @@ def coletar_producao_vereadores(c):
             NAO_PARL = ("prefeit", "executivo", "comiss", "mesa", "camara municipal",
                         "secretar", "poder", "procurador")
 
+            # Muitas versões do SAPL não embutem "autores" na matéria:
+            # a autoria vive em /api/materia/autoria/ (materia ↔ autor)
+            tem_campo_autores = any(m.get("autores") for m in mats)
+            mapa_autoria = {}
+            if not tem_campo_autores:
+                ids_ano = {m.get("id") for m in mats}
+                regs = []
+                try:
+                    regs = _sapl_paginar(
+                        f"{sapl}/api/materia/autoria/?materia__ano={a}&page_size=100", 30)
+                except Exception:
+                    try:
+                        regs = _sapl_paginar(f"{sapl}/api/materia/autoria/?page_size=100", 40)
+                    except Exception as e:
+                        print(f"[{c['nome']}] endpoint de autoria falhou: {e}", file=sys.stderr)
+                for reg in regs:
+                    mid = reg.get("materia")
+                    if mid in ids_ano:
+                        mapa_autoria.setdefault(mid, []).append(reg.get("autor"))
+
+            def autores_da(m):
+                return m.get("autores") or mapa_autoria.get(m.get("id")) or []
+
             def monta(filtro):
                 agg = {}
                 for m in mats:
@@ -492,7 +562,7 @@ def coletar_producao_vereadores(c):
                     nome_tipo = tipos.get(t, str(t)) if not isinstance(t, dict) else t.get("descricao", "")
                     cls, _, _ = classificar_materia(m.get("ementa", ""), nome_tipo)
                     chave = {"ESTRUTURAL": "alta", "REGULATORIA": "media", "SIMBOLICA": "baixa"}[cls]
-                    for aid in (m.get("autores") or []):
+                    for aid in autores_da(m):
                         nome = autores.get(aid, "")
                         if not filtro(nome):
                             continue
@@ -534,6 +604,7 @@ def coletar_diario_oficial(c):
 
 
 def coletar_cidade(c):
+    descobrir_sapl(c)
     pop_b = coletar_populacao(c)
     fin = coletar_rreo(c)
     rgf_e = coletar_rgf_pessoal(c, "E")
