@@ -446,11 +446,54 @@ def coletar_custo_camara(c):
                    "liquidada" in (i.get("coluna") or "").lower():
                     v = i.get("valor")
                     if v:
-                        return bloco(v, "SICONFI/DCA — função 01 Legislativa",
-                                     url, "verificada", f"Exercício {ano}")
+                        b = bloco(v, "SICONFI/DCA — função 01 Legislativa",
+                                  url, "verificada", f"Exercício {ano}")
+                        b["exercicio"] = ano
+                        return b
         except Exception:
             pass
-    return bloco(demo_fin(c)[4], "SICONFI/DCA", SICONFI, "demo")
+    b = bloco(demo_fin(c)[4], "SICONFI/DCA", SICONFI, "demo")
+    b["exercicio"] = None
+    return b
+
+
+def coletar_base29a(c, exercicio):
+    """Base do art. 29-A no EXERCÍCIO pedido (mesmo ano do custo da Câmara).
+
+    A CF manda usar a receita tributária + transferências do exercício
+    ANTERIOR ao do repasse; portanto, para um custo do exercício X,
+    a base correta é a do exercício X-1. Fonte: DCA Anexo I-C (ano fechado).
+    """
+    if not exercicio:
+        return None
+    ano_base = exercicio - 1
+    url = f"{SICONFI}/dca?an_exercicio={ano_base}&no_anexo=DCA-Anexo%20I-C&id_ente={c['ibge']}"
+    try:
+        r = requests.get(url, timeout=TIMEOUT, headers=UA)
+        r.raise_for_status()
+        trib = transf = None
+        for i in r.json().get("items", []):
+            conta = (i.get("conta") or "").lower()
+            col = (i.get("coluna") or "").lower()
+            if "realizad" not in col and "receitas brutas" not in col:
+                continue
+            v = i.get("valor")
+            if v is None:
+                continue
+            if "impostos, taxas e contribuições de melhoria" in conta or \
+               (conta.startswith("1.1") and "impostos" in conta):
+                trib = max(trib or 0, v)
+            if "transferências correntes" in conta and "intra" not in conta:
+                transf = max(transf or 0, v)
+        base = (trib or 0) + (transf or 0)
+        if base:
+            b = bloco(base, "SICONFI/DCA — base do art. 29-A", url, "verificada",
+                      f"Exercício {ano_base} (base legal do repasse de {exercicio})")
+            b["exercicio"] = ano_base
+            return b
+    except Exception as e:
+        print(f"[{c['nome']}] base 29-A {ano_base} falhou: {e}", file=sys.stderr)
+    return None
 
 
 def _sapl_paginar(url_base, max_paginas=20):
@@ -622,6 +665,7 @@ def coletar_cidade(c):
     rgf_e = coletar_rgf_pessoal(c, "E")
     rgf_l = coletar_rgf_pessoal(c, "L")
     custo_b = coletar_custo_camara(c)
+    base29a_29 = coletar_base29a(c, custo_b.get("exercicio"))
     props_b = coletar_proposicoes(c)
     prod_b = coletar_producao_vereadores(c)
     dia_b = coletar_diario_oficial(c)
@@ -629,6 +673,7 @@ def coletar_cidade(c):
     pop = pop_b["valor"]
     n_ver = c.get("vereadores") or vereadores_teto(pop)
     return {**c, "vereadores": n_ver,
+            "base29a_legal": base29a_29,
             "vereadores_estimado": c.get("vereadores") is None,
             "populacao": pop_b, "financas": fin,
             "rgf_executivo": rgf_e, "rgf_legislativo": rgf_l,
@@ -652,9 +697,13 @@ def pontuar(cidades):
         rc = d["financas"]["receita"]["valor"]
         dt = d["financas"]["despesa"]["valor"]
         inv = d["financas"]["investimentos"]["valor"]
-        base = d["financas"]["base29a"]["valor"]
+        base_legal = d.get("base29a_legal")
+        base = base_legal["valor"] if base_legal else None
         cc = d["custo_camara"]["valor"]
         limite = d["_limite"]
+        # Só compara custo e base do mesmo ciclo legal (custo X ↔ base X-1)
+        comparavel = bool(base_legal and d["custo_camara"].get("exercicio")
+                          and d["custo_camara"]["status"] == "verificada")
 
         # ── F: Gestão fiscal ──
         margem = (rc - dt) / rc if rc else 0
@@ -666,8 +715,11 @@ def pontuar(cidades):
         F = 0.50 * f_eq + 0.30 * f_pes + 0.20 * f_inv
 
         # ── C: Custo do Legislativo ──
-        uso = cc / base if base else None
-        c_teto = clamp((1 - uso / limite) * 100) if uso is not None else 0.0
+        uso = (cc / base) if (comparavel and base) else None
+        # Sem base do mesmo exercício, o teto não é calculável: o pilar C é
+        # renormalizado entre folha e comparação com o grupo, e a cidade
+        # perde confiança — nunca recebe nota inventada nem zero indevido.
+        c_teto = clamp((1 - uso / limite) * 100) if uso is not None else None
         q_leg = d["rgf_legislativo"]["valor"]
         c_folha = clamp((0.06 - q_leg) / 0.06 * 100) if q_leg is not None else 50.0
         grupo = sorted(grupos[limite])
@@ -677,7 +729,10 @@ def pontuar(cidades):
             c_rel = 100 - perc
         else:
             c_rel, perc = 50.0, None
-        C = 0.50 * c_teto + 0.30 * c_folha + 0.20 * c_rel
+        if c_teto is not None:
+            C = 0.50 * c_teto + 0.30 * c_folha + 0.20 * c_rel
+        else:
+            C = (0.30 * c_folha + 0.20 * c_rel) / 0.50  # renormalizado
 
         # ── Q: Qualidade legislativa ──
         pr = d["proposicoes"]["valor"]
@@ -691,7 +746,7 @@ def pontuar(cidades):
         selo = "VIÁVEL" if nota >= 70 else "ATENÇÃO" if nota >= 45 else "CRÍTICO"
 
         blocos = [d["populacao"], d["financas"]["receita"], d["financas"]["despesa"],
-                  d["financas"]["base29a"], d["rgf_executivo"], d["rgf_legislativo"],
+                  (base_legal or {"status": "demo"}), d["rgf_executivo"], d["rgf_legislativo"],
                   d["custo_camara"], d["proposicoes"], d["producao_vereadores"]]
         confianca = sum(1 for b in blocos if b["status"] == "verificada") / len(blocos)
 
@@ -699,6 +754,9 @@ def pontuar(cidades):
             "resultado_fiscal": rc - dt, "margem_fiscal": margem,
             "pessoal_executivo_rcl": p_exec, "taxa_investimento": taxa_inv,
             "limite_art29a": limite, "uso_limite": uso,
+            "teto_comparavel": comparavel,
+            "exercicio_custo": d["custo_camara"].get("exercicio"),
+            "exercicio_base29a": (base_legal or {}).get("exercicio"),
             "pessoal_legislativo_rcl": q_leg,
             "custo_por_habitante": d["_custo_hab"],
             "custo_por_vereador": cc / d["vereadores"],
@@ -710,7 +768,8 @@ def pontuar(cidades):
                      "confianca": round(confianca, 2),
                      "f": round(F, 1), "f_eq": round(f_eq, 1),
                      "f_pes": round(f_pes, 1), "f_inv": round(f_inv, 1),
-                     "c": round(C, 1), "c_teto": round(c_teto, 1),
+                     "c": round(C, 1),
+                     "c_teto": (round(c_teto, 1) if c_teto is not None else None),
                      "c_folha": round(c_folha, 1), "c_rel": round(c_rel, 1),
                      "q": round(Q, 1), "q_prop": round(q_prop, 1),
                      "q_tema": round(q_tema, 1)}
@@ -757,6 +816,9 @@ def gerar_analise(d):
 
     frases = []
     uso = ind["uso_limite"]
+    if uso is None:
+        frases.append("O uso do teto constitucional da Câmara não é calculável nesta coleta "
+                      "(dados do repasse e da base de cálculo ainda não disponíveis no mesmo ciclo)")
     if uso is not None:
         pct_teto = uso / ind["limite_art29a"]
         if pct_teto >= 0.95:
@@ -857,6 +919,20 @@ def pagina_cidade(c, pos, total, gerado_em):
                          for p in c["proposicoes"]["valor"]["tipos"][:10])
     uso_pct = min((ind["uso_limite"] / ind["limite_art29a"]) * 100, 100) if ind["uso_limite"] else 0
     cor_uso = "#1E6B4F" if ind["uso_limite"] and ind["uso_limite"] <= ind["limite_art29a"] else "#C22F2A"
+    if ind.get("uso_limite") is not None:
+        bloco_teto = (
+            f'<div class="barra"><div style="width:{uso_pct:.0f}%;background:{cor_uso}"></div></div>'
+            f'<p class="legenda">Uso do teto do art. 29-A: {_pct(ind["uso_limite"])} de '
+            f'{_pct(ind["limite_art29a"])} permitidos · repasse do exercício '
+            f'{ind.get("exercicio_custo")} sobre a base de {ind.get("exercicio_base29a")}, '
+            f'como manda a CF</p>')
+    else:
+        bloco_teto = ('<div class="nota">Uso do teto do art. 29-A: <b>não calculável</b> nesta '
+                      'coleta — o SICONFI ainda não tem, para este município, o custo da Câmara e a '
+                      'base de cálculo do exercício anterior no mesmo ciclo. Comparar anos '
+                      'diferentes produziria um percentual falso, então preferimos não publicar. '
+                      'O pilar C foi calculado apenas com folha do Legislativo e comparação com o '
+                      'grupo populacional, e a confiança da cidade caiu.</div>')
     prelim = ("" if n["confianca"] >= 1 else
               f'<div class="conf">nota preliminar — {n["confianca"]:.0%} das fontes verificadas</div>')
 
@@ -925,9 +1001,8 @@ def pagina_cidade(c, pos, total, gerado_em):
 
 <section>
   <h2>Custo do Legislativo {_selo_html(cc['status'])}</h2>
-  <p class="sub">Pilar C = {n['c']}/100 ({_subnotas([('teto 29-A', n['c_teto']), ('folha LRF', n['c_folha']), ('vs. grupo', n['c_rel'])])})</p>
-  <div class="barra"><div style="width:{uso_pct:.0f}%;background:{cor_uso}"></div></div>
-  <p class="legenda">Uso do teto do art. 29-A: {_pct(ind['uso_limite'])} de {_pct(ind['limite_art29a'])} permitidos</p>
+  <p class="sub">Pilar C = {n['c']}/100 ({_subnotas(([('teto 29-A', n['c_teto'])] if n['c_teto'] is not None else []) + [('folha LRF', n['c_folha']), ('vs. grupo', n['c_rel'])])})</p>
+  {bloco_teto}
   {_linha("Custo anual da função Legislativa", _brl(cc['valor']))}
   {_linha("Folha do Legislativo (% RCL — limite 6%)", _pct(ind['pessoal_legislativo_rcl']), (ind['pessoal_legislativo_rcl'] or 0) > 0.06)}
   {_linha("Custo por habitante / ano", _brl(ind['custo_por_habitante']))}
@@ -1017,7 +1092,7 @@ def pagina_metodologia(dados):
   {_linha("Qualidade Legislativa (Q)", "60% peso das matérias · 40% diversidade de temas")}
   <div class="nota">Equilíbrio: 50 pontos no empate receita×despesa, ±4 pontos por ponto percentual de margem.
   Pessoal do Executivo: limite de 54% da RCL (LRF, art. 20); do Legislativo: 6% da RCL.
-  Teto do art. 29-A da CF: de 7% (até 100 mil hab.) a 3,5% (acima de 8 mi) da receita tributária ampliada.
+  Teto do art. 29-A da CF: de 7% (até 100 mil hab.) a 3,5% (acima de 8 mi) da receita tributária ampliada <b>do exercício anterior</b> — comparamos sempre o repasse de um ano com a base do ano anterior, ambos de exercícios encerrados (DCA). Quando os dois não existem no mesmo ciclo, o indicador é publicado como não calculável em vez de gerar um percentual falso.
   Peso das matérias: estruturais valem 1,0; regulatórias 0,6; simbólicas (homenagens, moções, denominações) 0,0 —
   classificadas automaticamente pelas ementas (regras de alta precisão), com revisão humana prevista para casos ambíguos.
   Diversidade: entropia dos temas (Saúde, Educação, Saneamento, Mobilidade, etc.).
