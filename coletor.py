@@ -563,8 +563,68 @@ def _sapl_paginar(url_base, max_paginas=20):
     return itens
 
 
+def proposicoes_do_csv(c):
+    """Distribuição de classes a partir do CSV curado, quando existir."""
+    import csv as _csv
+    import os
+    caminho = f"docs/dados-manuais/{slug(c['nome'])}-{c['uf'].lower()}.csv"
+    if not os.path.exists(caminho):
+        return None
+    periodo = c.get("periodo_proposituras")
+    if periodo:
+        d0 = datetime.strptime(periodo[0], "%d/%m/%Y")
+        d1 = datetime.strptime(periodo[1], "%d/%m/%Y")
+        rotulo = f"{periodo[0]} a {periodo[1]}"
+    else:
+        ano = int(c.get("ano_exercicio") or datetime.now().year - 1)
+        d0, d1 = datetime(ano, 1, 1), datetime(ano, 12, 31)
+        rotulo = f"exercício {ano}"
+    classes = {"ESTRUTURAL": 0, "REGULATORIA": 0, "SIMBOLICA": 0}
+    temas, tipos = {}, {}
+    soma, total = 0.0, 0
+    try:
+        with open(caminho, encoding="utf-8-sig") as fh:
+            for row in _csv.DictReader(fh, delimiter=";"):
+                try:
+                    dt_ = datetime.strptime((row.get("data") or "")[:10], "%d/%m/%Y")
+                except ValueError:
+                    continue
+                if not (d0 <= dt_ <= d1):
+                    continue
+                cls, tema, peso = classificar_materia(row.get("ementa", ""),
+                                                      row.get("tipo", ""))
+                classes[cls] += 1
+                soma += peso
+                total += 1
+                if tema and cls != "SIMBOLICA":
+                    temas[tema] = temas.get(tema, 0) + 1
+                rot = {"ESTRUTURAL": "Projetos, emendas e substitutivos",
+                       "REGULATORIA": "Requerimentos e fiscalização",
+                       "SIMBOLICA": "Indicações, moções e homenagens"}[cls]
+                tipos[rot] = tipos.get(rot, 0) + 1
+    except Exception as e:
+        print(f"[{c['nome']}] CSV proposições falhou: {e}", file=sys.stderr)
+        return None
+    if not total:
+        return None
+    lista = [{"tipo": t, "qtd": q,
+              "peso": "alta" if t.startswith("Projetos") else
+                      "media" if t.startswith("Requer") else "baixa"}
+             for t, q in sorted(tipos.items(), key=lambda x: -x[1])]
+    print(f"[{c['nome']}] proposições do CSV: {total} ({rotulo})")
+    return bloco({"tipos": lista, "classes": classes, "temas": temas,
+                  "peso_medio": soma / total, "total": total,
+                  "cobertura": "completa"},
+                 "Portal oficial da Câmara (extração conferida) — classificação NLP",
+                 c.get("siscam") or "#", "verificada",
+                 f"Período {rotulo} · {total} proposituras, incluindo indicações")
+
+
 def coletar_proposicoes(c):
-    """Tipos + classificação NLP estágio 1 sobre as ementas (SAPL)."""
+    """Tipos + classificação NLP estágio 1 sobre as ementas."""
+    do_csv = proposicoes_do_csv(c)
+    if do_csv:
+        return do_csv
     sapl = c.get("sapl")
     if not sapl:
         classes = {"ESTRUTURAL": 0, "REGULATORIA": 0, "SIMBOLICA": 0}
@@ -604,8 +664,14 @@ def coletar_proposicoes(c):
                      for t, q in sorted(cont_tipos.items(), key=lambda x: -x[1])]
             print(f"[{c['nome']}] SAPL: {len(mats)} matérias {a} | "
                   f"E={classes['ESTRUTURAL']} R={classes['REGULATORIA']} S={classes['SIMBOLICA']}")
+            # Um portal que publica só projetos de lei parece "mais produtivo"
+            # que outro que publica também indicações. Marcamos a cobertura
+            # para não premiar a opacidade na comparação entre cidades.
+            frac_simb = classes["SIMBOLICA"] / len(mats)
+            cobertura = "completa" if frac_simb >= 0.25 else "parcial"
             return bloco({"tipos": lista, "classes": classes, "temas": temas,
-                          "peso_medio": soma_peso / len(mats), "total": len(mats)},
+                          "peso_medio": soma_peso / len(mats), "total": len(mats),
+                          "cobertura": cobertura},
                          "SAPL — Câmara Municipal (classificação NLP estágio 1)",
                          f"{sapl}/materia/pesquisar-materia?ano={a}", "verificada", f"Ano {a}")
         except Exception as e:
@@ -982,6 +1048,12 @@ def pontuar(cidades):
         pr = d["proposicoes"]["valor"]
         W = pr.get("peso_medio", 0)
         q_prop = clamp(W / 0.35 * 100)
+        # Cobertura parcial (portal que não publica indicações) infla o peso
+        # médio: a nota é apenas indicativa e fica limitada, para que a
+        # cidade que publica tudo não seja punida pela própria transparência.
+        cobertura_props = pr.get("cobertura", "desconhecida")
+        if cobertura_props == "parcial":
+            q_prop = min(q_prop, 70.0)
         temas = pr.get("temas") or {}
         q_tema = entropia_norm(temas) * 100 if temas else 50.0
         Q = 0.60 * q_prop + 0.40 * q_tema
@@ -1007,6 +1079,7 @@ def pontuar(cidades):
             "percentil_custo_estrato": perc,
             "peso_medio_proposicoes": W,
             "indice_propositivo": (pr["classes"]["ESTRUTURAL"] / pr["total"]) if pr.get("total") else 0,
+            "cobertura_proposicoes": cobertura_props,
         }
         d["nota"] = {"final": round(nota, 1), "selo": selo,
                      "confianca": round(confianca, 2),
@@ -1218,6 +1291,20 @@ def pagina_cidade(c, pos, total, gerado_em):
                   if dia.get("status") == "verificada" and dia.get("valor") else "")
     pr = c["proposicoes"]["valor"]
     cls = pr.get("classes", {})
+    cob = ind.get("cobertura_proposicoes")
+    if cob == "parcial":
+        aviso_cobertura = ('<div class="nota">O portal desta Câmara publica sobretudo projetos '
+                           'de lei; indicações e moções aparecem pouco ou não aparecem. Como isso '
+                           'infla artificialmente o peso médio das matérias, a nota deste pilar é '
+                           'limitada e serve apenas como indicação — não é comparável com cidades '
+                           'que publicam a produção completa.</div>')
+    elif cob == "completa":
+        aviso_cobertura = ('<div class="nota">Cobertura completa: o portal publica a produção '
+                           'inteira, incluindo indicações e moções. A comparação com cidades de '
+                           'cobertura parcial deve levar isso em conta — transparência maior '
+                           'costuma revelar índices propositivos menores.</div>')
+    else:
+        aviso_cobertura = ""
 
     corpo = f"""<a class="voltar" href="../index.html">← voltar ao ranking</a>
 <header class="cabecalho">
@@ -1255,6 +1342,7 @@ def pagina_cidade(c, pos, total, gerado_em):
 
 <section>
   <h2>Qualidade da produção legislativa {_selo_html(c['proposicoes']['status'])}</h2>
+  {aviso_cobertura}
   <p class="sub">Pilar Q = {n['q']}/100 ({_subnotas([('peso das matérias', n['q_prop']), ('diversidade de temas', n['q_tema'])])}) · {c['proposicoes'].get('detalhe','')}</p>
   {_linha("Matérias estruturais (criam/alteram políticas)", _num(cls.get('ESTRUTURAL')))}
   {_linha("Matérias regulatórias/fiscalizatórias", _num(cls.get('REGULATORIA')))}
