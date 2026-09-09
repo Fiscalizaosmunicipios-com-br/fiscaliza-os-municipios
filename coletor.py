@@ -458,12 +458,49 @@ def coletar_dca_anual(c):
 
 
 def coletar_rgf_pessoal(c, poder):
-    """RGF Anexo 01 — Despesa Total com Pessoal em % da RCL. poder: 'E' ou 'L'."""
+    """Despesa Total com Pessoal em % da RCL (RGF Anexo 01).
+
+    Robusto porque o SICONFI varia bastante: municípios pequenos entregam
+    semestralmente, o rótulo da conta muda entre versões do layout e nem
+    sempre há coluna com o percentual — nesse caso calculamos DTP/RCL a
+    partir dos valores absolutos do próprio anexo.
+    """
     ano_atual = datetime.now().year
-    tentativas = ([(ano_atual, "Q", p) for p in (3, 2, 1)] +
-                  [(ano_atual, "S", p) for p in (2, 1)] +
-                  [(ano_atual - 1, "Q", 3), (ano_atual - 1, "S", 2)])
+    tentativas = []
+    for ano in (ano_atual, ano_atual - 1, ano_atual - 2):
+        for p in (3, 2, 1):
+            tentativas.append((ano, "Q", p))
+        for p in (2, 1):
+            tentativas.append((ano, "S", p))
     rotulo = "Executivo" if poder == "E" else "Legislativo"
+
+    def extrai(itens):
+        dtp = rcl = pct = None
+        for i in itens:
+            conta = norm(i.get("conta") or "")
+            cod = norm(i.get("cod_conta") or "")
+            col = norm(i.get("coluna") or "")
+            v = i.get("valor")
+            if v is None:
+                continue
+            eh_dtp = ("despesa total com pessoal" in conta or
+                      "despesatotalcompessoal" in cod.replace(" ", "") or
+                      conta.startswith("dtp"))
+            eh_rcl = ("receita corrente liquida" in conta or
+                      "receitacorrenteliquida" in cod.replace(" ", ""))
+            if eh_dtp:
+                if "%" in col or "percentual" in col or "sobre a rcl" in col:
+                    pct = pct if pct is not None else float(v)
+                elif "despesas liquidadas" in col or "valor" in col or col == "":
+                    dtp = dtp if dtp is not None else float(v)
+            if eh_rcl and rcl is None:
+                rcl = float(v)
+        if pct is not None and 0 < pct <= 100:
+            return pct / 100.0
+        if dtp and rcl and rcl > 0:
+            return dtp / rcl
+        return None
+
     for ano, perc, periodo in tentativas:
         url = (f"{SICONFI}/rgf?an_exercicio={ano}&in_periodicidade={perc}"
                f"&nr_periodo={periodo}&co_tipo_demonstrativo=RGF"
@@ -472,20 +509,51 @@ def coletar_rgf_pessoal(c, poder):
         try:
             r = requests.get(url, timeout=TIMEOUT, headers=UA)
             r.raise_for_status()
+            itens = r.json().get("items", [])
+            if not itens:
+                continue
+            val = extrai(itens)
+            if val is not None:
+                per_txt = "quadrimestre" if perc == "Q" else "semestre"
+                return bloco(val, f"SICONFI/RGF — {rotulo}", url, "verificada",
+                             f"{periodo}º {per_txt} de {ano} (% da RCL)")
+            diag(c["nome"], f"rgf_{poder}_sem_dtp",
+                 f"{ano}/{perc}{periodo}: {len(itens)} itens, contas="
+                 f"{sorted({(i.get('conta') or '')[:45] for i in itens})[:6]}")
+        except Exception as e:
+            diag(c["nome"], f"rgf_{poder}_erro", f"{ano}/{perc}{periodo}: {str(e)[:80]}")
+    return bloco(None, f"SICONFI/RGF — {rotulo}", SICONFI, "demo",
+                 "RGF não localizado no SICONFI para os períodos consultados")
+
+
+def folha_legislativo_dca(c):
+    """Plano B para a folha da Câmara: pessoal e encargos da função
+    Legislativa no DCA, comparado ao repasse (art. 29-A, §1º: máx. 70%)."""
+    ano_atual = datetime.now().year
+    for ano in (ano_atual - 1, ano_atual - 2):
+        url = (f"{SICONFI}/dca?an_exercicio={ano}"
+               f"&no_anexo=DCA-Anexo%20I-E&id_ente={c['ibge']}")
+        try:
+            r = requests.get(url, timeout=TIMEOUT, headers=UA)
+            r.raise_for_status()
+            pessoal = None
             for i in r.json().get("items", []):
-                conta = (i.get("conta") or "").upper()
-                col = (i.get("coluna") or "").upper()
-                if "DESPESA TOTAL COM PESSOAL" in conta and "%" in col:
+                conta = norm(i.get("conta") or "")
+                col = norm(i.get("coluna") or "")
+                if "legislativa" not in conta:
+                    continue
+                if "pessoal" in conta and "liquidad" in col:
                     v = i.get("valor")
                     if v is not None:
-                        per_txt = ("quadrimestre" if perc == "Q" else "semestre")
-                        return bloco(float(v) / 100.0,
-                                     f"SICONFI/RGF — {rotulo}", url, "verificada",
-                                     f"{periodo}º {per_txt} {ano} (% da RCL)")
+                        pessoal = max(pessoal or 0, float(v))
+            if pessoal:
+                b = bloco(pessoal, "SICONFI/DCA — pessoal da função Legislativa",
+                          url, "verificada", f"Exercício {ano}")
+                b["exercicio"] = ano
+                return b
         except Exception:
             pass
-    return bloco(None, f"SICONFI/RGF — {rotulo}", SICONFI, "demo",
-                 "RGF não localizado para o período")
+    return None
 
 
 def coletar_custo_camara(c):
@@ -976,6 +1044,7 @@ def coletar_cidade(c):
     rgf_l = coletar_rgf_pessoal(c, "L")
     custo_b = coletar_custo_camara(c)
     base29a_29 = coletar_base29a(c, custo_b.get("exercicio"))
+    folha_leg_b = folha_legislativo_dca(c)
     props_b = coletar_proposicoes(c)
     prod_b = coletar_producao_vereadores(c)
     dia_b = coletar_diario_oficial(c)
@@ -984,6 +1053,7 @@ def coletar_cidade(c):
     n_ver = c.get("vereadores") or vereadores_teto(pop)
     return {**c, "vereadores": n_ver,
             "base29a_legal": base29a_29,
+            "folha_legislativo_dca": folha_leg_b,
             "vereadores_estimado": c.get("vereadores") is None,
             "populacao": pop_b, "financas": fin,
             "rgf_executivo": rgf_e, "rgf_legislativo": rgf_l,
@@ -1031,7 +1101,18 @@ def pontuar(cidades):
         # perde confiança — nunca recebe nota inventada nem zero indevido.
         c_teto = clamp((1 - uso / limite) * 100) if uso is not None else None
         q_leg = d["rgf_legislativo"]["valor"]
-        c_folha = clamp((0.06 - q_leg) / 0.06 * 100) if q_leg is not None else 50.0
+        # Art. 29-A, §1º: folha da Câmara não pode passar de 70% do repasse
+        folha_leg = (d.get("folha_legislativo_dca") or {}).get("valor")
+        razao_folha_repasse = (folha_leg / cc) if (folha_leg and cc) else None
+        if q_leg is not None:
+            c_folha = clamp((0.06 - q_leg) / 0.06 * 100)
+        elif razao_folha_repasse is not None:
+            # Sem RGF: pontua pela regra dos 70% (0 no limite, 100 se folha zero)
+            c_folha = clamp((0.70 - razao_folha_repasse) / 0.70 * 100)
+        else:
+            c_folha = 50.0
+        if razao_folha_repasse is not None and razao_folha_repasse > 0.70:
+            c_folha = 0.0  # violação do teto do §1º zera o componente
         grupo = sorted(grupos[limite])
         if len(grupo) >= 3:
             pos = grupo.index(d["_custo_hab"])
@@ -1074,6 +1155,8 @@ def pontuar(cidades):
             "exercicio_custo": d["custo_camara"].get("exercicio"),
             "exercicio_base29a": (base_legal or {}).get("exercicio"),
             "pessoal_legislativo_rcl": q_leg,
+            "folha_legislativo_valor": folha_leg,
+            "folha_sobre_repasse": razao_folha_repasse,
             "custo_por_habitante": d["_custo_hab"],
             "custo_por_vereador": cc / d["vereadores"],
             "percentil_custo_estrato": perc,
@@ -1336,6 +1419,8 @@ def pagina_cidade(c, pos, total, gerado_em):
   {bloco_teto}
   {_linha("Custo anual da função Legislativa", _brl(cc['valor']))}
   {_linha("Folha do Legislativo (% RCL — limite 6%)", _pct(ind['pessoal_legislativo_rcl']), (ind['pessoal_legislativo_rcl'] or 0) > 0.06)}
+  {_linha("Pessoal da Câmara (valor anual)", _brl(ind.get('folha_legislativo_valor')))}
+  {_linha("Folha sobre o repasse (art. 29-A §1º — limite 70%)", _pct(ind.get('folha_sobre_repasse')), (ind.get('folha_sobre_repasse') or 0) > 0.70)}
   {_linha("Custo por habitante / ano", _brl(ind['custo_por_habitante']))}
   {_linha("Custo por vereador / ano", _brl(ind['custo_por_vereador']))}
 </section>
