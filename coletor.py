@@ -31,6 +31,8 @@ CIDADES = [
     {"nome": "Charqueada", "uf": "SP", "ibge": "3511706", "vereadores": 11, "sapl": None,
      "transparencia": "https://webapp1-charqueada.cidade360.cloud/pronimtb/",
      "transparencia_sistema": "Pronim TB (Cidade360)",
+     "siscam": "https://charqueada.siscam.com.br",
+     "periodo_proposituras": ("01/01/2025", "09/09/2026"),
      "fontes_extra": [
         ("Proposituras — SisCam (Câmara de Charqueada)",
          "http://consulta.siscam.com.br/camaracharqueada/index/80/8"),
@@ -215,17 +217,60 @@ TIPOS_ESTRUTURAIS = ("projeto de lei", "emenda", "substitutivo", "projeto de lei
 TIPOS_REGULATORIOS = ("requerimento", "projeto de resolu", "projeto de decreto")
 
 
+# Padrões de ementa — usados quando o tipo não vem preenchido (portais que
+# agrupam por aba). A redação legislativa brasileira é formulaica, o que
+# permite alta precisão sem modelo treinado.
+RX_EMENTA_PEDIDO = re.compile(
+    r"^\s*(solicita|solicito|requer|reitera|indica|sugere|pede)\b|"
+    r"\bao (senhor |exmo|excelent)?.{0,25}(chefe do )?executivo\b|"
+    r"\bao (senhor |exmo\.? sr\.? )?prefeito\b|"
+    r"\bprovidenci|\bestudar a (possibilidade|viabilidade)|"
+    r"\bde informa[çc][õo]es\b", re.I)
+RX_EMENTA_ESTRUTURAL = re.compile(
+    r"^\s*(institui|disp[õo]e sobre|cria|altera a lei|altera o|acrescenta|"
+    r"revoga|estabelece|autoriza o poder|fixa|estima a receita|"
+    r"emenda ao projeto|substitutivo ao projeto|projeto de lei)\b|"
+    r"\bemenda ao projeto de lei\b|\bsubstitutivo\b", re.I)
+RX_EMENTA_FISCALIZATORIA = re.compile(
+    r"\bconvoca[çc][ãa]o\b|\bcomiss[ãa]o (especial|processante|de inqu[ée]rito)\b|"
+    r"\baprova as contas\b|\brejeita as contas\b|\bparecer pr[ée]vio\b|"
+    r"\bpresta[çc][ãa]o de contas\b|\baudi[êe]ncia p[úu]blica\b", re.I)
+
+
 def classificar_materia(ementa, tipo_nome):
-    """Classe (ESTRUTURAL 1,0 / REGULATORIA 0,6 / SIMBOLICA 0,0) + tema."""
+    """Classe (ESTRUTURAL 1,0 / REGULATORIA 0,6 / SIMBOLICA 0,0) + tema.
+
+    Estágio 1: regras de alta precisão. Usa o tipo declarado quando existe;
+    quando o portal não informa o tipo, infere pela redação da ementa —
+    pedidos ao Executivo (indicações/requerimentos de providência) não
+    criam norma e por isso não contam como produção estrutural.
+    """
     e, t = ementa or "", norm(tipo_nome)
-    if any(rx.search(e) for rx in PADROES_SIMBOLICA) or \
-       any(x in t for x in ("moc", "indica", "voto de", "homenagem", "pesar", "congratula")):
-        return "SIMBOLICA", None, 0.0
     tema = next((nome for nome, rx in TEMAS_RX.items() if re.search(rx, e, re.I)), None)
-    if any(x in t for x in TIPOS_ESTRUTURAIS):
+
+    # 1. Simbólicas (homenagens, moções, denominações) — pelo texto ou pelo tipo
+    if any(rx.search(e) for rx in PADROES_SIMBOLICA) or \
+       any(x in t for x in ("moc", "voto de", "homenagem", "pesar", "congratula")):
+        return "SIMBOLICA", None, 0.0
+
+    # 2. Tipo declarado tem prioridade
+    if t:
+        if "indica" in t:
+            return "SIMBOLICA", tema, 0.0
+        if any(x in t for x in TIPOS_ESTRUTURAIS):
+            return "ESTRUTURAL", tema, 1.0
+        if any(x in t for x in TIPOS_REGULATORIOS):
+            return "REGULATORIA", tema, 0.6
+
+    # 3. Sem tipo: inferir pela redação da ementa
+    if RX_EMENTA_ESTRUTURAL.search(e):
         return "ESTRUTURAL", tema, 1.0
-    if any(x in t for x in TIPOS_REGULATORIOS):
+    if RX_EMENTA_FISCALIZATORIA.search(e):
         return "REGULATORIA", tema, 0.6
+    if RX_EMENTA_PEDIDO.search(e):
+        # Pedido ao Executivo: não cria norma. Vale como representação
+        # do eleitor, mas com peso baixo na régua de produção legislativa.
+        return "SIMBOLICA", tema, 0.0
     return "REGULATORIA", tema, 0.6
 
 
@@ -235,6 +280,13 @@ def entropia_norm(contagens):
         return 0.0
     h = -sum((q / total) * math.log(q / total) for q in contagens.values() if q)
     return h / math.log(len(TEMAS_RX))
+
+
+DIAGNOSTICO = []
+
+
+def diag(cidade, etapa, info):
+    DIAGNOSTICO.append({"cidade": cidade, "etapa": etapa, "info": info})
 
 
 # ═════════════════ COLETAS ═════════════════
@@ -258,9 +310,11 @@ def descobrir_sapl(c):
 def coletar_populacao(c):
     url = ("https://servicodados.ibge.gov.br/api/v3/agregados/6579/"
            f"periodos/-1/variaveis/9324?localidades=N6[{c['ibge']}]")
-    for t in range(3):
+    for t in range(5):
         try:
             r = requests.get(url, timeout=TIMEOUT, headers=UA)
+            if r.status_code in (429, 503):
+                raise RuntimeError(f"limite de chamadas ({r.status_code})")
             r.raise_for_status()
             serie = r.json()[0]["resultados"][0]["series"][0]["serie"]
             ano, valor = sorted(serie.items())[-1]
@@ -268,7 +322,7 @@ def coletar_populacao(c):
                          url, "verificada")
         except Exception as e:
             print(f"[{c['nome']}] IBGE pop tentativa {t+1}: {e}", file=sys.stderr)
-            time.sleep(3 * (t + 1))
+            time.sleep(5 * (t + 1))
     return bloco(demo_fin(c)[0], "IBGE", url, "demo")
 
 
@@ -559,7 +613,175 @@ def coletar_proposicoes(c):
     return coletar_proposicoes({**c, "sapl": None})
 
 
+_robots_cache = {}
+
+
+def robots_permite(url, ua="FiscalizaOsMunicipios"):
+    """Consulta o robots.txt do domínio e diz se o caminho é permitido.
+    Em caso de erro de rede, assume NÃO permitido (postura conservadora)."""
+    from urllib.parse import urlparse
+    from urllib import robotparser
+    p = urlparse(url)
+    raiz = f"{p.scheme}://{p.netloc}"
+    if raiz not in _robots_cache:
+        rp = robotparser.RobotFileParser()
+        rp.set_url(f"{raiz}/robots.txt")
+        try:
+            rp.read()
+            _robots_cache[raiz] = rp
+        except Exception as e:
+            print(f"[robots] {raiz} ilegível ({e}) — assumindo bloqueio", file=sys.stderr)
+            _robots_cache[raiz] = None
+    rp = _robots_cache[raiz]
+    if rp is None:
+        return False
+    return rp.can_fetch(ua, url) and rp.can_fetch("*", url)
+
+
+RX_VEREADOR = re.compile(r'/Vereadores/Proposituras/(\d+)"[^>]*>\s*([^<]{3,80}?)\s*<', re.I)
+RX_PROPOSITURA = re.compile(
+    r"N[ºo°]\s*([\w/\s]+?)\s*-\s*(\d{2}/\d{2}/(\d{4}))\s*-\s*([^<\n]{10,400})", re.I)
+
+
+def coletar_siscam(c):
+    """Conector automático para Câmaras no SisCam.
+
+    Só executa se o robots.txt do portal autorizar. Ritmo lento
+    (1 requisição a cada 2s), User-Agent identificado, 1x por dia.
+    """
+    base = c.get("siscam")
+    if not base:
+        return None
+    lista_url = f"{base}/Vereadores"
+    if not robots_permite(lista_url):
+        print(f"[{c['nome']}] SisCam: robots.txt do portal não autoriza coleta "
+              f"automatizada — usando CSV curado, se houver", file=sys.stderr)
+        diag(c["nome"], "siscam_robots", "bloqueado")
+        return None
+    ano_alvo = str(c.get("ano_exercicio") or datetime.now().year - 1)
+    ua = {"User-Agent": ("FiscalizaOsMunicipios/2.0 (projeto civico de transparencia; "
+                         "fiscalizaosmunicipios.com.br; coleta diaria de dados publicos - LAI)")}
+    try:
+        r = requests.get(lista_url, timeout=TIMEOUT, headers=ua)
+        r.raise_for_status()
+        vereadores = {}
+        for vid, nome in RX_VEREADOR.findall(r.text):
+            nome = " ".join(nome.split())
+            if nome and vid not in vereadores:
+                vereadores[vid] = nome
+        diag(c["nome"], "siscam_vereadores_listados", len(vereadores))
+        if not vereadores:
+            return None
+        agg, total = {}, 0
+        for vid, nome in vereadores.items():
+            url_v = f"{base}/Vereadores/Proposituras/{vid}"
+            if not robots_permite(url_v):
+                continue
+            time.sleep(2)  # ritmo respeitoso
+            try:
+                rv = requests.get(url_v, timeout=TIMEOUT, headers=ua)
+                rv.raise_for_status()
+            except Exception as e:
+                print(f"[{c['nome']}] SisCam vereador {vid}: {e}", file=sys.stderr)
+                continue
+            html = re.sub(r"<[^>]+>", "\n", rv.text)
+            for num, data, ano, ementa in RX_PROPOSITURA.findall(html):
+                if ano != ano_alvo:
+                    continue
+                tipo = num if not num.strip().isdigit() else ""
+                cls, _, _ = classificar_materia(ementa, tipo)
+                chave = {"ESTRUTURAL": "alta", "REGULATORIA": "media",
+                         "SIMBOLICA": "baixa"}[cls]
+                v = agg.setdefault(vid, {"nome": nome, "alta": 0, "media": 0,
+                                         "baixa": 0, "total": 0, "link": url_v})
+                v[chave] += 1
+                v["total"] += 1
+                total += 1
+        diag(c["nome"], "siscam_proposituras_ano", total)
+        if not agg:
+            return None
+        lista = sorted(agg.values(), key=lambda v: (-v["alta"], -v["total"]))
+        print(f"[{c['nome']}] SisCam: {total} proposituras de {ano_alvo}, "
+              f"{len(lista)} vereadores")
+        return bloco(lista, "SisCam — portal oficial da Câmara Municipal",
+                     lista_url, "verificada",
+                     f"Exercício {ano_alvo} · {total} proposituras coletadas")
+    except Exception as e:
+        print(f"[{c['nome']}] SisCam falhou: {e}", file=sys.stderr)
+        diag(c["nome"], "siscam_erro", str(e)[:200])
+        return None
+
+
+def carregar_producao_manual(c):
+    """Lê proposituras curadas à mão em docs/dados-manuais/<slug>-<uf>.csv.
+
+    Formato (cabeçalho obrigatório):
+        vereador;tipo;numero;data;ementa;url
+
+    Serve para Câmaras cujo sistema não expõe API e cujo portal não
+    autoriza coleta automatizada: o dado é público, mas a extração é
+    feita por pessoa, com link de conferência em cada linha.
+    """
+    import csv
+    import os
+    caminho = f"docs/dados-manuais/{slug(c['nome'])}-{c['uf'].lower()}.csv"
+    if not os.path.exists(caminho):
+        return None
+    periodo = c.get("periodo_proposituras")  # ("01/01/2025", "09/09/2026")
+    if periodo:
+        d0 = datetime.strptime(periodo[0], "%d/%m/%Y")
+        d1 = datetime.strptime(periodo[1], "%d/%m/%Y")
+        rotulo = f"{periodo[0]} a {periodo[1]}"
+    else:
+        ano = int(c.get("ano_exercicio") or datetime.now().year - 1)
+        d0, d1 = datetime(ano, 1, 1), datetime(ano, 12, 31)
+        rotulo = f"exercício {ano}"
+    agg, total = {}, 0
+    try:
+        with open(caminho, encoding="utf-8-sig") as fh:
+            for row in csv.DictReader(fh, delimiter=";"):
+                data = (row.get("data") or "").strip()
+                try:
+                    dt_ = datetime.strptime(data[:10], "%d/%m/%Y")
+                except ValueError:
+                    continue
+                if not (d0 <= dt_ <= d1):
+                    continue
+                nome = (row.get("vereador") or "").strip()
+                if not nome:
+                    continue
+                cls, _, _ = classificar_materia(row.get("ementa", ""),
+                                                row.get("tipo", ""))
+                chave = {"ESTRUTURAL": "alta", "REGULATORIA": "media",
+                         "SIMBOLICA": "baixa"}[cls]
+                v = agg.setdefault(nome, {"nome": nome, "alta": 0, "media": 0,
+                                          "baixa": 0, "total": 0,
+                                          "link": (row.get("url") or "").strip()})
+                v[chave] += 1
+                v["total"] += 1
+                total += 1
+    except Exception as e:
+        print(f"[{c['nome']}] CSV manual falhou: {e}", file=sys.stderr)
+        return None
+    if not agg:
+        return None
+    lista = sorted(agg.values(), key=lambda v: (-v["alta"], -v["total"]))
+    print(f"[{c['nome']}] produção curada: {total} proposituras ({rotulo}), "
+          f"{len(lista)} vereadores")
+    return bloco(lista, "SisCam — portal oficial da Câmara (extração conferida)",
+                 c.get("siscam") or c.get("fontes_extra", [("", "#")])[0][1],
+                 "verificada",
+                 f"Período {rotulo} · {total} proposituras · cada vereador tem "
+                 f"link para sua página oficial de proposituras")
+
+
 def coletar_producao_vereadores(c):
+    auto = coletar_siscam(c)
+    if auto:
+        return auto
+    manual = carregar_producao_manual(c)
+    if manual:
+        return manual
     sapl = c.get("sapl")
     if not sapl:
         return bloco([], "Portal da Câmara — sem API de autoria",
@@ -589,6 +811,11 @@ def coletar_producao_vereadores(c):
 
             # Muitas versões do SAPL não embutem "autores" na matéria:
             # a autoria vive em /api/materia/autoria/ (materia ↔ autor)
+            amostra = mats[0] if mats else {}
+            diag(c["nome"], "materia_keys", sorted(amostra.keys())[:40])
+            diag(c["nome"], "materia_autores_exemplo", str(amostra.get("autores"))[:200])
+            diag(c["nome"], "n_parlamentares", len(parls))
+            diag(c["nome"], "n_autores_cadastro", len(autores))
             tem_campo_autores = any(m.get("autores") for m in mats)
             mapa_autoria = {}
             if not tem_campo_autores:
@@ -602,10 +829,19 @@ def coletar_producao_vereadores(c):
                         regs = _sapl_paginar(f"{sapl}/api/materia/autoria/?page_size=100", 40)
                     except Exception as e:
                         print(f"[{c['nome']}] endpoint de autoria falhou: {e}", file=sys.stderr)
+                diag(c["nome"], "n_regs_autoria", len(regs))
+                if regs:
+                    diag(c["nome"], "autoria_keys", sorted(regs[0].keys())[:30])
+                    diag(c["nome"], "autoria_exemplo", str(regs[0])[:300])
                 for reg in regs:
-                    mid = reg.get("materia")
+                    mid = reg.get("materia") or reg.get("materia_id") or \
+                        (reg.get("materia", {}) or {}).get("id") if isinstance(reg.get("materia"), dict) else reg.get("materia")
+                    aut = reg.get("autor")
+                    if isinstance(aut, dict):
+                        aut = aut.get("id")
                     if mid in ids_ano:
-                        mapa_autoria.setdefault(mid, []).append(reg.get("autor"))
+                        mapa_autoria.setdefault(mid, []).append(aut)
+                diag(c["nome"], "materias_com_autoria_mapeada", len(mapa_autoria))
 
             def autores_da(m):
                 return m.get("autores") or mapa_autoria.get(m.get("id")) or []
@@ -628,9 +864,12 @@ def coletar_producao_vereadores(c):
                 return agg
 
             agg = monta(eh_parl)
+            diag(c["nome"], "agg_filtro_parlamentar", len(agg))
             if not agg:
                 agg = monta(lambda nome: nome and not any(x in norm(nome) for x in NAO_PARL))
+                diag(c["nome"], "agg_filtro_orgaos", len(agg))
             if not agg:
+                diag(c["nome"], "resultado", "nenhum autor casado — ver keys acima")
                 continue
             for aid, v in agg.items():
                 v["link"] = f"{sapl}/materia/pesquisar-materia?autoria__autor={aid}&ano={a}"
@@ -645,15 +884,20 @@ def coletar_producao_vereadores(c):
 def coletar_diario_oficial(c):
     url = f"https://queridodiario.ok.org.br/api/gazettes?territory_ids={c['ibge']}&size=1"
     link = f"https://queridodiario.ok.org.br/pesquisa/?territory_ids={c['ibge']}"
-    try:
-        r = requests.get(url, timeout=TIMEOUT, headers=UA)
-        r.raise_for_status()
-        total = r.json().get("total_gazettes", 0)
-        if total:
-            return bloco(total, "Querido Diário — Open Knowledge Brasil",
-                         link, "verificada", "Edições do Diário Oficial indexadas")
-    except Exception as e:
-        print(f"[{c['nome']}] Querido Diário: {e}", file=sys.stderr)
+    for t in range(4):
+        try:
+            r = requests.get(url, timeout=TIMEOUT, headers=UA)
+            if r.status_code in (429, 503):
+                raise RuntimeError(f"limite de chamadas ({r.status_code})")
+            r.raise_for_status()
+            total = r.json().get("total_gazettes", 0)
+            if total:
+                return bloco(total, "Querido Diário — Open Knowledge Brasil",
+                             link, "verificada", "Edições do Diário Oficial indexadas")
+            break
+        except Exception as e:
+            print(f"[{c['nome']}] Querido Diário tentativa {t+1}: {e}", file=sys.stderr)
+            time.sleep(4 * (t + 1))
     return bloco(0, "Querido Diário", link, "demo",
                  "Cidade ainda não coberta pelo Querido Diário")
 
@@ -1248,6 +1492,8 @@ if __name__ == "__main__":
     }
     with open("docs/dados.json", "w", encoding="utf-8") as fh:
         json.dump(saida, fh, ensure_ascii=False, indent=2)
+    with open("docs/diagnostico.json", "w", encoding="utf-8") as fh:
+        json.dump(DIAGNOSTICO, fh, ensure_ascii=False, indent=2)
     print("\n✓ docs/dados.json gerado")
     gerar_site(saida)
     for i, x in enumerate(ranking[:10], 1):
