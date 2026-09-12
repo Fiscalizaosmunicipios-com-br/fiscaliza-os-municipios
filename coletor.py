@@ -27,33 +27,63 @@ from datetime import datetime, timezone
 import requests
 
 # ═════════════════ CONFIGURAÇÃO DE CIDADES ═════════════════
+# ═══ REGIÃO EM FOCO (Piracicaba/São Pedro e vizinhas) ═══
+# Meta: cobertura 100% verificada. Câmaras no SisCam usam o mesmo
+# extrator (docs/extrator-siscam.js) e alimentam docs/dados-manuais/.
+PERIODO = ("01/01/2025", "09/09/2026")
+
 CIDADES = [
-    {"nome": "Charqueada", "uf": "SP", "ibge": "3511706", "vereadores": 11, "sapl": None,
+    {"nome": "Charqueada", "uf": "SP", "ibge": "3511706", "vereadores": 11,
+     "regiao": True, "sapl": None,
+     "siscam": "https://charqueada.siscam.com.br",
+     "periodo_proposituras": PERIODO,
      "transparencia": "https://webapp1-charqueada.cidade360.cloud/pronimtb/",
      "transparencia_sistema": "Pronim TB (Cidade360)",
-     "siscam": "https://charqueada.siscam.com.br",
-     "periodo_proposituras": ("01/01/2025", "09/09/2026"),
      "fontes_extra": [
         ("Proposituras — SisCam (Câmara de Charqueada)",
-         "http://consulta.siscam.com.br/camaracharqueada/index/80/8"),
+         "https://charqueada.siscam.com.br/Vereadores"),
         ("Leis municipais — Legislação Digital",
          "https://legislacaodigital.com.br/Charqueada-sp"),
-        ("Transparência da Câmara (portal próprio)",
-         "http://186.250.144.166:5656/transparencia/"),
         ("Diário Oficial de Charqueada",
          "https://www.charqueada.sp.gov.br/portal/diario-oficial"),
      ]},
-    {"nome": "São Pedro", "uf": "SP", "ibge": "3550407", "vereadores": 11, "sapl": None},
-    {"nome": "Rio das Pedras", "uf": "SP", "ibge": "3544004", "vereadores": 10, "sapl": None},
-    {"nome": "Piracicaba", "uf": "SP", "ibge": "3538709", "vereadores": 23, "sapl": None},
-    {"nome": "Jacareí", "uf": "SP", "ibge": "3524402", "vereadores": 13, "sapl": None},
+    {"nome": "São Pedro", "uf": "SP", "ibge": "3550407", "vereadores": 11,
+     "regiao": True, "sapl": None,
+     "siscam": "https://saopedro.siscam.com.br",
+     "periodo_proposituras": PERIODO,
+     "fontes_extra": [("Proposituras — SisCam (Câmara de São Pedro)",
+                       "https://saopedro.siscam.com.br/Vereadores")]},
+    {"nome": "Rio das Pedras", "uf": "SP", "ibge": "3544004", "vereadores": 11,
+     "regiao": True, "sapl": None,
+     "siscam": "https://riodaspedras.siscam.com.br",
+     "periodo_proposituras": PERIODO,
+     "fontes_extra": [("Proposituras — SisCam (Câmara de Rio das Pedras)",
+                       "https://riodaspedras.siscam.com.br/Vereadores")]},
+    {"nome": "Piracicaba", "uf": "SP", "ibge": "3538709", "vereadores": 23,
+     "regiao": True, "sapl": None, "periodo_proposituras": PERIODO,
+     "fontes_extra": [("Atividade legislativa — SIAVE (Câmara de Piracicaba)",
+                       "https://siave.camarapiracicaba.sp.gov.br")]},
+    {"nome": "Jacareí", "uf": "SP", "ibge": "3524402", "vereadores": 13,
+     "regiao": True, "sapl": None, "periodo_proposituras": PERIODO},
+    # Vizinhas — entram com dados fiscais; proposituras conforme o sistema
+    {"nome": "Ipeúna", "uf": "SP", "ibge": None, "vereadores": None,
+     "regiao": True, "sapl": None, "periodo_proposituras": PERIODO},
+    {"nome": "Saltinho", "uf": "SP", "ibge": None, "vereadores": None,
+     "regiao": True, "sapl": None, "periodo_proposituras": PERIODO},
+    {"nome": "Santa Maria da Serra", "uf": "SP", "ibge": None, "vereadores": None,
+     "regiao": True, "sapl": None, "periodo_proposituras": PERIODO},
+    {"nome": "Águas de São Pedro", "uf": "SP", "ibge": None, "vereadores": None,
+     "regiao": True, "sapl": None, "periodo_proposituras": PERIODO},
+    {"nome": "Rio Claro", "uf": "SP", "ibge": None, "vereadores": None,
+     "regiao": True, "sapl": None, "periodo_proposituras": PERIODO},
+    # Referência nacional (SAPL ativo)
     {"nome": "Ilha Comprida", "uf": "SP", "ibge": None, "vereadores": 9,
      "sapl": "https://sapl.ilhacomprida.sp.leg.br"},
     {"nome": "Sales Oliveira", "uf": "SP", "ibge": "3544905", "vereadores": 9,
      "sapl": "https://sapl.salesoliveira.sp.leg.br"},
 ]
 
-# Capitais (Brasília fora: DF não tem Câmara de Vereadores; art. 29-A não se aplica)
+# Capitais — referência nacional (Brasília fora: DF não tem Câmara de Vereadores)
 CAPITAIS = [
     ("Rio Branco", "AC", "1200401"), ("Maceió", "AL", "2704302"),
     ("Macapá", "AP", "1600303"), ("Manaus", "AM", "1302603"),
@@ -290,6 +320,25 @@ def diag(cidade, etapa, info):
 
 
 # ═════════════════ COLETAS ═════════════════
+def descobrir_siscam(c):
+    """Sonda <cidade>.siscam.com.br para Câmaras da região sem sistema
+    configurado. Só registra; a extração continua sendo feita pelo
+    extrator no navegador (o robots do SisCam não autoriza coleta)."""
+    if c.get("siscam") or c.get("siscam_sondado") or not c.get("regiao"):
+        return
+    c["siscam_sondado"] = True
+    base = f"https://{slug(c['nome'])}.siscam.com.br"
+    try:
+        r = requests.get(f"{base}/Vereadores", timeout=12, headers=UA)
+        if r.status_code == 200 and "Proposituras" in r.text:
+            c["siscam"] = base
+            c.setdefault("fontes_extra", []).append(
+                (f"Proposituras — SisCam (Câmara de {c['nome']})", f"{base}/Vereadores"))
+            print(f"[{c['nome']}] SisCam descoberto: {base}")
+    except Exception:
+        pass
+
+
 def descobrir_sapl(c):
     """Sonda o padrão Interlegis sapl.<cidade>.<uf>.leg.br para cidades
     sem SAPL configurado. Ativa somente se a API responder com matérias."""
@@ -475,6 +524,7 @@ def coletar_rgf_pessoal(c, poder):
     rotulo = "Executivo" if poder == "E" else "Legislativo"
 
     def extrai(itens):
+        """Devolve (percentual_da_rcl, dtp_absoluto, rcl_absoluta)."""
         dtp = rcl = pct = None
         for i in itens:
             conta = norm(i.get("conta") or "")
@@ -496,10 +546,10 @@ def coletar_rgf_pessoal(c, poder):
             if eh_rcl and rcl is None:
                 rcl = float(v)
         if pct is not None and 0 < pct <= 100:
-            return pct / 100.0
+            return pct / 100.0, dtp, rcl
         if dtp and rcl and rcl > 0:
-            return dtp / rcl
-        return None
+            return dtp / rcl, dtp, rcl
+        return None, dtp, rcl
 
     for ano, perc, periodo in tentativas:
         url = (f"{SICONFI}/rgf?an_exercicio={ano}&in_periodicidade={perc}"
@@ -512,48 +562,24 @@ def coletar_rgf_pessoal(c, poder):
             itens = r.json().get("items", [])
             if not itens:
                 continue
-            val = extrai(itens)
+            val, dtp_abs, rcl_abs = extrai(itens)
             if val is not None:
                 per_txt = "quadrimestre" if perc == "Q" else "semestre"
-                return bloco(val, f"SICONFI/RGF — {rotulo}", url, "verificada",
-                             f"{periodo}º {per_txt} de {ano} (% da RCL)")
+                b = bloco(val, f"SICONFI/RGF — {rotulo}", url, "verificada",
+                          f"{periodo}º {per_txt} de {ano} (% da RCL)")
+                b["dtp"] = dtp_abs or (val * rcl_abs if rcl_abs else None)
+                b["rcl"] = rcl_abs
+                return b
             diag(c["nome"], f"rgf_{poder}_sem_dtp",
                  f"{ano}/{perc}{periodo}: {len(itens)} itens, contas="
                  f"{sorted({(i.get('conta') or '')[:45] for i in itens})[:6]}")
         except Exception as e:
             diag(c["nome"], f"rgf_{poder}_erro", f"{ano}/{perc}{periodo}: {str(e)[:80]}")
-    return bloco(None, f"SICONFI/RGF — {rotulo}", SICONFI, "demo",
-                 "RGF não localizado no SICONFI para os períodos consultados")
-
-
-def folha_legislativo_dca(c):
-    """Plano B para a folha da Câmara: pessoal e encargos da função
-    Legislativa no DCA, comparado ao repasse (art. 29-A, §1º: máx. 70%)."""
-    ano_atual = datetime.now().year
-    for ano in (ano_atual - 1, ano_atual - 2):
-        url = (f"{SICONFI}/dca?an_exercicio={ano}"
-               f"&no_anexo=DCA-Anexo%20I-E&id_ente={c['ibge']}")
-        try:
-            r = requests.get(url, timeout=TIMEOUT, headers=UA)
-            r.raise_for_status()
-            pessoal = None
-            for i in r.json().get("items", []):
-                conta = norm(i.get("conta") or "")
-                col = norm(i.get("coluna") or "")
-                if "legislativa" not in conta:
-                    continue
-                if "pessoal" in conta and "liquidad" in col:
-                    v = i.get("valor")
-                    if v is not None:
-                        pessoal = max(pessoal or 0, float(v))
-            if pessoal:
-                b = bloco(pessoal, "SICONFI/DCA — pessoal da função Legislativa",
-                          url, "verificada", f"Exercício {ano}")
-                b["exercicio"] = ano
-                return b
-        except Exception:
-            pass
-    return None
+    b = bloco(None, f"SICONFI/RGF — {rotulo}", SICONFI, "demo",
+              "o município não tem Relatório de Gestão Fiscal publicado no "
+              "SICONFI para os períodos consultados")
+    b["dtp"] = b["rcl"] = None
+    return b
 
 
 def coletar_custo_camara(c):
@@ -1038,13 +1064,13 @@ def coletar_diario_oficial(c):
 
 def coletar_cidade(c):
     descobrir_sapl(c)
+    descobrir_siscam(c)
     pop_b = coletar_populacao(c)
     fin = coletar_rreo(c)
     rgf_e = coletar_rgf_pessoal(c, "E")
     rgf_l = coletar_rgf_pessoal(c, "L")
     custo_b = coletar_custo_camara(c)
     base29a_29 = coletar_base29a(c, custo_b.get("exercicio"))
-    folha_leg_b = folha_legislativo_dca(c)
     props_b = coletar_proposicoes(c)
     prod_b = coletar_producao_vereadores(c)
     dia_b = coletar_diario_oficial(c)
@@ -1053,7 +1079,6 @@ def coletar_cidade(c):
     n_ver = c.get("vereadores") or vereadores_teto(pop)
     return {**c, "vereadores": n_ver,
             "base29a_legal": base29a_29,
-            "folha_legislativo_dca": folha_leg_b,
             "vereadores_estimado": c.get("vereadores") is None,
             "populacao": pop_b, "financas": fin,
             "rgf_executivo": rgf_e, "rgf_legislativo": rgf_l,
@@ -1102,7 +1127,11 @@ def pontuar(cidades):
         c_teto = clamp((1 - uso / limite) * 100) if uso is not None else None
         q_leg = d["rgf_legislativo"]["valor"]
         # Art. 29-A, §1º: folha da Câmara não pode passar de 70% do repasse
-        folha_leg = (d.get("folha_legislativo_dca") or {}).get("valor")
+        # Folha da Câmara em reais: percentual da RCL × RCL, ambos do RGF
+        rgf_l = d["rgf_legislativo"]
+        folha_leg = rgf_l.get("dtp")
+        if folha_leg is None and rgf_l.get("valor") and rgf_l.get("rcl"):
+            folha_leg = rgf_l["valor"] * rgf_l["rcl"]
         razao_folha_repasse = (folha_leg / cc) if (folha_leg and cc) else None
         if q_leg is not None:
             c_folha = clamp((0.06 - q_leg) / 0.06 * 100)
@@ -1139,7 +1168,17 @@ def pontuar(cidades):
         q_tema = entropia_norm(temas) * 100 if temas else 50.0
         Q = 0.60 * q_prop + 0.40 * q_tema
 
-        nota = 0.40 * F + 0.30 * C + 0.30 * Q
+        # Q só entra na nota quando há produção legislativa REAL. Sem ela, a
+        # nota usa apenas F e C, renormalizados — nunca o valor de
+        # demonstração, que empataria dezenas de cidades no mesmo número e
+        # penalizaria justamente quem publica sua produção.
+        q_real = d["proposicoes"]["status"] == "verificada"
+        if q_real:
+            nota = 0.40 * F + 0.30 * C + 0.30 * Q
+            escopo = "completa"
+        else:
+            nota = (0.40 * F + 0.30 * C) / 0.70
+            escopo = "parcial"
         selo = "VIÁVEL" if nota >= 70 else "ATENÇÃO" if nota >= 45 else "CRÍTICO"
 
         blocos = [d["populacao"], d["financas"]["receita"], d["financas"]["despesa"],
@@ -1165,6 +1204,7 @@ def pontuar(cidades):
             "cobertura_proposicoes": cobertura_props,
         }
         d["nota"] = {"final": round(nota, 1), "selo": selo,
+                     "escopo": escopo, "q_real": q_real,
                      "confianca": round(confianca, 2),
                      "f": round(F, 1), "f_eq": round(f_eq, 1),
                      "f_pes": round(f_pes, 1), "f_inv": round(f_inv, 1),
@@ -1374,6 +1414,23 @@ def pagina_cidade(c, pos, total, gerado_em):
                   if dia.get("status") == "verificada" and dia.get("valor") else "")
     pr = c["proposicoes"]["valor"]
     cls = pr.get("classes", {})
+    aviso_escopo = ""
+    if not n.get("q_real"):
+        aviso_escopo = ('<div class="nota"><b>Nota parcial.</b> A produção legislativa desta '
+                        'Câmara ainda não foi coletada em fonte oficial, então a nota usa apenas '
+                        'gestão fiscal (40%) e custo do legislativo (30%), renormalizados. '
+                        'Publicar um número estimado empataria cidades diferentes e penalizaria '
+                        'quem divulga sua produção. Veja o que falta em '
+                        '<a href="../cobertura.html">cobertura de dados</a>.</div>')
+    aviso_rgf = ""
+    if c["rgf_executivo"]["status"] != "verificada":
+        aviso_rgf = ('<div class="nota"><b>Sem Relatório de Gestão Fiscal.</b> Este município '
+                     'não tem RGF publicado no SICONFI para os períodos consultados. O RGF é '
+                     'obrigatório pela Lei de Responsabilidade Fiscal (art. 54 e 55) e é o '
+                     'documento que comprova o cumprimento do limite de pessoal. Sem ele, os '
+                     'componentes de folha do Executivo e do Legislativo ficam neutros na nota, '
+                     'e a ausência derruba a confiança da cidade — a lacuna é do ente, não da '
+                     'coleta.</div>')
     cob = ind.get("cobertura_proposicoes")
     if cob == "parcial":
         aviso_cobertura = ('<div class="nota">O portal desta Câmara publica sobretudo projetos '
@@ -1401,6 +1458,7 @@ def pagina_cidade(c, pos, total, gerado_em):
   {prelim}
 </header>
 
+{aviso_escopo}
 <div class="nota"><b>Leitura do retrato:</b> {gerar_analise(c)}</div>
 
 <section>
@@ -1410,6 +1468,7 @@ def pagina_cidade(c, pos, total, gerado_em):
   {_linha("Despesa total liquidada", _brl(dt['valor']))}
   {_linha("Resultado", _brl(ind['resultado_fiscal']), ind['resultado_fiscal'] < 0)}
   {_linha("Pessoal do Executivo (% RCL — limite 54%)", _pct(ind['pessoal_executivo_rcl']), (ind['pessoal_executivo_rcl'] or 0) > 0.54)}
+  {aviso_rgf}
   {_linha("Investimentos (% da receita)", _pct(ind['taxa_investimento']))}
 </section>
 
@@ -1460,36 +1519,57 @@ def pagina_index(dados):
     descricao = ("Quanto custa a Câmara da sua cidade? Ranking com capitais e municípios por "
                  "gestão fiscal, custo do legislativo e qualidade da produção dos vereadores — "
                  "dados oficiais verificáveis.")
-    itens = []
-    for i, c in enumerate(cidades, 1):
-        n = c["nota"]
-        s = slug(c["nome"]) + "-" + c["uf"].lower()
-        cor = COR[n["selo"]]
-        prelim = ("" if n["confianca"] >= 1 else
-                  f'<div class="conf">nota preliminar — {n["confianca"]:.0%} das fontes verificadas</div>')
-        pil = "".join(
-            f'<div class="pilar"><div class="pilar-rotulo">{r} · {v:.0f}</div>'
-            f'<div class="pilar-barra"><div style="width:{v:.0f}%"></div></div></div>'
-            for r, v in [("Gestão fiscal", n["f"]), ("Custo do legislativo", n["c"]),
-                         ("Produção legislativa", n["q"])])
-        itens.append(f"""<a class="cidade" href="cidades/{s}.html">
-  <div class="topo"><span class="pos">{i}º</span>
-  <span class="nome">{c['nome']} — {c['uf']}{' · capital' if c.get('capital') else ''}</span>
-  <span class="selo-cidade" style="color:{cor}">{n['selo']}</span>
-  <span class="nota-rank" style="color:{cor}">{str(n['final']).replace('.', ',')}</span></div>
-  <div class="pilares">{pil}</div>{prelim}</a>""")
+    def render_lista(lista):
+        out = []
+        for i, c in enumerate(lista, 1):
+            n = c["nota"]
+            s = slug(c["nome"]) + "-" + c["uf"].lower()
+            cor = COR[n["selo"]]
+            marcas = []
+            if not n.get("q_real"):
+                marcas.append("nota parcial: sem produção legislativa")
+            if n["confianca"] < 1:
+                marcas.append(f'{n["confianca"]:.0%} das fontes verificadas')
+            prelim = (f'<div class="conf">{" · ".join(marcas)}</div>' if marcas else "")
+            pares = [("Gestão fiscal", n["f"]), ("Custo do legislativo", n["c"])]
+            if n.get("q_real"):
+                pares.append(("Produção legislativa", n["q"]))
+            pil = "".join(
+                f'<div class="pilar"><div class="pilar-rotulo">{r} · {v:.0f}</div>'
+                f'<div class="pilar-barra"><div style="width:{v:.0f}%"></div></div></div>'
+                for r, v in pares)
+            if not n.get("q_real"):
+                pil += ('<div class="pilar"><div class="pilar-rotulo" style="color:#8A5A12">'
+                        'Produção legislativa · sem dados</div>'
+                        '<div class="pilar-barra"></div></div>')
+            out.append(f"""<a class="cidade" href="cidades/{s}.html">
+      <div class="topo"><span class="pos">{i}º</span>
+      <span class="nome">{c['nome']} — {c['uf']}{' · capital' if c.get('capital') else ''}</span>
+      <span class="selo-cidade" style="color:{cor}">{n['selo']}</span>
+      <span class="nota-rank" style="color:{cor}">{str(n['final']).replace('.', ',')}</span></div>
+      <div class="pilares">{pil}</div>{prelim}</a>""")
+
+        return "".join(out)
+
+    regiao = [c for c in cidades if c.get("regiao")]
+    outras = [c for c in cidades if not c.get("regiao")]
 
     corpo = f"""<header class="cabecalho">
   <div class="protocolo">{MARCA.upper()} · BASE DE PESQUISA CÍVICA</div>
   <h1>Quais cidades são bem geridas?
-    <small>{len(cidades)} cidades analisadas · atualizado em {dados['gerado_em'][:10]} · gestão fiscal, custo do legislativo e qualidade da produção dos vereadores, com dados públicos verificáveis</small>
+    <small>{len(regiao)} municípios da região + {len(outras)} de referência · atualizado em {dados['gerado_em'][:10]} · gestão fiscal, custo do legislativo e qualidade da produção dos vereadores, com dados públicos verificáveis</small>
   </h1>
 </header>
 <div class="metodo"><b>Como a nota é calculada:</b> 40% gestão fiscal (equilíbrio, folha de pessoal da LRF e investimento),
 30% custo do legislativo (teto do art. 29-A, folha parlamentar e comparação com o grupo populacional) e
 30% qualidade legislativa (peso real das matérias, por classificação automática das ementas, e diversidade de temas).
 Fórmulas em <a href="metodologia.html">como calculamos</a> · lacunas declaradas em <a href="cobertura.html">cobertura de dados</a>. Notas com fontes pendentes são preliminares.</div>
-{''.join(itens)}"""
+<h2 style="margin-top:30px">Região em foco — Piracicaba e vizinhas</h2>
+<p class="sub">Municípios onde buscamos cobertura completa, incluindo a produção de cada vereador.</p>
+{render_lista(regiao)}
+<h2 style="margin-top:36px">Referência nacional — capitais e outras cidades</h2>
+<p class="sub">Entram para comparação. A maioria ainda sem produção legislativa coletada: nota parcial.</p>
+{render_lista(outras)}"""
     return _shell(titulo, descricao, DOMINIO + "/", corpo)
 
 
@@ -1504,6 +1584,9 @@ def pagina_metodologia(dados):
 <section>
   <h2>A nota (0–100)</h2>
   <p>NOTA = 40% × Gestão Fiscal + 30% × Custo do Legislativo + 30% × Qualidade Legislativa.</p>
+  <p>Quando a produção legislativa ainda não foi coletada em fonte oficial, a nota é <b>parcial</b>:
+  calculada só com os dois primeiros pilares, renormalizados, e assim identificada no ranking.
+  Nunca preenchemos pilar sem dado com valor estimado.</p>
   {_linha("Gestão Fiscal (F)", "50% equilíbrio · 30% pessoal LRF · 20% investimento")}
   {_linha("Custo do Legislativo (C)", "50% teto art. 29-A · 30% folha LRF · 20% vs. grupo populacional")}
   {_linha("Qualidade Legislativa (Q)", "60% peso das matérias · 40% diversidade de temas")}
