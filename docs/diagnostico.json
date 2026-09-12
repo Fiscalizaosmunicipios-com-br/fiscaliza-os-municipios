@@ -3,5 +3,30 @@
     "cidade": "Charqueada",
     "etapa": "siscam_robots",
     "info": "bloqueado"
+  },
+  {
+    "cidade": "São Pedro",
+    "etapa": "siscam_robots",
+    "info": "bloqueado"
+  },
+  {
+    "cidade": "Rio das Pedras",
+    "etapa": "siscam_robots",
+    "info": "bloqueado"
+  },
+  {
+    "cidade": "Saltinho",
+    "etapa": "siscam_robots",
+    "info": "bloqueado"
+  },
+  {
+    "cidade": "Águas de São Pedro",
+    "etapa": "siscam_robots",
+    "info": "bloqueado"
+  },
+  {
+    "cidade": "Rio Claro",
+    "etapa": "siscam_robots",
+    "info": "bloqueado"
   }
 ]
