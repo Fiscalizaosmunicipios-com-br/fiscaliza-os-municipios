@@ -21,8 +21,83 @@
   },
   {
     "cidade": "Saltinho",
+    "etapa": "rgf_E_erro",
+    "info": "2025/Q2: 429 Client Error: Too Many Requests for url: https://apidatalake.tesouro.gov.br/"
+  },
+  {
+    "cidade": "Saltinho",
+    "etapa": "rgf_E_erro",
+    "info": "2024/S1: 429 Client Error: Too Many Requests for url: https://apidatalake.tesouro.gov.br/"
+  },
+  {
+    "cidade": "Saltinho",
+    "etapa": "rgf_L_erro",
+    "info": "2026/Q3: 429 Client Error: Too Many Requests for url: https://apidatalake.tesouro.gov.br/"
+  },
+  {
+    "cidade": "Saltinho",
+    "etapa": "rgf_L_erro",
+    "info": "2026/Q1: 429 Client Error: Too Many Requests for url: https://apidatalake.tesouro.gov.br/"
+  },
+  {
+    "cidade": "Saltinho",
+    "etapa": "rgf_L_erro",
+    "info": "2025/Q2: 429 Client Error: Too Many Requests for url: https://apidatalake.tesouro.gov.br/"
+  },
+  {
+    "cidade": "Saltinho",
+    "etapa": "rgf_L_erro",
+    "info": "2025/Q1: 429 Client Error: Too Many Requests for url: https://apidatalake.tesouro.gov.br/"
+  },
+  {
+    "cidade": "Saltinho",
+    "etapa": "rgf_L_erro",
+    "info": "2025/S2: 429 Client Error: Too Many Requests for url: https://apidatalake.tesouro.gov.br/"
+  },
+  {
+    "cidade": "Saltinho",
+    "etapa": "rgf_L_erro",
+    "info": "2025/S1: 429 Client Error: Too Many Requests for url: https://apidatalake.tesouro.gov.br/"
+  },
+  {
+    "cidade": "Saltinho",
+    "etapa": "rgf_L_erro",
+    "info": "2024/S2: 429 Client Error: Too Many Requests for url: https://apidatalake.tesouro.gov.br/"
+  },
+  {
+    "cidade": "Saltinho",
     "etapa": "siscam_robots",
     "info": "bloqueado"
+  },
+  {
+    "cidade": "Santa Maria da Serra",
+    "etapa": "rgf_E_erro",
+    "info": "2026/Q2: 429 Client Error: Too Many Requests for url: https://apidatalake.tesouro.gov.br/"
+  },
+  {
+    "cidade": "Santa Maria da Serra",
+    "etapa": "rgf_E_erro",
+    "info": "2025/Q2: 429 Client Error: Too Many Requests for url: https://apidatalake.tesouro.gov.br/"
+  },
+  {
+    "cidade": "Santa Maria da Serra",
+    "etapa": "rgf_L_erro",
+    "info": "2026/Q2: 429 Client Error: Too Many Requests for url: https://apidatalake.tesouro.gov.br/"
+  },
+  {
+    "cidade": "Santa Maria da Serra",
+    "etapa": "rgf_L_erro",
+    "info": "2026/S2: 429 Client Error: Too Many Requests for url: https://apidatalake.tesouro.gov.br/"
+  },
+  {
+    "cidade": "Santa Maria da Serra",
+    "etapa": "rgf_L_erro",
+    "info": "2025/Q2: 429 Client Error: Too Many Requests for url: https://apidatalake.tesouro.gov.br/"
+  },
+  {
+    "cidade": "Santa Maria da Serra",
+    "etapa": "rgf_L_erro",
+    "info": "2025/S2: 429 Client Error: Too Many Requests for url: https://apidatalake.tesouro.gov.br/"
   },
   {
     "cidade": "Águas de São Pedro",
@@ -33,5 +108,35 @@
     "cidade": "Rio Claro",
     "etapa": "siscam_robots",
     "info": "bloqueado"
+  },
+  {
+    "cidade": "Sales Oliveira",
+    "etapa": "rgf_E_erro",
+    "info": "2026/Q2: 429 Client Error: Too Many Requests for url: https://apidatalake.tesouro.gov.br/"
+  },
+  {
+    "cidade": "Sales Oliveira",
+    "etapa": "rgf_L_erro",
+    "info": "2025/Q1: 429 Client Error: Too Many Requests for url: https://apidatalake.tesouro.gov.br/"
+  },
+  {
+    "cidade": "Sales Oliveira",
+    "etapa": "rgf_L_erro",
+    "info": "2025/S2: 429 Client Error: Too Many Requests for url: https://apidatalake.tesouro.gov.br/"
+  },
+  {
+    "cidade": "Sales Oliveira",
+    "etapa": "rgf_L_erro",
+    "info": "2025/S1: 429 Client Error: Too Many Requests for url: https://apidatalake.tesouro.gov.br/"
+  },
+  {
+    "cidade": "Sales Oliveira",
+    "etapa": "rgf_L_erro",
+    "info": "2024/S2: 429 Client Error: Too Many Requests for url: https://apidatalake.tesouro.gov.br/"
+  },
+  {
+    "cidade": "Belo Horizonte",
+    "etapa": "rgf_E_erro",
+    "info": "2026/Q3: 429 Client Error: Too Many Requests for url: https://apidatalake.tesouro.gov.br/"
   }
 ]
