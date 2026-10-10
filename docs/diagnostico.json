@@ -33,5 +33,10 @@
     "cidade": "Rio Claro",
     "etapa": "siscam_robots",
     "info": "bloqueado"
+  },
+  {
+    "cidade": "Ilha Comprida",
+    "etapa": "rgf_L_erro",
+    "info": "2026/Q2: 429 Client Error: Too Many Requests for url: https://apidatalake.tesouro.gov.br/"
   }
 ]
