@@ -20,11 +20,6 @@
     "info": "bloqueado"
   },
   {
-    "cidade": "Santa Maria da Serra",
-    "etapa": "rgf_L_erro",
-    "info": "2026/S2: 429 Client Error: Too Many Requests for url: https://apidatalake.tesouro.gov.br/"
-  },
-  {
     "cidade": "Águas de São Pedro",
     "etapa": "siscam_robots",
     "info": "bloqueado"
