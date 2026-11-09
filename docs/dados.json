@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-08T18:30:42+00:00",
+  "gerado_em": "2026-11-09T22:27:11+00:00",
   "metodologia": {
     "versao": "2.0",
     "pesos": {
@@ -21,7 +21,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=3544905",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:19:45+00:00",
+        "coletado_em": "2026-11-09T20:06:27+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -31,7 +31,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3544905]",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:19:21+00:00",
+        "coletado_em": "2026-11-09T20:05:49+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -40,7 +40,7 @@
           "fonte": "SICONFI/DCA",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-C&id_ente=3544905",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:19:27+00:00",
+          "coletado_em": "2026-11-09T20:05:55+00:00",
           "detalhe": "DCA — contas anuais, exercício 2025"
         },
         "despesa": {
@@ -48,7 +48,7 @@
           "fonte": "SICONFI/DCA",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-D&id_ente=3544905",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:19:27+00:00",
+          "coletado_em": "2026-11-09T20:05:55+00:00",
           "detalhe": "DCA — contas anuais, exercício 2025"
         },
         "investimentos": {
@@ -56,7 +56,7 @@
           "fonte": "SICONFI/DCA — Investimentos",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-D&id_ente=3544905",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:19:27+00:00",
+          "coletado_em": "2026-11-09T20:05:55+00:00",
           "detalhe": "Exercício 2025"
         },
         "base29a": {
@@ -64,7 +64,7 @@
           "fonte": "SICONFI/DCA (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-C&id_ente=3544905",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:19:27+00:00",
+          "coletado_em": "2026-11-09T20:05:55+00:00",
           "detalhe": "Aproximação: impostos + transferências correntes"
         }
       },
@@ -73,7 +73,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:19:36+00:00",
+        "coletado_em": "2026-11-09T20:06:10+00:00",
         "detalhe": "o município não tem Relatório de Gestão Fiscal publicado no SICONFI para os períodos consultados",
         "dtp": null,
         "rcl": null
@@ -83,7 +83,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:19:43+00:00",
+        "coletado_em": "2026-11-09T20:06:25+00:00",
         "detalhe": "o município não tem Relatório de Gestão Fiscal publicado no SICONFI para os períodos consultados",
         "dtp": null,
         "rcl": null
@@ -93,7 +93,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3544905",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:19:44+00:00",
+        "coletado_em": "2026-11-09T20:06:26+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -173,7 +173,7 @@
         "fonte": "SAPL — Câmara Municipal (classificação NLP estágio 1)",
         "url": "https://sapl.salesoliveira.sp.leg.br/materia/pesquisar-materia?ano=2026",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:19:51+00:00",
+        "coletado_em": "2026-11-09T20:06:33+00:00",
         "detalhe": "Ano 2026"
       },
       "producao_vereadores": {
@@ -181,7 +181,7 @@
         "fonte": "SAPL (autoria indisponível no momento)",
         "url": "https://sapl.salesoliveira.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:19:52+00:00",
+        "coletado_em": "2026-11-09T20:06:35+00:00",
         "detalhe": ""
       },
       "diario_oficial": {
@@ -189,7 +189,7 @@
         "fonte": "Querido Diário",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=3544905",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:21:49+00:00",
+        "coletado_em": "2026-11-09T20:09:16+00:00",
         "detalhe": "Cidade ainda não coberta pelo Querido Diário"
       },
       "indicadores": {
@@ -244,7 +244,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=3205309",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:57:21+00:00",
+        "coletado_em": "2026-11-09T20:45:18+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -254,7 +254,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3205309]",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:57:15+00:00",
+        "coletado_em": "2026-11-09T20:45:10+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -263,7 +263,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3205309",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:57:17+00:00",
+          "coletado_em": "2026-11-09T20:45:12+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -271,7 +271,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3205309",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:57:17+00:00",
+          "coletado_em": "2026-11-09T20:45:12+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -279,7 +279,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3205309",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:57:17+00:00",
+          "coletado_em": "2026-11-09T20:45:12+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -287,7 +287,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3205309",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:57:17+00:00",
+          "coletado_em": "2026-11-09T20:45:12+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -296,7 +296,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=3205309",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:57:19+00:00",
+        "coletado_em": "2026-11-09T20:45:14+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 1286855278.85,
         "rcl": 3506395244.15
@@ -306,7 +306,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=3205309",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:57:20+00:00",
+        "coletado_em": "2026-11-09T20:45:16+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 41288022.72,
         "rcl": 3506395244.15
@@ -316,7 +316,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3205309",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:57:20+00:00",
+        "coletado_em": "2026-11-09T20:45:17+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -361,7 +361,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.vitoria.es.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:57:21+00:00",
+        "coletado_em": "2026-11-09T20:45:18+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -369,7 +369,7 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.vitoria.es.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:57:21+00:00",
+        "coletado_em": "2026-11-09T20:45:18+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "diario_oficial": {
@@ -377,7 +377,7 @@
         "fonte": "Querido Diário — Open Knowledge Brasil",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=3205309",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:57:48+00:00",
+        "coletado_em": "2026-11-09T20:46:20+00:00",
         "detalhe": "Edições do Diário Oficial indexadas"
       },
       "indicadores": {
@@ -443,7 +443,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=3550407",
         "status": "verificada",
-        "coletado_em": "2026-11-08T15:50:14+00:00",
+        "coletado_em": "2026-11-09T19:33:17+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -453,7 +453,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3550407]",
         "status": "demo",
-        "coletado_em": "2026-11-08T15:50:08+00:00",
+        "coletado_em": "2026-11-09T19:33:09+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -462,7 +462,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3550407",
           "status": "verificada",
-          "coletado_em": "2026-11-08T15:50:09+00:00",
+          "coletado_em": "2026-11-09T19:33:11+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -470,7 +470,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3550407",
           "status": "verificada",
-          "coletado_em": "2026-11-08T15:50:09+00:00",
+          "coletado_em": "2026-11-09T19:33:11+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -478,7 +478,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3550407",
           "status": "verificada",
-          "coletado_em": "2026-11-08T15:50:09+00:00",
+          "coletado_em": "2026-11-09T19:33:11+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -486,7 +486,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3550407",
           "status": "verificada",
-          "coletado_em": "2026-11-08T15:50:09+00:00",
+          "coletado_em": "2026-11-09T19:33:11+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -495,7 +495,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=3550407",
         "status": "verificada",
-        "coletado_em": "2026-11-08T15:50:11+00:00",
+        "coletado_em": "2026-11-09T19:33:12+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 88013066.29,
         "rcl": 273391494.25
@@ -505,7 +505,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=3550407",
         "status": "verificada",
-        "coletado_em": "2026-11-08T15:50:12+00:00",
+        "coletado_em": "2026-11-09T19:33:14+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 3071197.99,
         "rcl": 265901050.81
@@ -515,7 +515,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3550407",
         "status": "verificada",
-        "coletado_em": "2026-11-08T15:50:13+00:00",
+        "coletado_em": "2026-11-09T19:33:15+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -560,7 +560,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.saopedro.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T15:50:14+00:00",
+        "coletado_em": "2026-11-09T19:33:17+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -568,16 +568,16 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.saopedro.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T15:50:15+00:00",
+        "coletado_em": "2026-11-09T19:33:18+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "diario_oficial": {
-        "valor": 1174,
-        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "valor": 0,
+        "fonte": "Querido Diário",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=3550407",
-        "status": "verificada",
-        "coletado_em": "2026-11-08T15:50:40+00:00",
-        "detalhe": "Edições do Diário Oficial indexadas"
+        "status": "demo",
+        "coletado_em": "2026-11-09T19:34:30+00:00",
+        "detalhe": "Cidade ainda não coberta pelo Querido Diário"
       },
       "indicadores": {
         "resultado_fiscal": 6976126.980000019,
@@ -631,7 +631,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=2927408",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:47:50+00:00",
+        "coletado_em": "2026-11-09T20:35:18+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -641,7 +641,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[2927408]",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:47:43+00:00",
+        "coletado_em": "2026-11-09T20:35:10+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -650,7 +650,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2927408",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:47:44+00:00",
+          "coletado_em": "2026-11-09T20:35:12+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -658,7 +658,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2927408",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:47:44+00:00",
+          "coletado_em": "2026-11-09T20:35:12+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -666,7 +666,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2927408",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:47:44+00:00",
+          "coletado_em": "2026-11-09T20:35:12+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -674,7 +674,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2927408",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:47:44+00:00",
+          "coletado_em": "2026-11-09T20:35:12+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -683,7 +683,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=2927408",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:47:47+00:00",
+        "coletado_em": "2026-11-09T20:35:14+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 3433159448.94,
         "rcl": 12196329711.4
@@ -693,7 +693,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=2927408",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:47:48+00:00",
+        "coletado_em": "2026-11-09T20:35:16+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 188147785.62,
         "rcl": 12196329711.4
@@ -703,7 +703,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=2927408",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:47:49+00:00",
+        "coletado_em": "2026-11-09T20:35:17+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -748,7 +748,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.salvador.ba.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:47:50+00:00",
+        "coletado_em": "2026-11-09T20:35:18+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -756,7 +756,7 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.salvador.ba.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:47:50+00:00",
+        "coletado_em": "2026-11-09T20:35:18+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "diario_oficial": {
@@ -764,7 +764,7 @@
         "fonte": "Querido Diário — Open Knowledge Brasil",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=2927408",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:48:31+00:00",
+        "coletado_em": "2026-11-09T20:35:33+00:00",
         "detalhe": "Edições do Diário Oficial indexadas"
       },
       "indicadores": {
@@ -830,7 +830,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=3538709",
         "status": "verificada",
-        "coletado_em": "2026-11-08T15:58:47+00:00",
+        "coletado_em": "2026-11-09T19:43:44+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -840,7 +840,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3538709]",
         "status": "demo",
-        "coletado_em": "2026-11-08T15:58:41+00:00",
+        "coletado_em": "2026-11-09T19:43:38+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -849,7 +849,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3538709",
           "status": "verificada",
-          "coletado_em": "2026-11-08T15:58:43+00:00",
+          "coletado_em": "2026-11-09T19:43:40+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -857,7 +857,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3538709",
           "status": "verificada",
-          "coletado_em": "2026-11-08T15:58:43+00:00",
+          "coletado_em": "2026-11-09T19:43:40+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -865,7 +865,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3538709",
           "status": "verificada",
-          "coletado_em": "2026-11-08T15:58:43+00:00",
+          "coletado_em": "2026-11-09T19:43:40+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -873,7 +873,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3538709",
           "status": "verificada",
-          "coletado_em": "2026-11-08T15:58:43+00:00",
+          "coletado_em": "2026-11-09T19:43:40+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -882,7 +882,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=3538709",
         "status": "verificada",
-        "coletado_em": "2026-11-08T15:58:45+00:00",
+        "coletado_em": "2026-11-09T19:43:41+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 1209665704.98,
         "rcl": 3390706897.22
@@ -892,7 +892,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=3538709",
         "status": "verificada",
-        "coletado_em": "2026-11-08T15:58:46+00:00",
+        "coletado_em": "2026-11-09T19:43:43+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 48161975.8,
         "rcl": 3390706897.22
@@ -902,7 +902,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3538709",
         "status": "verificada",
-        "coletado_em": "2026-11-08T15:58:46+00:00",
+        "coletado_em": "2026-11-09T19:43:44+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -947,7 +947,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.piracicaba.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T15:58:47+00:00",
+        "coletado_em": "2026-11-09T19:43:44+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -955,7 +955,7 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.piracicaba.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T15:58:47+00:00",
+        "coletado_em": "2026-11-09T19:43:44+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "diario_oficial": {
@@ -963,7 +963,7 @@
         "fonte": "Querido Diário",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=3538709",
         "status": "demo",
-        "coletado_em": "2026-11-08T15:59:00+00:00",
+        "coletado_em": "2026-11-09T19:45:26+00:00",
         "detalhe": "Cidade ainda não coberta pelo Querido Diário"
       },
       "indicadores": {
@@ -1039,7 +1039,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=3511706",
         "status": "verificada",
-        "coletado_em": "2026-11-08T15:46:14+00:00",
+        "coletado_em": "2026-11-09T19:29:02+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -1049,7 +1049,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3511706]",
         "status": "demo",
-        "coletado_em": "2026-11-08T15:45:58+00:00",
+        "coletado_em": "2026-11-09T19:28:14+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -1058,7 +1058,7 @@
           "fonte": "SICONFI/DCA",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-C&id_ente=3511706",
           "status": "verificada",
-          "coletado_em": "2026-11-08T15:46:03+00:00",
+          "coletado_em": "2026-11-09T19:28:23+00:00",
           "detalhe": "DCA — contas anuais, exercício 2025"
         },
         "despesa": {
@@ -1066,7 +1066,7 @@
           "fonte": "SICONFI/DCA",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-D&id_ente=3511706",
           "status": "verificada",
-          "coletado_em": "2026-11-08T15:46:03+00:00",
+          "coletado_em": "2026-11-09T19:28:23+00:00",
           "detalhe": "DCA — contas anuais, exercício 2025"
         },
         "investimentos": {
@@ -1074,7 +1074,7 @@
           "fonte": "SICONFI/DCA — Investimentos",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-D&id_ente=3511706",
           "status": "verificada",
-          "coletado_em": "2026-11-08T15:46:03+00:00",
+          "coletado_em": "2026-11-09T19:28:23+00:00",
           "detalhe": "Exercício 2025"
         },
         "base29a": {
@@ -1082,7 +1082,7 @@
           "fonte": "SICONFI/DCA (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-C&id_ente=3511706",
           "status": "verificada",
-          "coletado_em": "2026-11-08T15:46:03+00:00",
+          "coletado_em": "2026-11-09T19:28:23+00:00",
           "detalhe": "Aproximação: impostos + transferências correntes"
         }
       },
@@ -1091,7 +1091,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
         "status": "demo",
-        "coletado_em": "2026-11-08T15:46:08+00:00",
+        "coletado_em": "2026-11-09T19:28:43+00:00",
         "detalhe": "o município não tem Relatório de Gestão Fiscal publicado no SICONFI para os períodos consultados",
         "dtp": null,
         "rcl": null
@@ -1101,7 +1101,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt",
         "status": "demo",
-        "coletado_em": "2026-11-08T15:46:13+00:00",
+        "coletado_em": "2026-11-09T19:29:01+00:00",
         "detalhe": "o município não tem Relatório de Gestão Fiscal publicado no SICONFI para os períodos consultados",
         "dtp": null,
         "rcl": null
@@ -1111,7 +1111,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3511706",
         "status": "verificada",
-        "coletado_em": "2026-11-08T15:46:14+00:00",
+        "coletado_em": "2026-11-09T19:29:01+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -1154,7 +1154,7 @@
         "fonte": "Portal oficial da Câmara (extração conferida) — classificação NLP",
         "url": "https://charqueada.siscam.com.br",
         "status": "verificada",
-        "coletado_em": "2026-11-08T15:46:14+00:00",
+        "coletado_em": "2026-11-09T19:29:02+00:00",
         "detalhe": "Período 01/01/2025 a 09/09/2026 · 623 proposituras, incluindo indicações"
       },
       "producao_vereadores": {
@@ -1251,7 +1251,7 @@
         "fonte": "SisCam — portal oficial da Câmara (extração conferida)",
         "url": "https://charqueada.siscam.com.br",
         "status": "verificada",
-        "coletado_em": "2026-11-08T15:46:16+00:00",
+        "coletado_em": "2026-11-09T19:29:04+00:00",
         "detalhe": "Período 01/01/2025 a 09/09/2026 · 623 proposituras · cada vereador tem link para sua página oficial de proposituras"
       },
       "diario_oficial": {
@@ -1259,7 +1259,7 @@
         "fonte": "Querido Diário — Open Knowledge Brasil",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=3511706",
         "status": "verificada",
-        "coletado_em": "2026-11-08T15:46:20+00:00",
+        "coletado_em": "2026-11-09T19:29:21+00:00",
         "detalhe": "Edições do Diário Oficial indexadas"
       },
       "indicadores": {
@@ -1314,7 +1314,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=4106902",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:37:00+00:00",
+        "coletado_em": "2026-11-09T21:26:26+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -1324,7 +1324,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[4106902]",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:36:53+00:00",
+        "coletado_em": "2026-11-09T21:26:17+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -1333,7 +1333,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=4106902",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:36:55+00:00",
+          "coletado_em": "2026-11-09T21:26:19+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -1341,7 +1341,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=4106902",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:36:55+00:00",
+          "coletado_em": "2026-11-09T21:26:19+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -1349,7 +1349,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=4106902",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:36:55+00:00",
+          "coletado_em": "2026-11-09T21:26:19+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -1357,7 +1357,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=4106902",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:36:55+00:00",
+          "coletado_em": "2026-11-09T21:26:19+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -1366,7 +1366,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=4106902",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:36:58+00:00",
+        "coletado_em": "2026-11-09T21:26:21+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 5256942230.46,
         "rcl": 13268443703.72
@@ -1376,7 +1376,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=4106902",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:36:59+00:00",
+        "coletado_em": "2026-11-09T21:26:24+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 168495235.26,
         "rcl": 13268443703.72
@@ -1386,7 +1386,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=4106902",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:37:00+00:00",
+        "coletado_em": "2026-11-09T21:26:25+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -1431,7 +1431,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.curitiba.pr.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:37:00+00:00",
+        "coletado_em": "2026-11-09T21:26:26+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -1439,7 +1439,7 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.curitiba.pr.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:37:00+00:00",
+        "coletado_em": "2026-11-09T21:26:26+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "diario_oficial": {
@@ -1447,7 +1447,7 @@
         "fonte": "Querido Diário — Open Knowledge Brasil",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=4106902",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:37:29+00:00",
+        "coletado_em": "2026-11-09T21:27:40+00:00",
         "detalhe": "Edições do Diário Oficial indexadas"
       },
       "indicadores": {
@@ -1502,7 +1502,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=3550308",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:20:18+00:00",
+        "coletado_em": "2026-11-09T22:17:56+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -1512,7 +1512,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3550308]",
         "status": "demo",
-        "coletado_em": "2026-11-08T18:20:13+00:00",
+        "coletado_em": "2026-11-09T22:17:47+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -1521,7 +1521,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3550308",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:20:14+00:00",
+          "coletado_em": "2026-11-09T22:17:49+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -1529,7 +1529,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3550308",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:20:14+00:00",
+          "coletado_em": "2026-11-09T22:17:49+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -1537,7 +1537,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3550308",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:20:14+00:00",
+          "coletado_em": "2026-11-09T22:17:49+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -1545,7 +1545,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3550308",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:20:14+00:00",
+          "coletado_em": "2026-11-09T22:17:49+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -1554,7 +1554,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=3550308",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:20:15+00:00",
+        "coletado_em": "2026-11-09T22:17:51+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 27904654723.79,
         "rcl": 107561934862.75
@@ -1564,7 +1564,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=3550308",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:20:16+00:00",
+        "coletado_em": "2026-11-09T22:17:54+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 477969997.41,
         "rcl": 107561934862.75
@@ -1574,7 +1574,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3550308",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:20:17+00:00",
+        "coletado_em": "2026-11-09T22:17:55+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -1619,7 +1619,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.saopaulo.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T18:20:18+00:00",
+        "coletado_em": "2026-11-09T22:17:56+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -1627,7 +1627,7 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.saopaulo.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T18:20:18+00:00",
+        "coletado_em": "2026-11-09T22:17:56+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "diario_oficial": {
@@ -1635,7 +1635,7 @@
         "fonte": "Querido Diário — Open Knowledge Brasil",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=3550308",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:21:58+00:00",
+        "coletado_em": "2026-11-09T22:18:38+00:00",
         "detalhe": "Edições do Diário Oficial indexadas"
       },
       "indicadores": {
@@ -1690,7 +1690,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=2507507",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:28:16+00:00",
+        "coletado_em": "2026-11-09T21:19:36+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -1700,7 +1700,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[2507507]",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:28:10+00:00",
+        "coletado_em": "2026-11-09T21:19:28+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -1709,7 +1709,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2507507",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:28:11+00:00",
+          "coletado_em": "2026-11-09T21:19:30+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -1717,7 +1717,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2507507",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:28:11+00:00",
+          "coletado_em": "2026-11-09T21:19:30+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -1725,7 +1725,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2507507",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:28:11+00:00",
+          "coletado_em": "2026-11-09T21:19:30+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -1733,7 +1733,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2507507",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:28:11+00:00",
+          "coletado_em": "2026-11-09T21:19:30+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -1742,7 +1742,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=2507507",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:28:14+00:00",
+        "coletado_em": "2026-11-09T21:19:31+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 2259556623.33,
         "rcl": 4842373936.1
@@ -1752,7 +1752,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=2507507",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:28:15+00:00",
+        "coletado_em": "2026-11-09T21:19:34+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 113597355.63,
         "rcl": 4842373936.1
@@ -1762,7 +1762,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=2507507",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:28:15+00:00",
+        "coletado_em": "2026-11-09T21:19:35+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -1771,13 +1771,8 @@
           "tipos": [
             {
               "tipo": "Projeto de Lei Ordinária",
-              "qtd": 788,
+              "qtd": 795,
               "peso": "alta"
-            },
-            {
-              "tipo": "REQ-Obras, serviços e melhoramentos.",
-              "qtd": 318,
-              "peso": "baixa"
             },
             {
               "tipo": "REQ- Votos (Art.171, Inc. X - Reg. Interno CMJP)",
@@ -1785,8 +1780,13 @@
               "peso": "baixa"
             },
             {
+              "tipo": "REQ-Obras, serviços e melhoramentos.",
+              "qtd": 283,
+              "peso": "baixa"
+            },
+            {
               "tipo": "Indicação",
-              "qtd": 226,
+              "qtd": 233,
               "peso": "baixa"
             },
             {
@@ -1801,7 +1801,7 @@
             },
             {
               "tipo": "REQ- Inclusão de projeto de urgência",
-              "qtd": 69,
+              "qtd": 88,
               "peso": "baixa"
             },
             {
@@ -1816,7 +1816,7 @@
             },
             {
               "tipo": "Ofícios Recebidos",
-              "qtd": 14,
+              "qtd": 15,
               "peso": "baixa"
             },
             {
@@ -1826,7 +1826,7 @@
             },
             {
               "tipo": "REQ-Encerramento de discussão",
-              "qtd": 7,
+              "qtd": 8,
               "peso": "baixa"
             },
             {
@@ -1866,29 +1866,29 @@
             }
           ],
           "classes": {
-            "ESTRUTURAL": 781,
-            "REGULATORIA": 690,
-            "SIMBOLICA": 529
+            "ESTRUTURAL": 787,
+            "REGULATORIA": 676,
+            "SIMBOLICA": 537
           },
           "temas": {
             "Segurança": 52,
-            "Educação": 178,
-            "Saúde": 170,
-            "Tributário": 12,
+            "Educação": 174,
+            "Saúde": 177,
+            "Tributário": 13,
             "Mobilidade": 61,
             "Assistência": 105,
-            "Saneamento": 198,
-            "Meio ambiente": 32,
+            "Saneamento": 169,
+            "Meio ambiente": 31,
             "Administração": 35
           },
-          "peso_medio": 0.5974999999999906,
+          "peso_medio": 0.5962999999999906,
           "total": 2000,
           "cobertura": "completa"
         },
         "fonte": "SAPL — Câmara Municipal (classificação NLP estágio 1)",
         "url": "https://sapl.joaopessoa.pb.leg.br/materia/pesquisar-materia?ano=2026",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:30:59+00:00",
+        "coletado_em": "2026-11-09T21:20:32+00:00",
         "detalhe": "Ano 2026"
       },
       "producao_vereadores": {
@@ -1896,7 +1896,7 @@
         "fonte": "SAPL (autoria indisponível no momento)",
         "url": "https://sapl.joaopessoa.pb.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:31:00+00:00",
+        "coletado_em": "2026-11-09T21:20:33+00:00",
         "detalhe": ""
       },
       "diario_oficial": {
@@ -1904,7 +1904,7 @@
         "fonte": "Querido Diário — Open Knowledge Brasil",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=2507507",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:33:05+00:00",
+        "coletado_em": "2026-11-09T21:22:28+00:00",
         "detalhe": "Edições do Diário Oficial indexadas"
       },
       "indicadores": {
@@ -1923,12 +1923,12 @@
         "custo_por_habitante": 270.49877474,
         "custo_por_vereador": 5409975.4948,
         "percentil_custo_estrato": 55.55555555555556,
-        "peso_medio_proposicoes": 0.5974999999999906,
-        "indice_propositivo": 0.3905,
+        "peso_medio_proposicoes": 0.5962999999999906,
+        "indice_propositivo": 0.3935,
         "cobertura_proposicoes": "completa"
       },
       "nota": {
-        "final": 60.6,
+        "final": 60.7,
         "selo": "ATENÇÃO",
         "escopo": "completa",
         "q_real": true,
@@ -1941,9 +1941,9 @@
         "c_teto": 33.1,
         "c_folha": 0.0,
         "c_rel": 44.4,
-        "q": 95.1,
+        "q": 95.4,
         "q_prop": 100.0,
-        "q_tema": 87.8
+        "q_tema": 88.5
       }
     },
     {
@@ -1959,7 +1959,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=2408102",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:53:16+00:00",
+        "coletado_em": "2026-11-09T21:48:06+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -1969,7 +1969,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[2408102]",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:53:09+00:00",
+        "coletado_em": "2026-11-09T21:47:58+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -1978,7 +1978,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2408102",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:53:11+00:00",
+          "coletado_em": "2026-11-09T21:48:00+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -1986,7 +1986,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2408102",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:53:11+00:00",
+          "coletado_em": "2026-11-09T21:48:00+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -1994,7 +1994,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2408102",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:53:11+00:00",
+          "coletado_em": "2026-11-09T21:48:00+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -2002,7 +2002,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2408102",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:53:11+00:00",
+          "coletado_em": "2026-11-09T21:48:00+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -2011,7 +2011,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=2408102",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:53:13+00:00",
+        "coletado_em": "2026-11-09T21:48:02+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 1820022334.16,
         "rcl": 4257767303.19
@@ -2021,7 +2021,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=2408102",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:53:14+00:00",
+        "coletado_em": "2026-11-09T21:48:04+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 98610313.22,
         "rcl": 4145792396.16
@@ -2031,7 +2031,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=2408102",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:53:15+00:00",
+        "coletado_em": "2026-11-09T21:48:05+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -2040,12 +2040,12 @@
           "tipos": [
             {
               "tipo": "Requerimento",
-              "qtd": 868,
+              "qtd": 851,
               "peso": "baixa"
             },
             {
               "tipo": "Projeto de Lei",
-              "qtd": 763,
+              "qtd": 772,
               "peso": "alta"
             },
             {
@@ -2055,12 +2055,12 @@
             },
             {
               "tipo": "Moção",
-              "qtd": 73,
+              "qtd": 78,
               "peso": "baixa"
             },
             {
               "tipo": "Indicação",
-              "qtd": 56,
+              "qtd": 57,
               "peso": "baixa"
             },
             {
@@ -2075,12 +2075,12 @@
             },
             {
               "tipo": "Emenda Modificativa",
-              "qtd": 11,
+              "qtd": 12,
               "peso": "alta"
             },
             {
               "tipo": "Projeto de Resolução",
-              "qtd": 10,
+              "qtd": 11,
               "peso": "baixa"
             },
             {
@@ -2110,29 +2110,29 @@
             }
           ],
           "classes": {
-            "ESTRUTURAL": 754,
-            "REGULATORIA": 967,
-            "SIMBOLICA": 279
+            "ESTRUTURAL": 763,
+            "REGULATORIA": 951,
+            "SIMBOLICA": 286
           },
           "temas": {
-            "Educação": 229,
-            "Saúde": 165,
+            "Educação": 228,
+            "Saúde": 164,
             "Mobilidade": 65,
-            "Segurança": 88,
-            "Saneamento": 74,
-            "Assistência": 87,
+            "Segurança": 87,
+            "Saneamento": 73,
+            "Assistência": 90,
             "Administração": 17,
             "Tributário": 8,
-            "Meio ambiente": 22
+            "Meio ambiente": 23
           },
-          "peso_medio": 0.6670999999999798,
+          "peso_medio": 0.6667999999999797,
           "total": 2000,
           "cobertura": "parcial"
         },
         "fonte": "SAPL — Câmara Municipal (classificação NLP estágio 1)",
         "url": "https://sapl.natal.rn.leg.br/materia/pesquisar-materia?ano=2026",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:53:59+00:00",
+        "coletado_em": "2026-11-09T21:48:53+00:00",
         "detalhe": "Ano 2026"
       },
       "producao_vereadores": {
@@ -2140,7 +2140,7 @@
         "fonte": "SAPL (autoria indisponível no momento)",
         "url": "https://sapl.natal.rn.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:54:00+00:00",
+        "coletado_em": "2026-11-09T21:48:54+00:00",
         "detalhe": ""
       },
       "diario_oficial": {
@@ -2148,7 +2148,7 @@
         "fonte": "Querido Diário — Open Knowledge Brasil",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=2408102",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:54:48+00:00",
+        "coletado_em": "2026-11-09T21:49:29+00:00",
         "detalhe": "Edições do Diário Oficial indexadas"
       },
       "indicadores": {
@@ -2167,12 +2167,12 @@
         "custo_por_habitante": 229.91114008000002,
         "custo_por_vereador": 4598222.8016,
         "percentil_custo_estrato": 40.74074074074074,
-        "peso_medio_proposicoes": 0.6670999999999798,
-        "indice_propositivo": 0.377,
+        "peso_medio_proposicoes": 0.6667999999999797,
+        "indice_propositivo": 0.3815,
         "cobertura_proposicoes": "parcial"
       },
       "nota": {
-        "final": 59.0,
+        "final": 59.1,
         "selo": "ATENÇÃO",
         "escopo": "completa",
         "q_real": true,
@@ -2185,9 +2185,9 @@
         "c_teto": 42.0,
         "c_folha": 0.0,
         "c_rel": 59.3,
-        "q": 76.0,
+        "q": 76.1,
         "q_prop": 70.0,
-        "q_tema": 85.1
+        "q_tema": 85.2
       }
     },
     {
@@ -2203,7 +2203,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=1600303",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:37:16+00:00",
+        "coletado_em": "2026-11-09T20:24:33+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -2213,7 +2213,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[1600303]",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:37:07+00:00",
+        "coletado_em": "2026-11-09T20:24:24+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -2222,7 +2222,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=2&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1600303",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:37:10+00:00",
+          "coletado_em": "2026-11-09T20:24:27+00:00",
           "detalhe": "RREO Anexo 01, 2º bimestre 2026"
         },
         "despesa": {
@@ -2230,7 +2230,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=2&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1600303",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:37:10+00:00",
+          "coletado_em": "2026-11-09T20:24:27+00:00",
           "detalhe": "RREO Anexo 01, 2º bimestre 2026"
         },
         "investimentos": {
@@ -2238,7 +2238,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=2&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1600303",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:37:10+00:00",
+          "coletado_em": "2026-11-09T20:24:27+00:00",
           "detalhe": "RREO Anexo 01, 2º bimestre 2026"
         },
         "base29a": {
@@ -2246,7 +2246,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=2&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1600303",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:37:10+00:00",
+          "coletado_em": "2026-11-09T20:24:27+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -2255,7 +2255,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=1&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=1600303",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:37:13+00:00",
+        "coletado_em": "2026-11-09T20:24:29+00:00",
         "detalhe": "1º quadrimestre de 2026 (% da RCL)",
         "dtp": 942130819.64,
         "rcl": 1895467665.09
@@ -2265,7 +2265,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=1&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=1600303",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:37:15+00:00",
+        "coletado_em": "2026-11-09T20:24:31+00:00",
         "detalhe": "1º quadrimestre de 2026 (% da RCL)",
         "dtp": 38443608.96,
         "rcl": 1894324423.78
@@ -2275,7 +2275,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=1600303",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:37:15+00:00",
+        "coletado_em": "2026-11-09T20:24:32+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -2320,7 +2320,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.macapa.ap.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:37:16+00:00",
+        "coletado_em": "2026-11-09T20:24:33+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -2328,16 +2328,16 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.macapa.ap.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:37:16+00:00",
+        "coletado_em": "2026-11-09T20:24:33+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "diario_oficial": {
-        "valor": 0,
-        "fonte": "Querido Diário",
+        "valor": 1019,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=1600303",
-        "status": "demo",
-        "coletado_em": "2026-11-08T16:39:57+00:00",
-        "detalhe": "Cidade ainda não coberta pelo Querido Diário"
+        "status": "verificada",
+        "coletado_em": "2026-11-09T20:25:09+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
       },
       "indicadores": {
         "resultado_fiscal": 31837896.02999997,
@@ -2391,7 +2391,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=1100205",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:03:07+00:00",
+        "coletado_em": "2026-11-09T21:58:22+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -2401,7 +2401,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[1100205]",
         "status": "demo",
-        "coletado_em": "2026-11-08T18:03:01+00:00",
+        "coletado_em": "2026-11-09T21:58:13+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -2410,7 +2410,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1100205",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:03:03+00:00",
+          "coletado_em": "2026-11-09T21:58:16+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -2418,7 +2418,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1100205",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:03:03+00:00",
+          "coletado_em": "2026-11-09T21:58:16+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -2426,7 +2426,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1100205",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:03:03+00:00",
+          "coletado_em": "2026-11-09T21:58:16+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -2434,7 +2434,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1100205",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:03:03+00:00",
+          "coletado_em": "2026-11-09T21:58:16+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -2443,7 +2443,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=1100205",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:03:04+00:00",
+        "coletado_em": "2026-11-09T21:58:17+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 1178805273.95,
         "rcl": 2727744996.53
@@ -2453,7 +2453,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=1100205",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:03:05+00:00",
+        "coletado_em": "2026-11-09T21:58:20+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 56180169.05,
         "rcl": 2727744996.53
@@ -2463,7 +2463,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=1100205",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:03:06+00:00",
+        "coletado_em": "2026-11-09T21:58:21+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -2487,11 +2487,11 @@
             "SIMBOLICA": 282
           },
           "temas": {
-            "Saneamento": 370,
-            "Segurança": 112,
+            "Saneamento": 367,
+            "Segurança": 110,
             "Educação": 64,
             "Saúde": 22,
-            "Mobilidade": 297,
+            "Mobilidade": 299,
             "Administração": 1,
             "Meio ambiente": 18,
             "Assistência": 2
@@ -2503,7 +2503,7 @@
         "fonte": "SAPL — Câmara Municipal (classificação NLP estágio 1)",
         "url": "https://sapl.portovelho.ro.leg.br/materia/pesquisar-materia?ano=2026",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:03:50+00:00",
+        "coletado_em": "2026-11-09T21:59:12+00:00",
         "detalhe": "Ano 2026"
       },
       "producao_vereadores": {
@@ -2511,7 +2511,7 @@
         "fonte": "SAPL (autoria indisponível no momento)",
         "url": "https://sapl.portovelho.ro.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T18:03:52+00:00",
+        "coletado_em": "2026-11-09T21:59:13+00:00",
         "detalhe": ""
       },
       "diario_oficial": {
@@ -2519,7 +2519,7 @@
         "fonte": "Querido Diário",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=1100205",
         "status": "demo",
-        "coletado_em": "2026-11-08T18:05:03+00:00",
+        "coletado_em": "2026-11-09T22:01:54+00:00",
         "detalhe": "Cidade ainda não coberta pelo Querido Diário"
       },
       "indicadores": {
@@ -2558,7 +2558,7 @@
         "c_rel": 85.2,
         "q": 67.0,
         "q_prop": 70.0,
-        "q_tema": 62.6
+        "q_tema": 62.5
       }
     },
     {
@@ -2574,7 +2574,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=2111300",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:05:53+00:00",
+        "coletado_em": "2026-11-09T20:55:36+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -2584,7 +2584,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[2111300]",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:05:46+00:00",
+        "coletado_em": "2026-11-09T20:55:28+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -2593,7 +2593,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2111300",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:05:48+00:00",
+          "coletado_em": "2026-11-09T20:55:30+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -2601,7 +2601,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2111300",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:05:48+00:00",
+          "coletado_em": "2026-11-09T20:55:30+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -2609,7 +2609,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2111300",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:05:48+00:00",
+          "coletado_em": "2026-11-09T20:55:30+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -2617,7 +2617,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2111300",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:05:48+00:00",
+          "coletado_em": "2026-11-09T20:55:30+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -2626,7 +2626,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=2111300",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:05:50+00:00",
+        "coletado_em": "2026-11-09T20:55:32+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 2304323344.87,
         "rcl": 6141468527.57
@@ -2636,7 +2636,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=2111300",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:05:51+00:00",
+        "coletado_em": "2026-11-09T20:55:34+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 127516237.67,
         "rcl": 6141468527.57
@@ -2646,7 +2646,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=2111300",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:05:52+00:00",
+        "coletado_em": "2026-11-09T20:55:35+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -2691,7 +2691,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.saoluis.ma.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:05:53+00:00",
+        "coletado_em": "2026-11-09T20:55:36+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -2699,7 +2699,7 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.saoluis.ma.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:05:53+00:00",
+        "coletado_em": "2026-11-09T20:55:36+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "diario_oficial": {
@@ -2707,7 +2707,7 @@
         "fonte": "Querido Diário — Open Knowledge Brasil",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=2111300",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:06:35+00:00",
+        "coletado_em": "2026-11-09T20:57:52+00:00",
         "detalhe": "Edições do Diário Oficial indexadas"
       },
       "indicadores": {
@@ -2762,7 +2762,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=1501402",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:24:13+00:00",
+        "coletado_em": "2026-11-09T21:14:25+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -2772,7 +2772,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[1501402]",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:24:05+00:00",
+        "coletado_em": "2026-11-09T21:14:16+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -2781,7 +2781,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1501402",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:24:06+00:00",
+          "coletado_em": "2026-11-09T21:14:19+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -2789,7 +2789,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1501402",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:24:06+00:00",
+          "coletado_em": "2026-11-09T21:14:19+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -2797,7 +2797,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1501402",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:24:06+00:00",
+          "coletado_em": "2026-11-09T21:14:19+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -2805,7 +2805,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1501402",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:24:06+00:00",
+          "coletado_em": "2026-11-09T21:14:19+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -2814,7 +2814,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=1501402",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:24:08+00:00",
+        "coletado_em": "2026-11-09T21:14:21+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 1994978578.17,
         "rcl": 5671839888.33
@@ -2824,7 +2824,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=1501402",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:24:09+00:00",
+        "coletado_em": "2026-11-09T21:14:23+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 160980570.21,
         "rcl": 5671839888.33
@@ -2834,7 +2834,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=1501402",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:24:12+00:00",
+        "coletado_em": "2026-11-09T21:14:24+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -2879,7 +2879,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.belem.pa.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:24:13+00:00",
+        "coletado_em": "2026-11-09T21:14:25+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -2887,16 +2887,16 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.belem.pa.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:24:13+00:00",
+        "coletado_em": "2026-11-09T21:14:25+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "diario_oficial": {
-        "valor": 4744,
-        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "valor": 0,
+        "fonte": "Querido Diário",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=1501402",
-        "status": "verificada",
-        "coletado_em": "2026-11-08T17:24:18+00:00",
-        "detalhe": "Edições do Diário Oficial indexadas"
+        "status": "demo",
+        "coletado_em": "2026-11-09T21:15:37+00:00",
+        "detalhe": "Cidade ainda não coberta pelo Querido Diário"
       },
       "indicadores": {
         "resultado_fiscal": 281859914.0700002,
@@ -2955,7 +2955,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=3524402",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:02:55+00:00",
+        "coletado_em": "2026-11-09T19:49:23+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -2965,7 +2965,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3524402]",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:02:50+00:00",
+        "coletado_em": "2026-11-09T19:49:15+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -2974,7 +2974,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3524402",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:02:51+00:00",
+          "coletado_em": "2026-11-09T19:49:17+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -2982,7 +2982,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3524402",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:02:51+00:00",
+          "coletado_em": "2026-11-09T19:49:17+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -2990,7 +2990,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3524402",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:02:51+00:00",
+          "coletado_em": "2026-11-09T19:49:17+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -2998,7 +2998,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3524402",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:02:51+00:00",
+          "coletado_em": "2026-11-09T19:49:17+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -3007,7 +3007,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=3524402",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:02:53+00:00",
+        "coletado_em": "2026-11-09T19:49:19+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 530806001.55,
         "rcl": 1452064187.06
@@ -3017,7 +3017,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=3524402",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:02:54+00:00",
+        "coletado_em": "2026-11-09T19:49:21+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 23818099.18,
         "rcl": 1452064187.06
@@ -3027,7 +3027,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3524402",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:02:54+00:00",
+        "coletado_em": "2026-11-09T19:49:22+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -3072,7 +3072,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.jacarei.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:02:55+00:00",
+        "coletado_em": "2026-11-09T19:49:23+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -3080,7 +3080,7 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.jacarei.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:02:55+00:00",
+        "coletado_em": "2026-11-09T19:49:23+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "diario_oficial": {
@@ -3088,7 +3088,7 @@
         "fonte": "Querido Diário",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=3524402",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:04:08+00:00",
+        "coletado_em": "2026-11-09T19:50:34+00:00",
         "detalhe": "Cidade ainda não coberta pelo Querido Diário"
       },
       "indicadores": {
@@ -3143,7 +3143,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=2304400",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:52:29+00:00",
+        "coletado_em": "2026-11-09T20:39:32+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -3153,7 +3153,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[2304400]",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:52:21+00:00",
+        "coletado_em": "2026-11-09T20:39:23+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -3162,7 +3162,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2304400",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:52:22+00:00",
+          "coletado_em": "2026-11-09T20:39:26+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -3170,7 +3170,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2304400",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:52:22+00:00",
+          "coletado_em": "2026-11-09T20:39:26+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -3178,7 +3178,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2304400",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:52:22+00:00",
+          "coletado_em": "2026-11-09T20:39:26+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -3186,7 +3186,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2304400",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:52:22+00:00",
+          "coletado_em": "2026-11-09T20:39:26+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -3195,7 +3195,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=2304400",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:52:27+00:00",
+        "coletado_em": "2026-11-09T20:39:27+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 6270555234.48,
         "rcl": 13315460829.85
@@ -3205,7 +3205,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=2304400",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:52:28+00:00",
+        "coletado_em": "2026-11-09T20:39:30+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 217404092.36,
         "rcl": 13315460829.85
@@ -3215,7 +3215,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=2304400",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:52:29+00:00",
+        "coletado_em": "2026-11-09T20:39:31+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -3224,17 +3224,17 @@
           "tipos": [
             {
               "tipo": "Indicação",
-              "qtd": 829,
+              "qtd": 831,
               "peso": "baixa"
             },
             {
               "tipo": "Requerimento",
-              "qtd": 536,
+              "qtd": 521,
               "peso": "baixa"
             },
             {
               "tipo": "Projeto de Lei Ordinária",
-              "qtd": 478,
+              "qtd": 489,
               "peso": "alta"
             },
             {
@@ -3244,7 +3244,7 @@
             },
             {
               "tipo": "Protocolo da Casa",
-              "qtd": 44,
+              "qtd": 46,
               "peso": "baixa"
             },
             {
@@ -3269,29 +3269,29 @@
             }
           ],
           "classes": {
-            "ESTRUTURAL": 486,
-            "REGULATORIA": 464,
-            "SIMBOLICA": 1050
+            "ESTRUTURAL": 495,
+            "REGULATORIA": 452,
+            "SIMBOLICA": 1053
           },
           "temas": {
-            "Educação": 224,
+            "Educação": 228,
             "Segurança": 50,
-            "Saúde": 111,
+            "Saúde": 114,
             "Mobilidade": 82,
             "Meio ambiente": 22,
             "Tributário": 16,
             "Saneamento": 43,
-            "Assistência": 84,
-            "Administração": 18
+            "Assistência": 87,
+            "Administração": 19
           },
-          "peso_medio": 0.3822000000000051,
+          "peso_medio": 0.383100000000005,
           "total": 2000,
           "cobertura": "completa"
         },
         "fonte": "SAPL — Câmara Municipal (classificação NLP estágio 1)",
         "url": "https://sapl.fortaleza.ce.leg.br/materia/pesquisar-materia?ano=2026",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:53:12+00:00",
+        "coletado_em": "2026-11-09T20:40:22+00:00",
         "detalhe": "Ano 2026"
       },
       "producao_vereadores": {
@@ -3299,7 +3299,7 @@
         "fonte": "SAPL (autoria indisponível no momento)",
         "url": "https://sapl.fortaleza.ce.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:53:13+00:00",
+        "coletado_em": "2026-11-09T20:40:23+00:00",
         "detalhe": ""
       },
       "diario_oficial": {
@@ -3307,7 +3307,7 @@
         "fonte": "Querido Diário",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=2304400",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:53:28+00:00",
+        "coletado_em": "2026-11-09T20:41:21+00:00",
         "detalhe": "Cidade ainda não coberta pelo Querido Diário"
       },
       "indicadores": {
@@ -3326,8 +3326,8 @@
         "custo_por_habitante": 601.9104015800001,
         "custo_por_vereador": 12038208.0316,
         "percentil_custo_estrato": 88.88888888888889,
-        "peso_medio_proposicoes": 0.3822000000000051,
-        "indice_propositivo": 0.243,
+        "peso_medio_proposicoes": 0.383100000000005,
+        "indice_propositivo": 0.2475,
         "cobertura_proposicoes": "completa"
       },
       "nota": {
@@ -3344,9 +3344,9 @@
         "c_teto": 45.6,
         "c_folha": 0.0,
         "c_rel": 11.1,
-        "q": 94.2,
+        "q": 94.1,
         "q_prop": 100.0,
-        "q_tema": 85.4
+        "q_tema": 85.3
       }
     },
     {
@@ -3362,7 +3362,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=2800308",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:25:53+00:00",
+        "coletado_em": "2026-11-09T22:22:35+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -3372,7 +3372,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[2800308]",
         "status": "demo",
-        "coletado_em": "2026-11-08T18:25:46+00:00",
+        "coletado_em": "2026-11-09T22:22:26+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -3381,7 +3381,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2800308",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:25:47+00:00",
+          "coletado_em": "2026-11-09T22:22:28+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -3389,7 +3389,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2800308",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:25:47+00:00",
+          "coletado_em": "2026-11-09T22:22:28+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -3397,7 +3397,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2800308",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:25:47+00:00",
+          "coletado_em": "2026-11-09T22:22:28+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -3405,7 +3405,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2800308",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:25:47+00:00",
+          "coletado_em": "2026-11-09T22:22:28+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -3414,7 +3414,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=2800308",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:25:50+00:00",
+        "coletado_em": "2026-11-09T22:22:30+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 1446897450.58,
         "rcl": 3458982474.82
@@ -3424,7 +3424,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=2800308",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:25:51+00:00",
+        "coletado_em": "2026-11-09T22:22:33+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 79313282.09,
         "rcl": 3458982474.82
@@ -3434,7 +3434,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=2800308",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:25:52+00:00",
+        "coletado_em": "2026-11-09T22:22:34+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -3479,7 +3479,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.aracaju.se.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T18:25:53+00:00",
+        "coletado_em": "2026-11-09T22:22:35+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -3487,7 +3487,7 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.aracaju.se.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T18:25:53+00:00",
+        "coletado_em": "2026-11-09T22:22:35+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "diario_oficial": {
@@ -3495,7 +3495,7 @@
         "fonte": "Querido Diário — Open Knowledge Brasil",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=2800308",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:26:17+00:00",
+        "coletado_em": "2026-11-09T22:23:02+00:00",
         "detalhe": "Edições do Diário Oficial indexadas"
       },
       "indicadores": {
@@ -3550,7 +3550,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=1721000",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:30:13+00:00",
+        "coletado_em": "2026-11-09T22:27:00+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -3560,7 +3560,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[1721000]",
         "status": "demo",
-        "coletado_em": "2026-11-08T18:30:07+00:00",
+        "coletado_em": "2026-11-09T22:26:52+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -3569,7 +3569,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1721000",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:30:08+00:00",
+          "coletado_em": "2026-11-09T22:26:54+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -3577,7 +3577,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1721000",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:30:08+00:00",
+          "coletado_em": "2026-11-09T22:26:54+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -3585,7 +3585,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1721000",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:30:08+00:00",
+          "coletado_em": "2026-11-09T22:26:54+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -3593,7 +3593,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1721000",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:30:08+00:00",
+          "coletado_em": "2026-11-09T22:26:54+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -3602,7 +3602,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=1721000",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:30:11+00:00",
+        "coletado_em": "2026-11-09T22:26:56+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 1140185833.93,
         "rcl": 2384210697.19
@@ -3612,7 +3612,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=1721000",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:30:12+00:00",
+        "coletado_em": "2026-11-09T22:26:58+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 44273716.23,
         "rcl": 2384210697.19
@@ -3622,7 +3622,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=1721000",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:30:13+00:00",
+        "coletado_em": "2026-11-09T22:26:59+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -3667,7 +3667,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.palmas.to.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T18:30:16+00:00",
+        "coletado_em": "2026-11-09T22:27:04+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -3675,7 +3675,7 @@
         "fonte": "SAPL (autoria indisponível no momento)",
         "url": "https://sapl.palmas.to.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T18:30:17+00:00",
+        "coletado_em": "2026-11-09T22:27:05+00:00",
         "detalhe": ""
       },
       "diario_oficial": {
@@ -3683,7 +3683,7 @@
         "fonte": "Querido Diário — Open Knowledge Brasil",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=1721000",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:30:40+00:00",
+        "coletado_em": "2026-11-09T22:27:09+00:00",
         "detalhe": "Edições do Diário Oficial indexadas"
       },
       "indicadores": {
@@ -3738,7 +3738,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=4314902",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:58:43+00:00",
+        "coletado_em": "2026-11-09T21:53:26+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -3748,7 +3748,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[4314902]",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:58:36+00:00",
+        "coletado_em": "2026-11-09T21:53:17+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -3757,7 +3757,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=4314902",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:58:37+00:00",
+          "coletado_em": "2026-11-09T21:53:20+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -3765,7 +3765,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=4314902",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:58:37+00:00",
+          "coletado_em": "2026-11-09T21:53:20+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -3773,7 +3773,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=4314902",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:58:37+00:00",
+          "coletado_em": "2026-11-09T21:53:20+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -3781,7 +3781,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=4314902",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:58:37+00:00",
+          "coletado_em": "2026-11-09T21:53:20+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -3790,7 +3790,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=4314902",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:58:40+00:00",
+        "coletado_em": "2026-11-09T21:53:21+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 3999882651.93,
         "rcl": 10273125061.61
@@ -3800,7 +3800,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=4314902",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:58:42+00:00",
+        "coletado_em": "2026-11-09T21:53:24+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 156258567.0,
         "rcl": 10273125061.61
@@ -3810,7 +3810,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=4314902",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:58:42+00:00",
+        "coletado_em": "2026-11-09T21:53:25+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -3855,7 +3855,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.portoalegre.rs.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:58:43+00:00",
+        "coletado_em": "2026-11-09T21:53:26+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -3863,7 +3863,7 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.portoalegre.rs.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:58:43+00:00",
+        "coletado_em": "2026-11-09T21:53:26+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "diario_oficial": {
@@ -3871,7 +3871,7 @@
         "fonte": "Querido Diário — Open Knowledge Brasil",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=4314902",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:59:12+00:00",
+        "coletado_em": "2026-11-09T21:54:25+00:00",
         "detalhe": "Edições do Diário Oficial indexadas"
       },
       "indicadores": {
@@ -3926,7 +3926,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=3106200",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:19:58+00:00",
+        "coletado_em": "2026-11-09T21:10:19+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -3936,7 +3936,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3106200]",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:19:51+00:00",
+        "coletado_em": "2026-11-09T21:10:10+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -3945,7 +3945,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3106200",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:19:53+00:00",
+          "coletado_em": "2026-11-09T21:10:13+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -3953,7 +3953,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3106200",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:19:53+00:00",
+          "coletado_em": "2026-11-09T21:10:13+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -3961,7 +3961,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3106200",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:19:53+00:00",
+          "coletado_em": "2026-11-09T21:10:13+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -3969,7 +3969,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3106200",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:19:53+00:00",
+          "coletado_em": "2026-11-09T21:10:13+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -3978,7 +3978,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=3106200",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:19:56+00:00",
+        "coletado_em": "2026-11-09T21:10:14+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 8286913400.81,
         "rcl": 19444852253.52
@@ -3988,7 +3988,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=3106200",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:19:57+00:00",
+        "coletado_em": "2026-11-09T21:10:16+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 303822118.62,
         "rcl": 19444852253.52
@@ -3998,7 +3998,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3106200",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:19:58+00:00",
+        "coletado_em": "2026-11-09T21:10:18+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -4043,7 +4043,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.belohorizonte.mg.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:19:58+00:00",
+        "coletado_em": "2026-11-09T21:10:19+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -4051,7 +4051,7 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.belohorizonte.mg.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:19:58+00:00",
+        "coletado_em": "2026-11-09T21:10:19+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "diario_oficial": {
@@ -4059,7 +4059,7 @@
         "fonte": "Querido Diário — Open Knowledge Brasil",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=3106200",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:20:17+00:00",
+        "coletado_em": "2026-11-09T21:10:29+00:00",
         "detalhe": "Edições do Diário Oficial indexadas"
       },
       "indicadores": {
@@ -4114,7 +4114,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=4205407",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:13:44+00:00",
+        "coletado_em": "2026-11-09T22:11:17+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -4124,7 +4124,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[4205407]",
         "status": "demo",
-        "coletado_em": "2026-11-08T18:13:38+00:00",
+        "coletado_em": "2026-11-09T22:11:08+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -4133,7 +4133,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=4205407",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:13:39+00:00",
+          "coletado_em": "2026-11-09T22:11:10+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -4141,7 +4141,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=4205407",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:13:39+00:00",
+          "coletado_em": "2026-11-09T22:11:10+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -4149,7 +4149,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=4205407",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:13:39+00:00",
+          "coletado_em": "2026-11-09T22:11:10+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -4157,7 +4157,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=4205407",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:13:39+00:00",
+          "coletado_em": "2026-11-09T22:11:10+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -4166,7 +4166,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=4205407",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:13:42+00:00",
+        "coletado_em": "2026-11-09T22:11:12+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 1897569665.86,
         "rcl": 4004363144.95
@@ -4176,7 +4176,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=4205407",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:13:43+00:00",
+        "coletado_em": "2026-11-09T22:11:15+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 106876366.8,
         "rcl": 4004363144.95
@@ -4186,7 +4186,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=4205407",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:13:43+00:00",
+        "coletado_em": "2026-11-09T22:11:16+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -4231,7 +4231,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.florianopolis.sc.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T18:13:44+00:00",
+        "coletado_em": "2026-11-09T22:11:17+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -4239,7 +4239,7 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.florianopolis.sc.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T18:13:44+00:00",
+        "coletado_em": "2026-11-09T22:11:17+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "diario_oficial": {
@@ -4247,7 +4247,7 @@
         "fonte": "Querido Diário",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=4205407",
         "status": "demo",
-        "coletado_em": "2026-11-08T18:16:25+00:00",
+        "coletado_em": "2026-11-09T22:13:58+00:00",
         "detalhe": "Cidade ainda não coberta pelo Querido Diário"
       },
       "indicadores": {
@@ -4302,7 +4302,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=1400100",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:08:58+00:00",
+        "coletado_em": "2026-11-09T22:05:53+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -4312,7 +4312,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[1400100]",
         "status": "demo",
-        "coletado_em": "2026-11-08T18:08:51+00:00",
+        "coletado_em": "2026-11-09T22:05:44+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -4321,7 +4321,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1400100",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:08:53+00:00",
+          "coletado_em": "2026-11-09T22:05:46+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -4329,7 +4329,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1400100",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:08:53+00:00",
+          "coletado_em": "2026-11-09T22:05:46+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -4337,7 +4337,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1400100",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:08:53+00:00",
+          "coletado_em": "2026-11-09T22:05:46+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -4345,7 +4345,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1400100",
           "status": "verificada",
-          "coletado_em": "2026-11-08T18:08:53+00:00",
+          "coletado_em": "2026-11-09T22:05:46+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -4354,7 +4354,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=1400100",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:08:55+00:00",
+        "coletado_em": "2026-11-09T22:05:48+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 1351492001.98,
         "rcl": 2875411237.18
@@ -4364,7 +4364,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=1400100",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:08:56+00:00",
+        "coletado_em": "2026-11-09T22:05:50+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 63208094.97,
         "rcl": 2709204998.78
@@ -4374,7 +4374,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=1400100",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:08:57+00:00",
+        "coletado_em": "2026-11-09T22:05:52+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -4414,7 +4414,7 @@
         "fonte": "SAPL — Câmara Municipal (classificação NLP estágio 1)",
         "url": "https://sapl.boavista.rr.leg.br/materia/pesquisar-materia?ano=2026",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:09:44+00:00",
+        "coletado_em": "2026-11-09T22:06:43+00:00",
         "detalhe": "Ano 2026"
       },
       "producao_vereadores": {
@@ -4422,7 +4422,7 @@
         "fonte": "SAPL (autoria indisponível no momento)",
         "url": "https://sapl.boavista.rr.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T18:09:45+00:00",
+        "coletado_em": "2026-11-09T22:06:44+00:00",
         "detalhe": ""
       },
       "diario_oficial": {
@@ -4430,7 +4430,7 @@
         "fonte": "Querido Diário — Open Knowledge Brasil",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=1400100",
         "status": "verificada",
-        "coletado_em": "2026-11-08T18:09:50+00:00",
+        "coletado_em": "2026-11-09T22:07:19+00:00",
         "detalhe": "Edições do Diário Oficial indexadas"
       },
       "indicadores": {
@@ -4485,7 +4485,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=1302603",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:43:50+00:00",
+        "coletado_em": "2026-11-09T20:29:06+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -4495,7 +4495,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[1302603]",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:43:46+00:00",
+        "coletado_em": "2026-11-09T20:28:58+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -4504,7 +4504,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1302603",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:43:47+00:00",
+          "coletado_em": "2026-11-09T20:29:00+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -4512,7 +4512,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1302603",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:43:47+00:00",
+          "coletado_em": "2026-11-09T20:29:00+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -4520,7 +4520,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1302603",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:43:47+00:00",
+          "coletado_em": "2026-11-09T20:29:00+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -4528,7 +4528,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1302603",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:43:47+00:00",
+          "coletado_em": "2026-11-09T20:29:00+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -4537,7 +4537,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=1302603",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:43:48+00:00",
+        "coletado_em": "2026-11-09T20:29:02+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 3766094503.86,
         "rcl": 10188356154.25
@@ -4547,7 +4547,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=1302603",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:43:49+00:00",
+        "coletado_em": "2026-11-09T20:29:04+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 201698813.61,
         "rcl": 10188356154.25
@@ -4557,7 +4557,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=1302603",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:43:49+00:00",
+        "coletado_em": "2026-11-09T20:29:05+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -4602,7 +4602,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.manaus.am.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:43:53+00:00",
+        "coletado_em": "2026-11-09T20:29:09+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -4610,16 +4610,16 @@
         "fonte": "SAPL (autoria indisponível no momento)",
         "url": "https://sapl.manaus.am.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:43:54+00:00",
+        "coletado_em": "2026-11-09T20:29:11+00:00",
         "detalhe": ""
       },
       "diario_oficial": {
-        "valor": 7517,
-        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "valor": 0,
+        "fonte": "Querido Diário",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=1302603",
-        "status": "verificada",
-        "coletado_em": "2026-11-08T16:43:55+00:00",
-        "detalhe": "Edições do Diário Oficial indexadas"
+        "status": "demo",
+        "coletado_em": "2026-11-09T20:31:22+00:00",
+        "detalhe": "Cidade ainda não coberta pelo Querido Diário"
       },
       "indicadores": {
         "resultado_fiscal": -616476518.7399998,
@@ -4673,7 +4673,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=2704302",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:33:01+00:00",
+        "coletado_em": "2026-11-09T20:18:54+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -4683,7 +4683,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[2704302]",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:32:56+00:00",
+        "coletado_em": "2026-11-09T20:18:45+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -4692,7 +4692,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2704302",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:32:57+00:00",
+          "coletado_em": "2026-11-09T20:18:47+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -4700,7 +4700,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2704302",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:32:57+00:00",
+          "coletado_em": "2026-11-09T20:18:47+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -4708,7 +4708,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2704302",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:32:57+00:00",
+          "coletado_em": "2026-11-09T20:18:47+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -4716,7 +4716,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2704302",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:32:57+00:00",
+          "coletado_em": "2026-11-09T20:18:47+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -4725,7 +4725,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=2704302",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:32:59+00:00",
+        "coletado_em": "2026-11-09T20:18:49+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 1844756756.4,
         "rcl": 4829455598.87
@@ -4735,7 +4735,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=2704302",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:33:00+00:00",
+        "coletado_em": "2026-11-09T20:18:51+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 97136835.7,
         "rcl": 4829455598.87
@@ -4745,7 +4745,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=2704302",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:33:00+00:00",
+        "coletado_em": "2026-11-09T20:18:52+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -4790,7 +4790,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.maceio.al.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:33:01+00:00",
+        "coletado_em": "2026-11-09T20:18:54+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -4798,16 +4798,16 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.maceio.al.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:33:01+00:00",
+        "coletado_em": "2026-11-09T20:18:54+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "diario_oficial": {
-        "valor": 3838,
-        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "valor": 0,
+        "fonte": "Querido Diário",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=2704302",
-        "status": "verificada",
-        "coletado_em": "2026-11-08T16:33:19+00:00",
-        "detalhe": "Edições do Diário Oficial indexadas"
+        "status": "demo",
+        "coletado_em": "2026-11-09T20:20:35+00:00",
+        "detalhe": "Cidade ainda não coberta pelo Querido Diário"
       },
       "indicadores": {
         "resultado_fiscal": -263995600.67000008,
@@ -4861,7 +4861,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=5208707",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:01:43+00:00",
+        "coletado_em": "2026-11-09T20:50:18+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -4871,7 +4871,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[5208707]",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:01:37+00:00",
+        "coletado_em": "2026-11-09T20:50:10+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -4880,7 +4880,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=5208707",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:01:38+00:00",
+          "coletado_em": "2026-11-09T20:50:12+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -4888,7 +4888,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=5208707",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:01:38+00:00",
+          "coletado_em": "2026-11-09T20:50:12+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -4896,7 +4896,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=5208707",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:01:38+00:00",
+          "coletado_em": "2026-11-09T20:50:12+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -4904,7 +4904,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=5208707",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:01:38+00:00",
+          "coletado_em": "2026-11-09T20:50:12+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -4913,7 +4913,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=5208707",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:01:41+00:00",
+        "coletado_em": "2026-11-09T20:50:13+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 4215406322.33,
         "rcl": 9370571912.96
@@ -4923,7 +4923,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=5208707",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:01:42+00:00",
+        "coletado_em": "2026-11-09T20:50:16+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 209793847.67,
         "rcl": 9370571912.96
@@ -4933,7 +4933,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=5208707",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:01:43+00:00",
+        "coletado_em": "2026-11-09T20:50:17+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -4978,7 +4978,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.goiania.go.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:01:43+00:00",
+        "coletado_em": "2026-11-09T20:50:18+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -4986,16 +4986,16 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.goiania.go.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:01:43+00:00",
+        "coletado_em": "2026-11-09T20:50:18+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "diario_oficial": {
-        "valor": 9074,
-        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "valor": 0,
+        "fonte": "Querido Diário",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=5208707",
-        "status": "verificada",
-        "coletado_em": "2026-11-08T17:01:49+00:00",
-        "detalhe": "Edições do Diário Oficial indexadas"
+        "status": "demo",
+        "coletado_em": "2026-11-09T20:51:30+00:00",
+        "detalhe": "Cidade ainda não coberta pelo Querido Diário"
       },
       "indicadores": {
         "resultado_fiscal": -114808463.14999962,
@@ -5049,7 +5049,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=2211001",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:45:22+00:00",
+        "coletado_em": "2026-11-09T21:36:48+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -5059,7 +5059,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[2211001]",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:45:15+00:00",
+        "coletado_em": "2026-11-09T21:36:39+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -5068,7 +5068,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2211001",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:45:17+00:00",
+          "coletado_em": "2026-11-09T21:36:41+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -5076,7 +5076,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2211001",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:45:17+00:00",
+          "coletado_em": "2026-11-09T21:36:41+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -5084,7 +5084,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2211001",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:45:17+00:00",
+          "coletado_em": "2026-11-09T21:36:41+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -5092,7 +5092,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2211001",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:45:17+00:00",
+          "coletado_em": "2026-11-09T21:36:41+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -5101,7 +5101,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=2211001",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:45:19+00:00",
+        "coletado_em": "2026-11-09T21:36:43+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 2231942119.55,
         "rcl": 5010645391.39
@@ -5111,7 +5111,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=2211001",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:45:20+00:00",
+        "coletado_em": "2026-11-09T21:36:46+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 128025940.12,
         "rcl": 5010645391.39
@@ -5121,7 +5121,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=2211001",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:45:21+00:00",
+        "coletado_em": "2026-11-09T21:36:47+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -5166,7 +5166,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.teresina.pi.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:45:22+00:00",
+        "coletado_em": "2026-11-09T21:36:48+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -5174,16 +5174,16 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.teresina.pi.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:45:22+00:00",
+        "coletado_em": "2026-11-09T21:36:48+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "diario_oficial": {
-        "valor": 3363,
-        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "valor": 0,
+        "fonte": "Querido Diário",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=2211001",
-        "status": "verificada",
-        "coletado_em": "2026-11-08T17:45:23+00:00",
-        "detalhe": "Edições do Diário Oficial indexadas"
+        "status": "demo",
+        "coletado_em": "2026-11-09T21:38:00+00:00",
+        "detalhe": "Cidade ainda não coberta pelo Querido Diário"
       },
       "indicadores": {
         "resultado_fiscal": 75917373.4300003,
@@ -5237,7 +5237,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=1200401",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:25:42+00:00",
+        "coletado_em": "2026-11-09T20:13:12+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -5247,7 +5247,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[1200401]",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:25:38+00:00",
+        "coletado_em": "2026-11-09T20:13:05+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -5256,7 +5256,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1200401",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:25:39+00:00",
+          "coletado_em": "2026-11-09T20:13:07+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -5264,7 +5264,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1200401",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:25:39+00:00",
+          "coletado_em": "2026-11-09T20:13:07+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -5272,7 +5272,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1200401",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:25:39+00:00",
+          "coletado_em": "2026-11-09T20:13:07+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -5280,7 +5280,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=1200401",
           "status": "verificada",
-          "coletado_em": "2026-11-08T16:25:39+00:00",
+          "coletado_em": "2026-11-09T20:13:07+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -5289,7 +5289,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=1200401",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:25:40+00:00",
+        "coletado_em": "2026-11-09T20:13:08+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 898862764.57,
         "rcl": 1892638834.14
@@ -5299,7 +5299,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=1200401",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:25:41+00:00",
+        "coletado_em": "2026-11-09T20:13:10+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 50855153.01,
         "rcl": 1892836381.62
@@ -5309,7 +5309,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=1200401",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:25:41+00:00",
+        "coletado_em": "2026-11-09T20:13:11+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -5347,7 +5347,7 @@
         "fonte": "SAPL — Câmara Municipal (classificação NLP estágio 1)",
         "url": "https://sapl.riobranco.ac.leg.br/materia/pesquisar-materia?ano=2026",
         "status": "verificada",
-        "coletado_em": "2026-11-08T16:26:26+00:00",
+        "coletado_em": "2026-11-09T20:13:58+00:00",
         "detalhe": "Ano 2026"
       },
       "producao_vereadores": {
@@ -5355,7 +5355,7 @@
         "fonte": "SAPL (autoria indisponível no momento)",
         "url": "https://sapl.riobranco.ac.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:26:27+00:00",
+        "coletado_em": "2026-11-09T20:13:59+00:00",
         "detalhe": ""
       },
       "diario_oficial": {
@@ -5363,7 +5363,7 @@
         "fonte": "Querido Diário",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=1200401",
         "status": "demo",
-        "coletado_em": "2026-11-08T16:29:07+00:00",
+        "coletado_em": "2026-11-09T20:14:57+00:00",
         "detalhe": "Cidade ainda não coberta pelo Querido Diário"
       },
       "indicadores": {
@@ -5418,7 +5418,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=2611606",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:41:26+00:00",
+        "coletado_em": "2026-11-09T21:31:39+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -5428,7 +5428,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[2611606]",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:41:21+00:00",
+        "coletado_em": "2026-11-09T21:31:32+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -5437,7 +5437,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2611606",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:41:22+00:00",
+          "coletado_em": "2026-11-09T21:31:34+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -5445,7 +5445,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2611606",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:41:22+00:00",
+          "coletado_em": "2026-11-09T21:31:34+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -5453,7 +5453,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2611606",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:41:22+00:00",
+          "coletado_em": "2026-11-09T21:31:34+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -5461,7 +5461,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=2611606",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:41:22+00:00",
+          "coletado_em": "2026-11-09T21:31:34+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -5470,7 +5470,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=2611606",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:41:24+00:00",
+        "coletado_em": "2026-11-09T21:31:35+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 3700763011.1,
         "rcl": 8475823578.32
@@ -5480,7 +5480,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=2611606",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:41:25+00:00",
+        "coletado_em": "2026-11-09T21:31:37+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 198213401.74,
         "rcl": 8475823578.32
@@ -5490,7 +5490,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=2611606",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:41:26+00:00",
+        "coletado_em": "2026-11-09T21:31:38+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -5535,7 +5535,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.recife.pe.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:41:26+00:00",
+        "coletado_em": "2026-11-09T21:31:39+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -5543,16 +5543,16 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.recife.pe.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:41:26+00:00",
+        "coletado_em": "2026-11-09T21:31:39+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "diario_oficial": {
-        "valor": 1859,
-        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "valor": 0,
+        "fonte": "Querido Diário",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=2611606",
-        "status": "verificada",
-        "coletado_em": "2026-11-08T17:41:27+00:00",
-        "detalhe": "Edições do Diário Oficial indexadas"
+        "status": "demo",
+        "coletado_em": "2026-11-09T21:32:51+00:00",
+        "detalhe": "Cidade ainda não coberta pelo Querido Diário"
       },
       "indicadores": {
         "resultado_fiscal": -450712273.64000034,
@@ -5606,7 +5606,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=3304557",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:49:19+00:00",
+        "coletado_em": "2026-11-09T21:41:58+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -5616,7 +5616,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3304557]",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:49:11+00:00",
+        "coletado_em": "2026-11-09T21:41:49+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -5625,7 +5625,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3304557",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:49:13+00:00",
+          "coletado_em": "2026-11-09T21:41:51+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -5633,7 +5633,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3304557",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:49:13+00:00",
+          "coletado_em": "2026-11-09T21:41:51+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -5641,7 +5641,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3304557",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:49:13+00:00",
+          "coletado_em": "2026-11-09T21:41:51+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -5649,7 +5649,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3304557",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:49:13+00:00",
+          "coletado_em": "2026-11-09T21:41:51+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -5658,7 +5658,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=3304557",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:49:16+00:00",
+        "coletado_em": "2026-11-09T21:41:52+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 15986299915.93,
         "rcl": 37824045684.68
@@ -5668,7 +5668,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=3304557",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:49:18+00:00",
+        "coletado_em": "2026-11-09T21:41:55+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 713988446.22,
         "rcl": 37824045684.68
@@ -5678,7 +5678,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3304557",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:49:18+00:00",
+        "coletado_em": "2026-11-09T21:41:56+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -5723,7 +5723,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.riodejaneiro.rj.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:49:19+00:00",
+        "coletado_em": "2026-11-09T21:41:58+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -5731,16 +5731,16 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.riodejaneiro.rj.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:49:19+00:00",
+        "coletado_em": "2026-11-09T21:41:58+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "diario_oficial": {
-        "valor": 6403,
-        "fonte": "Querido Diário — Open Knowledge Brasil",
+        "valor": 0,
+        "fonte": "Querido Diário",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=3304557",
-        "status": "verificada",
-        "coletado_em": "2026-11-08T17:49:20+00:00",
-        "detalhe": "Edições do Diário Oficial indexadas"
+        "status": "demo",
+        "coletado_em": "2026-11-09T21:44:09+00:00",
+        "detalhe": "Cidade ainda não coberta pelo Querido Diário"
       },
       "indicadores": {
         "resultado_fiscal": -4380426742.120003,
@@ -5794,7 +5794,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=5103403",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:10:30+00:00",
+        "coletado_em": "2026-11-09T21:01:49+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -5804,7 +5804,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[5103403]",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:10:23+00:00",
+        "coletado_em": "2026-11-09T21:01:40+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -5813,7 +5813,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=5103403",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:10:25+00:00",
+          "coletado_em": "2026-11-09T21:01:43+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -5821,7 +5821,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=5103403",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:10:25+00:00",
+          "coletado_em": "2026-11-09T21:01:43+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -5829,7 +5829,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=5103403",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:10:25+00:00",
+          "coletado_em": "2026-11-09T21:01:43+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -5837,7 +5837,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=5103403",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:10:25+00:00",
+          "coletado_em": "2026-11-09T21:01:43+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -5846,7 +5846,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=5103403",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:10:27+00:00",
+        "coletado_em": "2026-11-09T21:01:44+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 2141290033.72,
         "rcl": 4337474805.4
@@ -5856,7 +5856,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=5103403",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:10:28+00:00",
+        "coletado_em": "2026-11-09T21:01:47+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 73776651.93,
         "rcl": 4337474805.4
@@ -5866,7 +5866,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=5103403",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:10:29+00:00",
+        "coletado_em": "2026-11-09T21:01:48+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -5911,7 +5911,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.cuiaba.mt.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:10:30+00:00",
+        "coletado_em": "2026-11-09T21:01:49+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -5919,16 +5919,16 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.cuiaba.mt.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:10:30+00:00",
+        "coletado_em": "2026-11-09T21:01:49+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "diario_oficial": {
-        "valor": 0,
-        "fonte": "Querido Diário",
+        "valor": 10000,
+        "fonte": "Querido Diário — Open Knowledge Brasil",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=5103403",
-        "status": "demo",
-        "coletado_em": "2026-11-08T17:11:41+00:00",
-        "detalhe": "Cidade ainda não coberta pelo Querido Diário"
+        "status": "verificada",
+        "coletado_em": "2026-11-09T21:02:24+00:00",
+        "detalhe": "Edições do Diário Oficial indexadas"
       },
       "indicadores": {
         "resultado_fiscal": -193726617.9500003,
@@ -5982,7 +5982,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=5002704",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:15:36+00:00",
+        "coletado_em": "2026-11-09T21:06:20+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -5992,7 +5992,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[5002704]",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:15:29+00:00",
+        "coletado_em": "2026-11-09T21:06:12+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -6001,7 +6001,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=5002704",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:15:31+00:00",
+          "coletado_em": "2026-11-09T21:06:14+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -6009,7 +6009,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=5002704",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:15:31+00:00",
+          "coletado_em": "2026-11-09T21:06:14+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -6017,7 +6017,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=5002704",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:15:31+00:00",
+          "coletado_em": "2026-11-09T21:06:14+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -6025,7 +6025,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=5002704",
           "status": "verificada",
-          "coletado_em": "2026-11-08T17:15:31+00:00",
+          "coletado_em": "2026-11-09T21:06:14+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -6034,7 +6034,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=5002704",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:15:34+00:00",
+        "coletado_em": "2026-11-09T21:06:16+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 3015778169.46,
         "rcl": 5723692337.25
@@ -6044,7 +6044,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=5002704",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:15:35+00:00",
+        "coletado_em": "2026-11-09T21:06:18+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 96133520.45,
         "rcl": 5723692337.25
@@ -6054,7 +6054,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=5002704",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:15:36+00:00",
+        "coletado_em": "2026-11-09T21:06:19+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -6099,7 +6099,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.campogrande.ms.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:15:36+00:00",
+        "coletado_em": "2026-11-09T21:06:20+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -6107,7 +6107,7 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.campogrande.ms.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T17:15:36+00:00",
+        "coletado_em": "2026-11-09T21:06:20+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "diario_oficial": {
@@ -6115,7 +6115,7 @@
         "fonte": "Querido Diário — Open Knowledge Brasil",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=5002704",
         "status": "verificada",
-        "coletado_em": "2026-11-08T17:16:04+00:00",
+        "coletado_em": "2026-11-09T21:06:22+00:00",
         "detalhe": "Edições do Diário Oficial indexadas"
       },
       "indicadores": {
@@ -6181,7 +6181,7 @@
         "fonte": "SICONFI/DCA — base do art. 29-A",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=3544004",
         "status": "verificada",
-        "coletado_em": "2026-11-08T15:54:33+00:00",
+        "coletado_em": "2026-11-09T19:38:24+00:00",
         "detalhe": "Exercício 2024 (base legal do repasse de 2025)",
         "exercicio": 2024
       },
@@ -6191,7 +6191,7 @@
         "fonte": "IBGE",
         "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-1/variaveis/9324?localidades=N6[3544004]",
         "status": "demo",
-        "coletado_em": "2026-11-08T15:54:27+00:00",
+        "coletado_em": "2026-11-09T19:38:18+00:00",
         "detalhe": ""
       },
       "financas": {
@@ -6200,7 +6200,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3544004",
           "status": "verificada",
-          "coletado_em": "2026-11-08T15:54:29+00:00",
+          "coletado_em": "2026-11-09T19:38:20+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "despesa": {
@@ -6208,7 +6208,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3544004",
           "status": "verificada",
-          "coletado_em": "2026-11-08T15:54:29+00:00",
+          "coletado_em": "2026-11-09T19:38:20+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "investimentos": {
@@ -6216,7 +6216,7 @@
           "fonte": "SICONFI/RREO",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3544004",
           "status": "verificada",
-          "coletado_em": "2026-11-08T15:54:29+00:00",
+          "coletado_em": "2026-11-09T19:38:20+00:00",
           "detalhe": "RREO Anexo 01, 4º bimestre 2026"
         },
         "base29a": {
@@ -6224,7 +6224,7 @@
           "fonte": "SICONFI/RREO (base aprox. art. 29-A)",
           "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO&no_anexo=RREO-Anexo%2001&id_ente=3544004",
           "status": "verificada",
-          "coletado_em": "2026-11-08T15:54:29+00:00",
+          "coletado_em": "2026-11-09T19:38:20+00:00",
           "detalhe": "Aproximação: tributária + transferências correntes"
         }
       },
@@ -6233,7 +6233,7 @@
         "fonte": "SICONFI/RGF — Executivo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=3544004",
         "status": "verificada",
-        "coletado_em": "2026-11-08T15:54:31+00:00",
+        "coletado_em": "2026-11-09T19:38:21+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 101449170.68,
         "rcl": 213220320.93
@@ -6243,7 +6243,7 @@
         "fonte": "SICONFI/RGF — Legislativo",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=Q&nr_periodo=2&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=L&id_ente=3544004",
         "status": "verificada",
-        "coletado_em": "2026-11-08T15:54:32+00:00",
+        "coletado_em": "2026-11-09T19:38:23+00:00",
         "detalhe": "2º quadrimestre de 2026 (% da RCL)",
         "dtp": 4575856.2,
         "rcl": 211044336.93
@@ -6253,7 +6253,7 @@
         "fonte": "SICONFI/DCA — função 01 Legislativa",
         "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo%20I-E&id_ente=3544004",
         "status": "verificada",
-        "coletado_em": "2026-11-08T15:54:32+00:00",
+        "coletado_em": "2026-11-09T19:38:24+00:00",
         "detalhe": "Exercício 2025",
         "exercicio": 2025
       },
@@ -6298,7 +6298,7 @@
         "fonte": "Portal da Câmara — sistema próprio, conector em desenvolvimento",
         "url": "https://www.riodaspedras.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T15:54:33+00:00",
+        "coletado_em": "2026-11-09T19:38:24+00:00",
         "detalhe": "Esta Câmara não usa o SAPL; a integração é a próxima etapa."
       },
       "producao_vereadores": {
@@ -6306,7 +6306,7 @@
         "fonte": "Portal da Câmara — sem API de autoria",
         "url": "https://www.riodaspedras.sp.leg.br",
         "status": "demo",
-        "coletado_em": "2026-11-08T15:54:34+00:00",
+        "coletado_em": "2026-11-09T19:38:26+00:00",
         "detalhe": "Nomes de vereadores só são publicados com fonte oficial verificável."
       },
       "diario_oficial": {
@@ -6314,7 +6314,7 @@
         "fonte": "Querido Diário",
         "url": "https://queridodiario.ok.org.br/pesquisa/?territory_ids=3544004",
         "status": "demo",
-        "coletado_em": "2026-11-08T15:54:41+00:00",
+        "coletado_em": "2026-11-09T19:39:37+00:00",
         "detalhe": "Cidade ainda não coberta pelo Querido Diário"
       },
       "indicadores": {
